@@ -1,0 +1,2 @@
+SELECT DifferenzaQ.IdP, Go.IdMinoriMIS, Go.Sede, Go.Cognome, Go.Nome, Go.LuogoN, Go.DataN, Go.Sesso, Go.Cittadinanza, Go.tel, Go.mail, Go.Note, Go.Decreto, DifferenzaQ.IdT, DifferenzaQ.IdC, DifferenzaQ.Data, DifferenzaQ.Ora, DifferenzaQ.Data1, DifferenzaQ.Ora1, DifferenzaQ.Diff, DifferenzaQ.Retta, TipoData.Tipo
+FROM ([Go] INNER JOIN DifferenzaQ ON Go.IdP = DifferenzaQ.IdP) INNER JOIN TipoData ON DifferenzaQ.IdT = TipoData.IdT;

@@ -1,0 +1,973 @@
+Version =21
+VersionRequired =20
+PublishOption =1
+Checksum =2143855494
+Begin Form
+    AutoCenter = NotDefault
+    DividingLines = NotDefault
+    AllowDesignChanges = NotDefault
+    ViewsAllowed =1
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridY =10
+    Width =13776
+    DatasheetFontHeight =11
+    ItemSuffix =98
+    Left =5160
+    Top =2760
+    Right =19830
+    Bottom =7350
+    DatasheetGridlinesColor =0
+    Filter ="[IdP]='D1046'"
+    RecSrcDt = Begin
+        0xa727057b7687e540
+    End
+    GUID = Begin
+        0x2b61c2ab051ca146a810e5950e8eb794
+    End
+    RecordSource ="Alias"
+    Caption ="Alias"
+    BeforeInsert ="[Event Procedure]"
+    DatasheetFontName ="Calibri"
+    PrtMip = Begin
+        0x6801000068010000680100006801000000000000201c0000e010000001000000 ,
+        0x010000006801000000000000a10700000100000001000000
+    End
+    OnLoad ="[Event Procedure]"
+    AllowDatasheetView =0
+    FilterOnLoad =0
+    ShowPageMargins =0
+    DisplayOnSharePointSite =1
+    DatasheetAlternateBackColor =15921906
+    DatasheetGridlinesColor12 =0
+    FitToScreen =1
+    AlternateBackShade =95.0
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            FontSize =11
+            FontName ="Calibri"
+            BorderTint =50.0
+            ForeTint =50.0
+            GridlineShade =65.0
+        End
+        Begin CommandButton
+            Width =1701
+            Height =283
+            FontSize =11
+            FontWeight =400
+            FontName ="Calibri"
+            ForeTint =75.0
+            GridlineShade =65.0
+            BackTint =60.0
+            BorderLineStyle =0
+            BorderColor =16777215
+            BorderTint =60.0
+        End
+        Begin CheckBox
+            BorderLineStyle =0
+            LabelX =230
+            LabelY =-30
+            BorderShade =65.0
+            GridlineShade =65.0
+        End
+        Begin TextBox
+            AddColon = NotDefault
+            FELineBreak = NotDefault
+            BorderLineStyle =0
+            Width =1701
+            LabelX =-1701
+            FontSize =11
+            FontName ="Calibri"
+            AsianLineBreak =1
+            BorderShade =65.0
+            ForeTint =75.0
+            GridlineShade =65.0
+        End
+        Begin ComboBox
+            AddColon = NotDefault
+            BorderLineStyle =0
+            Width =1701
+            LabelX =-1701
+            FontSize =11
+            FontName ="Calibri"
+            AllowValueListEdits =1
+            InheritValueList =1
+            BorderShade =65.0
+            ForeShade =50.0
+            GridlineShade =65.0
+        End
+        Begin EmptyCell
+            Height =240
+            GridlineColor =12632256
+            GridlineShade =65.0
+        End
+        Begin FormHeader
+            Height =1035
+            BackColor =14410976
+            Name ="IntestazioneMaschera"
+            GUID = Begin
+                0x36c58fbb8908f849bcf5be7af1a88a1d
+            End
+            AutoHeight =1
+            AlternateBackShade =95.0
+            BackTint =20.0
+            Begin
+                Begin Label
+                    OverlapFlags =85
+                    Left =8546
+                    Top =690
+                    Width =1440
+                    Height =315
+                    BorderColor =8355711
+                    ForeColor =8355711
+                    Name ="Citt_Etichetta"
+                    Caption ="Cittadinanza"
+                    GUID = Begin
+                        0xaa142743b1c41c4d857b414eb30cfdad
+                    End
+                    GridlineColor =10921638
+                    LayoutCachedLeft =8546
+                    LayoutCachedTop =690
+                    LayoutCachedWidth =9986
+                    LayoutCachedHeight =1005
+                    ColumnStart =7
+                    ColumnEnd =7
+                End
+                Begin Label
+                    OverlapFlags =85
+                    Left =12971
+                    Top =690
+                    Width =690
+                    Height =315
+                    BorderColor =8355711
+                    ForeColor =8355711
+                    Name ="Etichetta52"
+                    Caption ="Attiva"
+                    GUID = Begin
+                        0x005365c07a84f745beafe083ec81acd8
+                    End
+                    GridlineColor =10921638
+                    LayoutCachedLeft =12971
+                    LayoutCachedTop =690
+                    LayoutCachedWidth =13661
+                    LayoutCachedHeight =1005
+                    ColumnStart =9
+                    ColumnEnd =9
+                End
+                Begin Label
+                    OverlapFlags =85
+                    Left =170
+                    Top =56
+                    Width =1026
+                    Height =459
+                    FontSize =20
+                    BorderColor =8355711
+                    ForeColor =8355711
+                    Name ="Etichetta20"
+                    Caption ="Alias"
+                    GUID = Begin
+                        0x3c8f966a1e849c408cc3ae2f492acc6f
+                    End
+                    GridlineColor =10921638
+                    LayoutCachedLeft =170
+                    LayoutCachedTop =56
+                    LayoutCachedWidth =1196
+                    LayoutCachedHeight =515
+                End
+                Begin TextBox
+                    Visible = NotDefault
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =1530
+                    Top =113
+                    Width =555
+                    Height =315
+                    ColumnWidth =1701
+                    BorderColor =10921638
+                    ForeColor =4210752
+                    Name ="IdA"
+                    ControlSource ="IdA"
+                    GUID = Begin
+                        0x8c0d601e42995046aceba33bea677b2b
+                    End
+                    GridlineColor =10921638
+
+                    LayoutCachedLeft =1530
+                    LayoutCachedTop =113
+                    LayoutCachedWidth =2085
+                    LayoutCachedHeight =428
+                    RowStart =1
+                    RowEnd =1
+                End
+                Begin TextBox
+                    Visible = NotDefault
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =2324
+                    Top =170
+                    Width =510
+                    Height =315
+                    ColumnWidth =1530
+                    TabIndex =1
+                    BorderColor =10921638
+                    ForeColor =4210752
+                    Name ="IdP"
+                    ControlSource ="IdP"
+                    GUID = Begin
+                        0xa7bc1b47985c0742834b40a17f7c97e4
+                    End
+                    GridlineColor =10921638
+
+                    LayoutCachedLeft =2324
+                    LayoutCachedTop =170
+                    LayoutCachedWidth =2834
+                    LayoutCachedHeight =485
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =1
+                    ColumnEnd =1
+                End
+                Begin Label
+                    OverlapFlags =85
+                    TextAlign =1
+                    Left =10046
+                    Top =690
+                    Width =2865
+                    Height =315
+                    BorderColor =8355711
+                    ForeColor =8355711
+                    Name ="Note_Etichetta"
+                    Caption ="Note"
+                    Tag ="DetachedLabel"
+                    GUID = Begin
+                        0xe5bae0a88bbeac43b6b62a5e4af2f6ae
+                    End
+                    GridlineColor =10921638
+                    LayoutCachedLeft =10046
+                    LayoutCachedTop =690
+                    LayoutCachedWidth =12911
+                    LayoutCachedHeight =1005
+                    ColumnStart =8
+                    ColumnEnd =8
+                End
+                Begin Label
+                    OverlapFlags =85
+                    TextAlign =3
+                    Left =7271
+                    Top =690
+                    Width =1215
+                    Height =315
+                    BorderColor =8355711
+                    ForeColor =8355711
+                    Name ="DataN_Etichetta"
+                    Caption ="DataN"
+                    Tag ="DetachedLabel"
+                    GUID = Begin
+                        0x7b18e3d1e47dc44895d412d0bbb2e588
+                    End
+                    GridlineColor =10921638
+                    LayoutCachedLeft =7271
+                    LayoutCachedTop =690
+                    LayoutCachedWidth =8486
+                    LayoutCachedHeight =1005
+                    ColumnStart =6
+                    ColumnEnd =6
+                End
+                Begin Label
+                    OverlapFlags =85
+                    TextAlign =1
+                    Left =5381
+                    Top =690
+                    Width =1830
+                    Height =315
+                    BorderColor =8355711
+                    ForeColor =8355711
+                    Name ="LuogoN_Etichetta"
+                    Caption ="LuogoN"
+                    Tag ="DetachedLabel"
+                    GUID = Begin
+                        0x2911d2ebba39c84a9310ed0c31255af8
+                    End
+                    GridlineColor =10921638
+                    LayoutCachedLeft =5381
+                    LayoutCachedTop =690
+                    LayoutCachedWidth =7211
+                    LayoutCachedHeight =1005
+                    ColumnStart =5
+                    ColumnEnd =5
+                End
+                Begin Label
+                    OverlapFlags =85
+                    TextAlign =1
+                    Left =3491
+                    Top =690
+                    Width =1830
+                    Height =315
+                    BorderColor =8355711
+                    ForeColor =8355711
+                    Name ="Nome_Etichetta"
+                    Caption ="Nome"
+                    Tag ="DetachedLabel"
+                    GUID = Begin
+                        0x71135f023cee7c4bb7dca7657e64fd9a
+                    End
+                    GridlineColor =10921638
+                    LayoutCachedLeft =3491
+                    LayoutCachedTop =690
+                    LayoutCachedWidth =5321
+                    LayoutCachedHeight =1005
+                    ColumnStart =4
+                    ColumnEnd =4
+                End
+                Begin Label
+                    OverlapFlags =85
+                    TextAlign =1
+                    Left =1601
+                    Top =690
+                    Width =1830
+                    Height =315
+                    BorderColor =8355711
+                    ForeColor =8355711
+                    Name ="Cognome_Etichetta"
+                    Caption ="Cognome"
+                    Tag ="DetachedLabel"
+                    GUID = Begin
+                        0x3e0c4f957ad20d41bf408324f4d38749
+                    End
+                    GridlineColor =10921638
+                    LayoutCachedLeft =1601
+                    LayoutCachedTop =690
+                    LayoutCachedWidth =3431
+                    LayoutCachedHeight =1005
+                    ColumnStart =3
+                    ColumnEnd =3
+                End
+                Begin Label
+                    OverlapFlags =85
+                    TextAlign =3
+                    Left =56
+                    Top =690
+                    Width =1485
+                    Height =315
+                    BorderColor =8355711
+                    ForeColor =8355711
+                    Name ="DataModifica_Etichetta"
+                    Caption ="DataModifica"
+                    Tag ="DetachedLabel"
+                    GUID = Begin
+                        0xb74661352851fb4199a9d18d0d9b5deb
+                    End
+                    GridlineColor =10921638
+                    LayoutCachedLeft =56
+                    LayoutCachedTop =690
+                    LayoutCachedWidth =1541
+                    LayoutCachedHeight =1005
+                    ColumnStart =2
+                    ColumnEnd =2
+                End
+            End
+        End
+        Begin Section
+            Height =453
+            Name ="Corpo"
+            GUID = Begin
+                0x863e914f9ea2c249ba6dcc2957d15f90
+            End
+            AlternateBackColor =15921906
+            AlternateBackShade =95.0
+            Begin
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =116
+                    Top =30
+                    Width =1425
+                    Height =315
+                    ColumnWidth =1620
+                    BorderColor =10921638
+                    ForeColor =4210752
+                    Name ="DataModifica"
+                    ControlSource ="DataModifica"
+                    OnExit ="[Event Procedure]"
+                    GUID = Begin
+                        0xb30fb76337e57b44b48312e3a9116ce8
+                    End
+                    GridlineColor =10921638
+
+                    LayoutCachedLeft =116
+                    LayoutCachedTop =30
+                    LayoutCachedWidth =1541
+                    LayoutCachedHeight =345
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =2
+                    ColumnEnd =2
+                End
+                Begin TextBox
+                    EnterKeyBehavior = NotDefault
+                    ScrollBars =2
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =1601
+                    Top =30
+                    Width =1830
+                    Height =315
+                    ColumnWidth =3000
+                    TabIndex =1
+                    BorderColor =10921638
+                    ForeColor =4210752
+                    Name ="Cognome"
+                    ControlSource ="Cognome"
+                    GUID = Begin
+                        0x8c280a95075b744b923021c79caed424
+                    End
+                    GridlineColor =10921638
+
+                    LayoutCachedLeft =1601
+                    LayoutCachedTop =30
+                    LayoutCachedWidth =3431
+                    LayoutCachedHeight =345
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =3
+                    ColumnEnd =3
+                End
+                Begin TextBox
+                    EnterKeyBehavior = NotDefault
+                    ScrollBars =2
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =3491
+                    Top =30
+                    Width =1830
+                    Height =315
+                    ColumnWidth =3000
+                    TabIndex =2
+                    BorderColor =10921638
+                    ForeColor =4210752
+                    Name ="Nome"
+                    ControlSource ="Nome"
+                    GUID = Begin
+                        0x68c47086d1575344929daaa875242896
+                    End
+                    GridlineColor =10921638
+
+                    LayoutCachedLeft =3491
+                    LayoutCachedTop =30
+                    LayoutCachedWidth =5321
+                    LayoutCachedHeight =345
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =4
+                    ColumnEnd =4
+                End
+                Begin TextBox
+                    EnterKeyBehavior = NotDefault
+                    ScrollBars =2
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =5381
+                    Top =30
+                    Width =1830
+                    Height =315
+                    ColumnWidth =3000
+                    TabIndex =3
+                    BorderColor =10921638
+                    ForeColor =4210752
+                    Name ="LuogoN"
+                    ControlSource ="LuogoN"
+                    GUID = Begin
+                        0x9ac14a654e59b9449b451f6c2ad0397a
+                    End
+                    GridlineColor =10921638
+
+                    LayoutCachedLeft =5381
+                    LayoutCachedTop =30
+                    LayoutCachedWidth =7211
+                    LayoutCachedHeight =345
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =5
+                    ColumnEnd =5
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =7271
+                    Top =30
+                    Width =1215
+                    Height =315
+                    ColumnWidth =1620
+                    TabIndex =4
+                    BorderColor =10921638
+                    ForeColor =4210752
+                    Name ="DataN"
+                    ControlSource ="DataN"
+                    GUID = Begin
+                        0xb93aba5db971a04d8293f1d135cd6f34
+                    End
+                    GridlineColor =10921638
+
+                    LayoutCachedLeft =7271
+                    LayoutCachedTop =30
+                    LayoutCachedWidth =8486
+                    LayoutCachedHeight =345
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =6
+                    ColumnEnd =6
+                End
+                Begin TextBox
+                    EnterKeyBehavior = NotDefault
+                    ScrollBars =2
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =10046
+                    Top =30
+                    Width =2865
+                    Height =315
+                    ColumnWidth =3000
+                    FontSize =9
+                    TabIndex =6
+                    BorderColor =10921638
+                    ForeColor =4210752
+                    Name ="Note"
+                    ControlSource ="Note"
+                    GUID = Begin
+                        0xe4e91b5623bc22429a83d77412a89bb5
+                    End
+                    GridlineColor =10921638
+
+                    LayoutCachedLeft =10046
+                    LayoutCachedTop =30
+                    LayoutCachedWidth =12911
+                    LayoutCachedHeight =345
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =8
+                    ColumnEnd =8
+                End
+                Begin CheckBox
+                    OverlapFlags =85
+                    Left =12971
+                    Top =30
+                    Width =300
+                    Height =315
+                    TabIndex =7
+                    BorderColor =10921638
+                    Name ="Attiva"
+                    ControlSource ="Attiva"
+                    GUID = Begin
+                        0x855c1a2d5c841e48bb9c23a377acd451
+                    End
+                    GridlineColor =10921638
+
+                    LayoutCachedLeft =12971
+                    LayoutCachedTop =30
+                    LayoutCachedWidth =13271
+                    LayoutCachedHeight =345
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =9
+                    ColumnEnd =9
+                End
+                Begin ComboBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =8546
+                    Top =30
+                    Width =1440
+                    Height =315
+                    TabIndex =5
+                    BorderColor =10921638
+                    ForeColor =2701361
+                    ColumnInfo ="\"\";\"\";\"10\";\"510\""
+                    GUID = Begin
+                        0x9f5d530ca455684db3b9852516ba3e1d
+                    End
+                    Name ="cmbCitt"
+                    ControlSource ="Cittadinanza"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT Go.Cittadinanza FROM [Go] GROUP BY Go.Cittadinanza; "
+                    GridlineColor =10921638
+
+                    LayoutCachedLeft =8546
+                    LayoutCachedTop =30
+                    LayoutCachedWidth =9986
+                    LayoutCachedHeight =345
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =7
+                    ColumnEnd =7
+                End
+            End
+        End
+        Begin FormFooter
+            Height =907
+            Name ="PièDiPaginaMaschera"
+            GUID = Begin
+                0xd85cff825d893f4895d11ba46ac9e6b9
+            End
+            AlternateBackShade =95.0
+            Begin
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =12982
+                    Top =113
+                    Width =576
+                    Height =576
+                    ForeColor =4210752
+                    Name ="cmdEsci"
+                    Caption ="Comando63"
+                    OnClick ="[Event Procedure]"
+                    PictureData = Begin
+                        0x2800000010000000100000000100040000000000800000000000000000000000 ,
+                        0x0000000000000000000000000000800000800000008080008000000080008000 ,
+                        0x8080000080808000c0c0c0000000ff00c0c0c00000ffff00ff000000c0c0c000 ,
+                        0xffff0000ffffff00ddddd0dddddddddddddd00ddddddddddddd030dddddddddd ,
+                        0xdd0330dddddddddd0033300000000dddd03330ff0dddddddd03300ff0dddd4dd ,
+                        0xd03330ff0ddd44ddd03330ff0dd44444d03330ff0d444444d03330ff0dd44444 ,
+                        0xd0330fff0ddd44ddd030ffff0dddd4ddd00fffff0dddddddd00000000ddddddd ,
+                        0xdddddddddddddddd000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000
+                    End
+                    ObjectPalette = Begin
+                        0x000301000000000000000000
+                    End
+                    ControlTipText ="Chiudi maschera"
+                    GUID = Begin
+                        0xafa67c7012a41c4d9f45cc1f18a4a1b6
+                    End
+                    GridlineColor =10921638
+
+                    LayoutCachedLeft =12982
+                    LayoutCachedTop =113
+                    LayoutCachedWidth =13558
+                    LayoutCachedHeight =689
+                    BackColor =7124467
+                    BorderColor =7124467
+                    WebImagePaddingLeft =3
+                    WebImagePaddingTop =3
+                    WebImagePaddingRight =2
+                    WebImagePaddingBottom =2
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =10091
+                    Top =226
+                    Width =794
+                    Height =397
+                    TabIndex =1
+                    ForeColor =4210752
+                    Name ="cmdSalva"
+                    Caption ="Salva"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0x6bf0060f8e24f24b80126416b5fd2990
+                    End
+                    GridlineColor =10921638
+
+                    LayoutCachedLeft =10091
+                    LayoutCachedTop =226
+                    LayoutCachedWidth =10885
+                    LayoutCachedHeight =623
+                    BackColor =7124467
+                    BorderColor =7124467
+                    WebImagePaddingLeft =3
+                    WebImagePaddingTop =3
+                    WebImagePaddingRight =2
+                    WebImagePaddingBottom =2
+                    Overlaps =1
+                End
+            End
+        End
+    End
+End
+CodeBehindForm
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Compare Database
+Private sOpen As String
+Private bApertura As Boolean
+
+
+Private Sub cmdEsci_Click()
+On Error GoTo Err_cmdEsci_Click
+
+
+    If Me.Dirty Then Me.Dirty = False
+    DoCmd.Close
+
+Exit_cmdEsci_Click:
+    Exit Sub
+
+Err_cmdEsci_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdEsci_Click
+
+End Sub
+
+Private Sub cmdSalva_Click()
+'Devo controllare che ci sia un solo ceck su salva
+'se sono più di uno devo mandare un messaggio e bloccare tutto
+
+ControlloAttiva
+
+
+'controllare che ci siano tutti i dati e poi salvarli nella tabella go
+'sopratutto la data di validità
+
+End Sub
+
+Sub ControlloAttiva()
+
+Set db = CurrentDb
+Dim nConta As Double, sIda As String
+Dim sNome As String, sCognome As String, dDataN As Date, sCittadinanza As String, sLuogo As String
+
+sIda = ""
+sNome = ""
+sCognome = ""
+dDataN = "01/01/1900"
+sCittadinanza = ""
+sLuogo = ""
+
+nConta = 0
+
+controllaCampi
+
+
+'bErrore = False
+' Cancello la tabella contenete i dati di acquisto
+'        CurrentDb.Execute "delete * from Differenza", dbFailOnError ' to empty table before new insertion
+ 
+ 
+'Salvo il record attuale
+
+ DoCmd.DoMenuItem acFormBar, acRecordsMenu, acSaveRecord, , acMenuVer70
+
+
+
+'ricreo i dati diacquisto
+    ' CurrentDb.Execute (sqlc) '
+
+
+sqlc = "SELECT *  " & _
+        "FROM Alias " & _
+        "WHERE (IdP) = '" & Me.IdP & "'  and  (Attiva)=True"
+
+
+
+        
+'Apro il recordset
+    
+    Set rsR = db.OpenRecordset(sqlc, dbOpenDynaset)
+    
+ 
+    Do While Not rsR.EOF
+          nConta = 1 + nConta
+            'Asocio le stringhe per caricarle dopo
+            sIda = rsR!IdA
+            sCognome = rsR!Cognome
+            sNome = rsR!Nome
+            
+            If Not IsNull(rsR!LuogoN) Then
+                sLuogo = rsR!LuogoN
+            Else
+                sLuogo = ""
+            End If
+            
+            If Not IsNull(rsR!DataN) Then
+            
+               dDataN = rsR!DataN
+            Else
+               dDataN = "10/10/1900"
+            End If
+        
+            If Not IsNull(rsR!Cittadinanza) Then
+                sCittadinanza = rsR!Cittadinanza
+            Else
+                sCittadinanza = ""
+            End If
+         
+         
+         rsR.MoveNext
+        Loop
+    
+    If nConta = 1 Then
+    
+ '       sqlc1 = " SELECT Go.IdP, Go.Cognome, Go.Nome, Go.LuogoN, Go.DataN, Go.Cittadinanza " & _
+ '            "FROM [Go] " & _
+ '            "WHERE Go.IdP= " & Me.IdP
+ '
+ '       Set rsR1 = db.OpenRecordset(sqlc1, dbOpenDynaset)
+ '
+ '
+ '       Do While Not rsR1.EOF
+ '           rsR1.Edit
+ '               rsR1!Cognome = sCognome
+ '               rsR1!Nome = sNome
+'
+'
+'                If Not sLuogo = "" Then
+'                    rsR1!LuogoN = sLuogo
+'                Else
+'                    rsR1!LuogoN = rsR1!LuogoN
+'                End If
+'
+'                If Not IsNull(dDataN) Then
+'
+'                   rsR1!DataN = dDataN
+'                Else
+'                   rsR1!DataN = rsR1!DataN
+'                End If
+'
+'                If Not sCittadinanza = "" Then
+'                    rsR1!Cittadinanza = sCittadinanza
+'                Else
+'                    rsR1!Cittadinanza = rsR1!Cittadinanza
+'                End If
+'
+'
+'            rsR1.Update
+'            rsR1.MoveNext
+'        Loop
+    
+    
+        sqlc1 = "UPDATE [Go] INNER JOIN Alias ON Go.IdP = Alias.IdP SET [Go].Cognome = [Alias]![Cognome], " & _
+                    "[Go].Nome = [Alias]![Nome], [Go].LuogoN = [Alias]![LuogoN], [Go].DataN = [Alias]![DataN], " & _
+                    "[Go].Cittadinanza = [Alias]![Cittadinanza] " & _
+                    "WHERE Alias.IdA='" & sIda & "'"
+  
+    
+        DoCmd.SetWarnings True
+        CurrentDb.Execute sqlc1 ' to empty table before new insertion
+
+        'MsgBox db.RecordsAffected & " record(s) aggiornati!"
+        Set db = Nothing
+    
+       
+        
+    
+    Else
+        MsgBox "Si può selezionare solo un nome attivo per volta", vbCritical, Alias
+        Exit Sub
+    End If
+      
+    
+    rsR.Close
+ '   rsR1.Close
+    
+    Set rsR = Nothing
+ '   Set rsR1 = Nothing
+
+
+End Sub
+
+
+Private Sub Form_BeforeInsert(Cancel As Integer)
+Dim sqlc As String, rsNum As Recordset
+Set db = CurrentDb
+'sqlc = "Select max(IdP) from Go"
+sqlc = "SELECT Max(CLng(Right([IdA],Len([IdA])-1))) AS A " & _
+        "FROM [Alias];"
+
+
+
+Set rsNum = db.OpenRecordset(sqlc, dbOpenSnapshot)
+If Not IsNull(rsNum(0)) Then
+
+
+    IdA = "C" & rsNum(0) + 1
+Else
+    IdA = 1
+End If
+
+
+If sOpen <> "" Then
+    IdP = sOpen
+    
+Else
+    'txtIdConservazione.Enabled = True
+End If
+
+End Sub
+
+Private Sub Form_Load()
+ Dim f As Form
+
+ Set f = Forms(Me.Name)
+    If Not IsNull(f.OpenArgs) Then
+        sOpen = f.OpenArgs
+    Else
+       sOpen = ""
+    End If
+bApertura = True
+
+End Sub
+
+
+
+
+Private Sub DataModifica_Exit(Cancel As Integer)
+If bApertura = False Then
+    If Len(Me![DataModifica] & "") = 0 Then
+        MsgBox "il campo [DataModifica] è obbligatorio!", vbOKOnly, "Attenzione!"
+        Cancel = True
+    End If
+Else
+    bApertura = False
+End If
+
+End Sub
+
+Private Sub controllaCampi()
+    If Len(Me![DataModifica] & "") = 0 Then
+        MsgBox "il campo Data modifica è obbligatorio!", vbOKOnly, "Attenzione!"
+        Me![DataModifica] = Date
+'        Cancel = True
+ '       Exit Sub
+    End If
+
+    If Len(Me![DataN] & "") = 0 Then
+        MsgBox "il campo Data di nascita è obbligatorio!", vbOKOnly, "Attenzione!"
+         Me![DataN] = "01/01/1900"
+        
+ '       Cancel = True
+ '       Exit Sub
+        
+    End If
+
+
+
+End Sub

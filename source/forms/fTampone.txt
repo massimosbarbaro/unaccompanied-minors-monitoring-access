@@ -1,0 +1,693 @@
+Version =21
+VersionRequired =20
+PublishOption =1
+Checksum =343443018
+Begin Form
+    AutoCenter = NotDefault
+    DividingLines = NotDefault
+    AllowDesignChanges = NotDefault
+    ViewsAllowed =1
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridY =10
+    Width =15713
+    DatasheetFontHeight =11
+    ItemSuffix =66
+    Left =6150
+    Top =1485
+    Right =22410
+    Bottom =11670
+    DatasheetGridlinesColor =0
+    Filter ="[IdP]='D791'"
+    RecSrcDt = Begin
+        0x0e8a0e10588fe540
+    End
+    GUID = Begin
+        0xc6a1f48fba2da64fadc9414e48e9ca4c
+    End
+    RecordSource ="Tampone"
+    Caption ="Tampone"
+    BeforeInsert ="[Event Procedure]"
+    DatasheetFontName ="Calibri"
+    PrtMip = Begin
+        0x6801000068010000680100006801000000000000201c0000e010000001000000 ,
+        0x010000006801000000000000a10700000100000001000000
+    End
+    OnLoad ="[Event Procedure]"
+    AllowDatasheetView =0
+    FilterOnLoad =0
+    ShowPageMargins =0
+    DisplayOnSharePointSite =1
+    DatasheetAlternateBackColor =15921906
+    DatasheetGridlinesColor12 =0
+    FitToScreen =1
+    AlternateBackShade =95.0
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            FontSize =11
+            FontName ="Calibri"
+            BorderTint =50.0
+            ForeTint =50.0
+            GridlineShade =65.0
+        End
+        Begin CommandButton
+            Width =1701
+            Height =283
+            FontSize =11
+            FontWeight =400
+            FontName ="Calibri"
+            ForeTint =75.0
+            GridlineShade =65.0
+            BackTint =60.0
+            BorderLineStyle =0
+            BorderColor =16777215
+            BorderTint =60.0
+        End
+        Begin TextBox
+            AddColon = NotDefault
+            FELineBreak = NotDefault
+            BorderLineStyle =0
+            Width =1701
+            LabelX =-1701
+            FontSize =11
+            FontName ="Calibri"
+            AsianLineBreak =1
+            BorderShade =65.0
+            ForeTint =75.0
+            GridlineShade =65.0
+        End
+        Begin ListBox
+            BorderLineStyle =0
+            Width =1701
+            Height =1417
+            LabelX =-1701
+            FontSize =11
+            FontName ="Calibri"
+            AllowValueListEdits =1
+            InheritValueList =1
+            BorderShade =65.0
+            ForeTint =75.0
+            GridlineShade =65.0
+        End
+        Begin ComboBox
+            AddColon = NotDefault
+            BorderLineStyle =0
+            Width =1701
+            LabelX =-1701
+            FontSize =11
+            FontName ="Calibri"
+            AllowValueListEdits =1
+            InheritValueList =1
+            BorderShade =65.0
+            ForeShade =50.0
+            GridlineShade =65.0
+        End
+        Begin EmptyCell
+            Height =240
+            GridlineColor =12632256
+            GridlineShade =65.0
+        End
+        Begin FormHeader
+            Height =1303
+            BackColor =14410976
+            Name ="IntestazioneMaschera"
+            GUID = Begin
+                0x5c9e830f7863534ab78478f5afc4aa4f
+            End
+            AlternateBackShade =95.0
+            BackTint =20.0
+            Begin
+                Begin Label
+                    OverlapFlags =85
+                    TextAlign =1
+                    Left =36
+                    Top =792
+                    Width =1416
+                    Height =312
+                    BorderColor =8355711
+                    ForeColor =8355711
+                    Name ="DataT_Etichetta"
+                    Caption ="Data Tampone"
+                    Tag ="DetachedLabel"
+                    GUID = Begin
+                        0x6f98bc2f2dac094cb98c162a359bc993
+                    End
+                    GroupTable =1
+                    GridlineColor =10921638
+                    LayoutCachedLeft =36
+                    LayoutCachedTop =792
+                    LayoutCachedWidth =1452
+                    LayoutCachedHeight =1104
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin Label
+                    OverlapFlags =85
+                    Left =5748
+                    Top =792
+                    Width =1236
+                    Height =312
+                    BorderColor =8355711
+                    ForeColor =8355711
+                    Name ="Risultato_Etichetta"
+                    Caption ="Risultato"
+                    Tag ="DetachedLabel"
+                    GUID = Begin
+                        0xf1b502b3f607b546a7d6167ebd88107b
+                    End
+                    GroupTable =1
+                    GridlineColor =10921638
+                    LayoutCachedLeft =5748
+                    LayoutCachedTop =792
+                    LayoutCachedWidth =6984
+                    LayoutCachedHeight =1104
+                    ColumnStart =3
+                    ColumnEnd =3
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin Label
+                    OverlapFlags =85
+                    TextAlign =1
+                    Left =7056
+                    Top =792
+                    Width =3828
+                    Height =312
+                    BorderColor =8355711
+                    ForeColor =8355711
+                    Name ="Note_Etichetta"
+                    Caption ="Note"
+                    Tag ="DetachedLabel"
+                    GUID = Begin
+                        0x90b58ad35587944d832386465f558a78
+                    End
+                    GroupTable =1
+                    GridlineColor =10921638
+                    LayoutCachedLeft =7056
+                    LayoutCachedTop =792
+                    LayoutCachedWidth =10884
+                    LayoutCachedHeight =1104
+                    ColumnStart =4
+                    ColumnEnd =4
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin Label
+                    OverlapFlags =85
+                    Left =57
+                    Top =57
+                    Width =1944
+                    Height =579
+                    FontSize =20
+                    BorderColor =8355711
+                    ForeColor =8355711
+                    Name ="Etichetta10"
+                    Caption ="Tampone"
+                    GUID = Begin
+                        0x992c2e21a70a444aabe31ad56be1a4e3
+                    End
+                    GridlineColor =10921638
+                    LayoutCachedLeft =57
+                    LayoutCachedTop =57
+                    LayoutCachedWidth =2001
+                    LayoutCachedHeight =636
+                End
+                Begin TextBox
+                    Enabled = NotDefault
+                    Locked = NotDefault
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =2324
+                    Top =113
+                    Width =798
+                    Height =315
+                    ColumnWidth =1701
+                    BorderColor =10921638
+                    ForeColor =4210752
+                    Name ="IdTp"
+                    ControlSource ="IdTp"
+                    GUID = Begin
+                        0x1c17251baae760428c3a84b96cccefde
+                    End
+                    GridlineColor =10921638
+
+                    LayoutCachedLeft =2324
+                    LayoutCachedTop =113
+                    LayoutCachedWidth =3122
+                    LayoutCachedHeight =428
+                End
+                Begin TextBox
+                    Enabled = NotDefault
+                    Locked = NotDefault
+                    EnterKeyBehavior = NotDefault
+                    ScrollBars =2
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =3231
+                    Top =113
+                    Width =1194
+                    Height =285
+                    ColumnWidth =3000
+                    TabIndex =1
+                    BorderColor =10921638
+                    ForeColor =4210752
+                    Name ="IdP"
+                    ControlSource ="IdP"
+                    GUID = Begin
+                        0x1c4e1344c731bb4692c3c3b49a187c87
+                    End
+                    GridlineColor =10921638
+
+                    LayoutCachedLeft =3231
+                    LayoutCachedTop =113
+                    LayoutCachedWidth =4425
+                    LayoutCachedHeight =398
+                End
+                Begin Label
+                    OverlapFlags =85
+                    TextAlign =2
+                    Left =1524
+                    Top =792
+                    Width =2760
+                    Height =312
+                    BorderColor =8355711
+                    ForeColor =8355711
+                    Name ="Etichetta13"
+                    Caption ="Dove"
+                    GUID = Begin
+                        0x9408e7429de7b044bddc3c242cfe4251
+                    End
+                    GroupTable =1
+                    GridlineColor =10921638
+                    LayoutCachedLeft =1524
+                    LayoutCachedTop =792
+                    LayoutCachedWidth =4284
+                    LayoutCachedHeight =1104
+                    ColumnStart =1
+                    ColumnEnd =1
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin Label
+                    OverlapFlags =85
+                    TextAlign =1
+                    Left =4356
+                    Top =792
+                    Width =1320
+                    Height =312
+                    BorderColor =8355711
+                    ForeColor =8355711
+                    Name ="Etichetta14"
+                    Caption ="Data Risultato"
+                    GUID = Begin
+                        0xf6cde7f5a0052a41bdffd26decaff6ad
+                    End
+                    GroupTable =1
+                    GridlineColor =10921638
+                    LayoutCachedLeft =4356
+                    LayoutCachedTop =792
+                    LayoutCachedWidth =5676
+                    LayoutCachedHeight =1104
+                    ColumnStart =2
+                    ColumnEnd =2
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin Label
+                    OverlapFlags =85
+                    TextAlign =1
+                    Left =10956
+                    Top =792
+                    Width =3828
+                    Height =312
+                    BorderColor =8355711
+                    ForeColor =8355711
+                    Name ="Etichetta48"
+                    Caption ="File"
+                    GUID = Begin
+                        0xf4ec28cc4c8ed94684eaf44c9a9b63dd
+                    End
+                    GroupTable =1
+                    GridlineColor =10921638
+                    LayoutCachedLeft =10956
+                    LayoutCachedTop =792
+                    LayoutCachedWidth =14784
+                    LayoutCachedHeight =1104
+                    ColumnStart =5
+                    ColumnEnd =5
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+            End
+        End
+        Begin Section
+            Height =680
+            Name ="Corpo"
+            GUID = Begin
+                0x6739eb7a7a7b504cbb738eea68a992d4
+            End
+            AlternateBackColor =15921906
+            AlternateBackShade =95.0
+            Begin
+                Begin TextBox
+                    OverlapFlags =85
+                    TextAlign =1
+                    IMESentenceMode =3
+                    Left =36
+                    Top =60
+                    Width =1416
+                    Height =315
+                    ColumnWidth =1620
+                    BorderColor =10921638
+                    ForeColor =4210752
+                    Name ="DataT"
+                    ControlSource ="DataT"
+                    GUID = Begin
+                        0xe55522cbad8cda4e847b457493991918
+                    End
+                    GroupTable =1
+                    GridlineColor =10921638
+
+                    LayoutCachedLeft =36
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =1452
+                    LayoutCachedHeight =375
+                    RowStart =1
+                    RowEnd =1
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin TextBox
+                    EnterKeyBehavior = NotDefault
+                    ScrollBars =2
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =7056
+                    Top =60
+                    Width =3828
+                    Height =315
+                    ColumnWidth =3000
+                    TabIndex =4
+                    BorderColor =10921638
+                    ForeColor =4210752
+                    Name ="Note"
+                    ControlSource ="Note"
+                    GUID = Begin
+                        0xd2f48b2b79fea546bd8292c125e39b60
+                    End
+                    GroupTable =1
+                    GridlineColor =10921638
+
+                    LayoutCachedLeft =7056
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =10884
+                    LayoutCachedHeight =375
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =4
+                    ColumnEnd =4
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin ComboBox
+                    RowSourceTypeInt =1
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    ListWidth =1440
+                    Left =5748
+                    Top =60
+                    Width =1236
+                    Height =315
+                    TabIndex =3
+                    BorderColor =10921638
+                    ForeColor =2701361
+                    GUID = Begin
+                        0x86d25191c0975a40b661f6532de9f361
+                    End
+                    Name ="cmbRisultato"
+                    ControlSource ="Risultato"
+                    RowSourceType ="Value List"
+                    RowSource ="\"Positivo\";\"Negativo\""
+                    ColumnWidths ="1440"
+                    GroupTable =1
+                    GridlineColor =10921638
+
+                    LayoutCachedLeft =5748
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =6984
+                    LayoutCachedHeight =375
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =3
+                    ColumnEnd =3
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    TextAlign =1
+                    IMESentenceMode =3
+                    Left =4356
+                    Top =60
+                    Width =1320
+                    Height =315
+                    TabIndex =2
+                    BorderColor =10921638
+                    ForeColor =4210752
+                    Name ="DataR"
+                    ControlSource ="DataR"
+                    StatusBarText ="Data risposta"
+                    GUID = Begin
+                        0xc6182778fbc44f4894903f0061f99ca6
+                    End
+                    GroupTable =1
+                    GridlineColor =10921638
+
+                    LayoutCachedLeft =4356
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =5676
+                    LayoutCachedHeight =375
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =2
+                    ColumnEnd =2
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin ComboBox
+                    OverlapFlags =85
+                    TextAlign =2
+                    IMESentenceMode =3
+                    Left =1524
+                    Top =60
+                    Width =2760
+                    Height =315
+                    TabIndex =1
+                    BorderColor =10921638
+                    ForeColor =4210752
+                    ColumnInfo ="\"\";\"\";\"10\";\"510\""
+                    GUID = Begin
+                        0xe35d4f265ad8874b816c97699278afcf
+                    End
+                    Name ="Dove"
+                    ControlSource ="Dove"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT Tampone.Dove FROM Tampone GROUP BY Tampone.Dove HAVING ((Not (Tampone.Dov"
+                        "e) Is Null));"
+                    StatusBarText ="Chia a fatto il tampone"
+                    GroupTable =1
+                    GridlineColor =10921638
+
+                    LayoutCachedLeft =1524
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =4284
+                    LayoutCachedHeight =375
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =1
+                    ColumnEnd =1
+                    LayoutGroup =1
+                    ForeTint =75.0
+                    ForeShade =100.0
+                    GroupTable =1
+                End
+                Begin TextBox
+                    FontUnderline = NotDefault
+                    IsHyperlink = NotDefault
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =10956
+                    Top =60
+                    Width =3828
+                    Height =315
+                    TabIndex =5
+                    BorderColor =10921638
+                    ForeColor =14915625
+                    Name ="File"
+                    ControlSource ="File"
+                    GUID = Begin
+                        0x8a9761ae5c99fa49bb85c5f1ab35400f
+                    End
+                    GroupTable =1
+                    GridlineColor =10921638
+
+                    LayoutCachedLeft =10956
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =14784
+                    LayoutCachedHeight =375
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =5
+                    ColumnEnd =5
+                    LayoutGroup =1
+                    ForeTint =100.0
+                    GroupTable =1
+                End
+            End
+        End
+        Begin FormFooter
+            Height =793
+            Name ="PièDiPaginaMaschera"
+            GUID = Begin
+                0x445888927eb70f40a0c44ab30dac48aa
+            End
+            AlternateBackShade =95.0
+            Begin
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =15137
+                    Top =56
+                    Width =576
+                    Height =576
+                    ForeColor =4210752
+                    Name ="cmdEsci"
+                    Caption ="Comando47"
+                    OnClick ="[Event Procedure]"
+                    PictureData = Begin
+                        0x2800000010000000100000000100040000000000800000000000000000000000 ,
+                        0x0000000000000000000000000000800000800000008080008000000080008000 ,
+                        0x8080000080808000c0c0c0000000ff00c0c0c00000ffff00ff000000c0c0c000 ,
+                        0xffff0000ffffff00ddddd0dddddddddddddd00ddddddddddddd030dddddddddd ,
+                        0xdd0330dddddddddd0033300000000dddd03330ff0dddddddd03300ff0dddd4dd ,
+                        0xd03330ff0ddd44ddd03330ff0dd44444d03330ff0d444444d03330ff0dd44444 ,
+                        0xd0330fff0ddd44ddd030ffff0dddd4ddd00fffff0dddddddd00000000ddddddd ,
+                        0xdddddddddddddddd000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000
+                    End
+                    ObjectPalette = Begin
+                        0x000301000000000000000000
+                    End
+                    ControlTipText ="Chiudi maschera"
+                    GUID = Begin
+                        0xfbb831f61a226f44a318ae3c22bedcbd
+                    End
+                    GridlineColor =10921638
+
+                    LayoutCachedLeft =15137
+                    LayoutCachedTop =56
+                    LayoutCachedWidth =15713
+                    LayoutCachedHeight =632
+                    BackColor =7124467
+                    BorderColor =7124467
+                    WebImagePaddingLeft =3
+                    WebImagePaddingTop =3
+                    WebImagePaddingRight =2
+                    WebImagePaddingBottom =2
+                    Overlaps =1
+                End
+            End
+        End
+    End
+End
+CodeBehindForm
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Compare Database
+Private sOpen As String
+
+
+Private Sub cmdEsci_Click()
+On Error GoTo Err_cmdEsci_Click
+
+
+    If Me.Dirty Then Me.Dirty = False
+    DoCmd.Close
+
+Exit_cmdEsci_Click:
+    Exit Sub
+
+Err_cmdEsci_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdEsci_Click
+
+End Sub
+
+Private Sub Form_BeforeInsert(Cancel As Integer)
+
+Dim sqlc As String, rsNum As Recordset
+Set db = CurrentDb
+'sqlc = "Select max(IdL) from LPTC"
+sqlc = "SELECT Max(CLng(Right([IdTp],Len([IdTp])-1))) AS T " & _
+        "FROM [Tampone];"
+
+
+
+Set rsNum = db.OpenRecordset(sqlc, dbOpenSnapshot)
+If Not IsNull(rsNum(0)) Then
+
+
+    IdTp = "C" & rsNum(0) + 1
+Else
+    IdTp = 1
+End If
+
+
+If sOpen <> "" Then
+    IdP = sOpen
+    
+Else
+    'txtIdConservazione.Enabled = True
+End If
+
+End Sub
+
+Private Sub Form_Load()
+ Dim f As Form
+
+ Set f = Forms(Me.Name)
+    If Not IsNull(f.OpenArgs) Then
+        sOpen = f.OpenArgs
+    Else
+       sOpen = ""
+    End If
+
+End Sub

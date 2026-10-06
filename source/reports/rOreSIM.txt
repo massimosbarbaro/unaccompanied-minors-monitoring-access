@@ -1,0 +1,1343 @@
+Version =21
+VersionRequired =20
+PublishOption =1
+Checksum =1954386548
+Begin Report
+    LayoutForPrint = NotDefault
+    DividingLines = NotDefault
+    AllowDesignChanges = NotDefault
+    TabularCharSet =162
+    DateGrouping =1
+    GrpKeepTogether =1
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridY =10
+    Width =16110
+    DatasheetFontHeight =11
+    ItemSuffix =63
+    Top =600
+    Right =14805
+    Bottom =11145
+    DatasheetGridlinesColor =15062992
+    RecSrcDt = Begin
+        0x8f0d2d49d788e540
+    End
+    GUID = Begin
+        0x91bbca83283fb54b9db410af597b0cb0
+    End
+    RecordSource ="qDifferenza"
+    Caption ="OreAccoglienza"
+    DatasheetFontName ="Calibri"
+    PrtMip = Begin
+        0x6801000068010000680100006801000000000000ee3e00006f01000001000000 ,
+        0x010000006801000000000000a10700000100000001000000
+    End
+    FilterOnLoad =0
+    FitToPage =1
+    DisplayOnSharePointSite =1
+    DatasheetAlternateBackColor =16053492
+    DatasheetGridlinesColor12 =15062992
+    FitToScreen =1
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            TextFontCharSet =204
+            FontSize =10
+            BorderColor =-2147483609
+            ForeColor =-2147483615
+            FontName ="Calibri"
+            GridlineColor =-2147483613
+        End
+        Begin Rectangle
+            BorderLineStyle =0
+            Width =850
+            Height =850
+            BackColor =-2147483616
+            BorderColor =-2147483609
+            GridlineColor =-2147483613
+        End
+        Begin Line
+            OldBorderStyle =0
+            BorderLineStyle =0
+            Width =1701
+            BorderColor =-2147483609
+            GridlineColor =-2147483613
+        End
+        Begin Image
+            BorderLineStyle =0
+            SizeMode =3
+            PictureAlignment =2
+            Width =1701
+            Height =1701
+            BackColor =-2147483616
+            BorderColor =-2147483609
+            GridlineColor =-2147483613
+        End
+        Begin CommandButton
+            TextFontCharSet =204
+            Width =1701
+            Height =283
+            FontWeight =400
+            FontName ="Calibri"
+            GridlineColor =-2147483613
+            BorderLineStyle =0
+        End
+        Begin OptionButton
+            OldBorderStyle =0
+            BorderLineStyle =0
+            LabelX =230
+            LabelY =-30
+            BorderColor =-2147483609
+            GridlineColor =-2147483613
+        End
+        Begin CheckBox
+            BorderLineStyle =0
+            LabelX =230
+            LabelY =-30
+            GridlineColor =-2147483613
+        End
+        Begin OptionGroup
+            OldBorderStyle =0
+            BorderLineStyle =0
+            Width =1701
+            Height =1701
+            BorderColor =-2147483609
+        End
+        Begin BoundObjectFrame
+            SizeMode =3
+            OldBorderStyle =0
+            BorderLineStyle =0
+            BackStyle =0
+            Width =4536
+            Height =2835
+            LabelX =-1701
+            BorderColor =-2147483609
+            GridlineColor =-2147483613
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            OldBorderStyle =0
+            TextFontCharSet =204
+            BorderLineStyle =0
+            BackStyle =0
+            Width =1701
+            LabelX =-1701
+            FontSize =10
+            BorderColor =-2147483609
+            FontName ="Calibri"
+            AsianLineBreak =1
+            GridlineColor =-2147483613
+            ShowDatePicker =0
+        End
+        Begin ListBox
+            TextFontCharSet =204
+            OldBorderStyle =0
+            BorderLineStyle =0
+            Width =1701
+            Height =1417
+            LabelX =-1701
+            FontSize =10
+            BorderColor =-2147483609
+            FontName ="Calibri"
+            GridlineColor =-2147483613
+            AllowValueListEdits =1
+            InheritValueList =1
+        End
+        Begin ComboBox
+            OldBorderStyle =0
+            TextFontCharSet =204
+            BorderLineStyle =0
+            BackStyle =0
+            Width =1701
+            LabelX =-1701
+            FontSize =10
+            BorderColor =-2147483609
+            FontName ="Calibri"
+            GridlineColor =-2147483613
+            AllowValueListEdits =1
+            InheritValueList =1
+        End
+        Begin Subform
+            BorderLineStyle =0
+            Width =1701
+            Height =1701
+            BorderColor =-2147483609
+            GridlineColor =-2147483613
+        End
+        Begin UnboundObjectFrame
+            BackStyle =0
+            Width =4536
+            Height =2835
+            BorderColor =-2147483609
+            GridlineColor =-2147483613
+        End
+        Begin CustomControl
+            OldBorderStyle =1
+            Width =4536
+            Height =2835
+            BorderColor =-2147483609
+            GridlineColor =-2147483613
+        End
+        Begin ToggleButton
+            TextFontCharSet =204
+            Width =283
+            Height =283
+            FontWeight =400
+            FontName ="Calibri"
+            GridlineColor =-2147483613
+            BorderLineStyle =0
+        End
+        Begin Tab
+            TextFontCharSet =204
+            BackStyle =0
+            Width =5103
+            Height =3402
+            FontSize =10
+            FontName ="Calibri"
+            BorderLineStyle =0
+        End
+        Begin EmptyCell
+            Height =240
+            GridlineColor =10921638
+            GridlineThemeColorIndex =1
+            GridlineShade =65.0
+        End
+        Begin FormHeader
+            KeepTogether = NotDefault
+            Height =657
+            Name ="IntestazioneReport"
+            GUID = Begin
+                0x6baec6555432ac47bf4c813453a4983f
+            End
+            AutoHeight =1
+            Begin
+                Begin Label
+                    OverlapFlags =81
+                    TextFontCharSet =0
+                    Left =57
+                    Top =57
+                    Width =2850
+                    Height =600
+                    FontSize =20
+                    ForeColor =-2147483617
+                    Name ="Etichetta28"
+                    Caption ="OreAccoglienza"
+                    FontName ="Segoe UI"
+                    GUID = Begin
+                        0x346d2f743691d54897937aa39a853f24
+                    End
+                    GridlineColor =0
+                    LayoutCachedLeft =57
+                    LayoutCachedTop =57
+                    LayoutCachedWidth =2907
+                    LayoutCachedHeight =657
+                End
+            End
+        End
+        Begin PageHeader
+            Height =455
+            Name ="SezioneIntestazionePagina"
+            GUID = Begin
+                0xa4e5fd6516a8454082d8ad658e57b1f8
+            End
+            Begin
+                Begin Label
+                    BackStyle =1
+                    OverlapFlags =81
+                    TextAlign =1
+                    Left =348
+                    Top =36
+                    Width =480
+                    Height =288
+                    BackColor =-2147483612
+                    Name ="Sede_Etichetta"
+                    Caption ="Sede"
+                    Tag ="DetachedLabel"
+                    GUID = Begin
+                        0x79d4ea92fc00764d863d9414ba6860bb
+                    End
+                    GroupTable =1
+                    LayoutCachedLeft =348
+                    LayoutCachedTop =36
+                    LayoutCachedWidth =828
+                    LayoutCachedHeight =324
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin Label
+                    BackStyle =1
+                    OverlapFlags =81
+                    TextAlign =1
+                    Left =3948
+                    Top =36
+                    Width =576
+                    Height =288
+                    BackColor =-2147483612
+                    Name ="Cittadinanza_Etichetta"
+                    Caption ="Cittadinanza"
+                    Tag ="DetachedLabel"
+                    GUID = Begin
+                        0xb09457217b6bfb49b7ec560780f0830e
+                    End
+                    GroupTable =1
+                    LayoutCachedLeft =3948
+                    LayoutCachedTop =36
+                    LayoutCachedWidth =4524
+                    LayoutCachedHeight =324
+                    ColumnStart =6
+                    ColumnEnd =6
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin Label
+                    BackStyle =1
+                    OverlapFlags =81
+                    TextAlign =1
+                    Left =13740
+                    Top =36
+                    Width =540
+                    Height =288
+                    BackColor =-2147483612
+                    Name ="Ora1_Etichetta"
+                    Caption ="Ora1"
+                    Tag ="DetachedLabel"
+                    GUID = Begin
+                        0xce8bf2a2d419b84fab44f35154bb3a38
+                    End
+                    GroupTable =1
+                    LayoutCachedLeft =13740
+                    LayoutCachedTop =36
+                    LayoutCachedWidth =14280
+                    LayoutCachedHeight =324
+                    ColumnStart =16
+                    ColumnEnd =16
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin Label
+                    BackStyle =1
+                    OverlapFlags =81
+                    TextAlign =3
+                    Left =14340
+                    Top =36
+                    Width =552
+                    Height =288
+                    BackColor =-2147483612
+                    Name ="Ora_Etichetta"
+                    Caption ="Ora"
+                    Tag ="DetachedLabel"
+                    GUID = Begin
+                        0x4c1738f8ed7dd84c99055c90742baff2
+                    End
+                    GroupTable =1
+                    LayoutCachedLeft =14340
+                    LayoutCachedTop =36
+                    LayoutCachedWidth =14892
+                    LayoutCachedHeight =324
+                    ColumnStart =17
+                    ColumnEnd =17
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin Label
+                    BackStyle =1
+                    OverlapFlags =81
+                    TextAlign =3
+                    Left =14952
+                    Top =36
+                    Width =540
+                    Height =288
+                    BackColor =-2147483612
+                    Name ="Diff_Etichetta"
+                    Caption ="Ore/gg Diff"
+                    Tag ="DetachedLabel"
+                    GUID = Begin
+                        0x040a351244a8ae42b1bc547d6095c70a
+                    End
+                    GroupTable =1
+                    LayoutCachedLeft =14952
+                    LayoutCachedTop =36
+                    LayoutCachedWidth =15492
+                    LayoutCachedHeight =324
+                    ColumnStart =18
+                    ColumnEnd =18
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin Label
+                    BackStyle =1
+                    OverlapFlags =81
+                    TextAlign =1
+                    Left =888
+                    Top =36
+                    Width =636
+                    Height =288
+                    BackColor =-2147483612
+                    Name ="Etichetta32"
+                    Caption ="N"
+                    GUID = Begin
+                        0x409df68d1bd94b49ba117696d36ad41e
+                    End
+                    GroupTable =1
+                    LayoutCachedLeft =888
+                    LayoutCachedTop =36
+                    LayoutCachedWidth =1524
+                    LayoutCachedHeight =324
+                    ColumnStart =1
+                    ColumnEnd =1
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin Label
+                    BackStyle =1
+                    OverlapFlags =81
+                    TextAlign =1
+                    Left =1584
+                    Top =36
+                    Width =228
+                    Height =288
+                    BackColor =-2147483612
+                    Name ="Etichetta33"
+                    Caption ="Num progressivo del minore"
+                    GUID = Begin
+                        0x9b35b8e7e8a94d418a3d33b5031f6e11
+                    End
+                    GroupTable =1
+                    LayoutCachedLeft =1584
+                    LayoutCachedTop =36
+                    LayoutCachedWidth =1812
+                    LayoutCachedHeight =324
+                    ColumnStart =2
+                    ColumnEnd =2
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin Label
+                    BackStyle =1
+                    OverlapFlags =81
+                    TextAlign =1
+                    Left =1872
+                    Top =36
+                    Width =732
+                    Height =288
+                    BackColor =-2147483612
+                    Name ="Etichetta34"
+                    Caption ="ID minore"
+                    GUID = Begin
+                        0x1f60bc5050fbea45b9331b3a1a433f59
+                    End
+                    GroupTable =1
+                    LayoutCachedLeft =1872
+                    LayoutCachedTop =36
+                    LayoutCachedWidth =2604
+                    LayoutCachedHeight =324
+                    ColumnStart =3
+                    ColumnEnd =3
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin Label
+                    BackStyle =1
+                    OverlapFlags =81
+                    TextAlign =1
+                    Left =2664
+                    Top =36
+                    Width =636
+                    Height =288
+                    BackColor =-2147483612
+                    Name ="Etichetta35"
+                    Caption ="Nome MSNA"
+                    GUID = Begin
+                        0x0d6e9aaf4717414a8448eb6fa1ca79e4
+                    End
+                    GroupTable =1
+                    LayoutCachedLeft =2664
+                    LayoutCachedTop =36
+                    LayoutCachedWidth =3300
+                    LayoutCachedHeight =324
+                    ColumnStart =4
+                    ColumnEnd =4
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin Label
+                    BackStyle =1
+                    OverlapFlags =81
+                    TextAlign =1
+                    Left =3360
+                    Top =36
+                    Width =528
+                    Height =288
+                    BackColor =-2147483612
+                    Name ="Etichetta36"
+                    Caption ="Cognome MSNA"
+                    GUID = Begin
+                        0x2f714e413ad5f84b8e868633c013cde4
+                    End
+                    GroupTable =1
+                    LayoutCachedLeft =3360
+                    LayoutCachedTop =36
+                    LayoutCachedWidth =3888
+                    LayoutCachedHeight =324
+                    ColumnStart =5
+                    ColumnEnd =5
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin Label
+                    BackStyle =1
+                    OverlapFlags =81
+                    TextAlign =1
+                    Left =4584
+                    Top =36
+                    Width =1116
+                    Height =288
+                    BackColor =-2147483612
+                    Name ="Etichetta37"
+                    Caption ="Data di nascita"
+                    GUID = Begin
+                        0xa9288eb734e93540bbef324e69f8e0f2
+                    End
+                    GroupTable =1
+                    LayoutCachedLeft =4584
+                    LayoutCachedTop =36
+                    LayoutCachedWidth =5700
+                    LayoutCachedHeight =324
+                    ColumnStart =7
+                    ColumnEnd =7
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin Label
+                    BackStyle =1
+                    OverlapFlags =81
+                    TextAlign =1
+                    Left =5760
+                    Top =36
+                    Width =552
+                    Height =288
+                    BackColor =-2147483612
+                    Name ="Etichetta38"
+                    Caption ="Genere"
+                    GUID = Begin
+                        0xe7f47515ee7076459c25834e07031849
+                    End
+                    GroupTable =1
+                    LayoutCachedLeft =5760
+                    LayoutCachedTop =36
+                    LayoutCachedWidth =6312
+                    LayoutCachedHeight =324
+                    ColumnStart =8
+                    ColumnEnd =8
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin Label
+                    BackStyle =1
+                    OverlapFlags =81
+                    TextAlign =1
+                    Left =7920
+                    Top =36
+                    Width =900
+                    Height =288
+                    BackColor =-2147483612
+                    Name ="Etichetta39"
+                    Caption ="Tipologia di accoglienza (struttura/privato)"
+                    GUID = Begin
+                        0x4254550869b08c49b430daf9ba77f1fa
+                    End
+                    GroupTable =1
+                    LayoutCachedLeft =7920
+                    LayoutCachedTop =36
+                    LayoutCachedWidth =8820
+                    LayoutCachedHeight =324
+                    ColumnStart =10
+                    ColumnEnd =10
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin Label
+                    BackStyle =1
+                    OverlapFlags =81
+                    TextAlign =1
+                    Left =8880
+                    Top =36
+                    Width =936
+                    Height =288
+                    BackColor =-2147483612
+                    Name ="Etichetta40"
+                    Caption ="Denominazione(struttura/privato)"
+                    GUID = Begin
+                        0xa3e8a57b1d945346b4b8e2d83a186165
+                    End
+                    GroupTable =1
+                    LayoutCachedLeft =8880
+                    LayoutCachedTop =36
+                    LayoutCachedWidth =9816
+                    LayoutCachedHeight =324
+                    ColumnStart =11
+                    ColumnEnd =11
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin Label
+                    BackStyle =1
+                    OverlapFlags =81
+                    TextAlign =1
+                    Left =9876
+                    Top =36
+                    Width =816
+                    Height =288
+                    BackColor =-2147483612
+                    Name ="Etichetta41"
+                    Caption ="Indirizzo"
+                    GUID = Begin
+                        0xb5166f81e7b2c2499ea8f507926c4b36
+                    End
+                    GroupTable =1
+                    LayoutCachedLeft =9876
+                    LayoutCachedTop =36
+                    LayoutCachedWidth =10692
+                    LayoutCachedHeight =324
+                    ColumnStart =12
+                    ColumnEnd =12
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin Label
+                    BackStyle =1
+                    OverlapFlags =81
+                    TextAlign =1
+                    Left =10752
+                    Top =36
+                    Width =720
+                    Height =288
+                    BackColor =-2147483612
+                    Name ="Etichetta42"
+                    Caption ="Ente gestore struttura di accoglienza"
+                    GUID = Begin
+                        0x176e75fa9486fe45a44d3142cdf0b141
+                    End
+                    GroupTable =1
+                    LayoutCachedLeft =10752
+                    LayoutCachedTop =36
+                    LayoutCachedWidth =11472
+                    LayoutCachedHeight =324
+                    ColumnStart =13
+                    ColumnEnd =13
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin Label
+                    BackStyle =1
+                    OverlapFlags =81
+                    TextAlign =1
+                    Left =11532
+                    Top =36
+                    Width =1032
+                    Height =288
+                    BackColor =-2147483612
+                    Name ="Etichetta43"
+                    Caption ="Periodo di accoglienza DAL"
+                    GUID = Begin
+                        0xf1858869b0f9aa4b90391b93cfa9c606
+                    End
+                    GroupTable =1
+                    LayoutCachedLeft =11532
+                    LayoutCachedTop =36
+                    LayoutCachedWidth =12564
+                    LayoutCachedHeight =324
+                    ColumnStart =14
+                    ColumnEnd =14
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin Label
+                    BackStyle =1
+                    OverlapFlags =81
+                    TextAlign =1
+                    Left =12624
+                    Top =36
+                    Width =1056
+                    Height =288
+                    BackColor =-2147483612
+                    Name ="Etichetta44"
+                    Caption ="Periodo di accoglienza AL"
+                    GUID = Begin
+                        0x00a922c24671854897febb013c627539
+                    End
+                    GroupTable =1
+                    LayoutCachedLeft =12624
+                    LayoutCachedTop =36
+                    LayoutCachedWidth =13680
+                    LayoutCachedHeight =324
+                    ColumnStart =15
+                    ColumnEnd =15
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin Label
+                    BackStyle =1
+                    OverlapFlags =81
+                    TextAlign =3
+                    Left =15552
+                    Top =36
+                    Width =480
+                    Height =288
+                    BackColor =-2147483612
+                    Name ="Etichetta49"
+                    Caption ="Retta"
+                    GUID = Begin
+                        0x786ebedc50f41849afbe3d56e5e57604
+                    End
+                    GroupTable =1
+                    LayoutCachedLeft =15552
+                    LayoutCachedTop =36
+                    LayoutCachedWidth =16032
+                    LayoutCachedHeight =324
+                    ColumnStart =19
+                    ColumnEnd =19
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin Label
+                    BackStyle =1
+                    OverlapFlags =81
+                    TextFontCharSet =0
+                    TextAlign =1
+                    Left =6372
+                    Top =36
+                    Width =1488
+                    Height =288
+                    BackColor =-2147483612
+                    Name ="Etichetta56"
+                    Caption ="Tipo"
+                    GUID = Begin
+                        0x15491db806a76840a1bc29709bbd2649
+                    End
+                    GroupTable =1
+                    LayoutCachedLeft =6372
+                    LayoutCachedTop =36
+                    LayoutCachedWidth =7860
+                    LayoutCachedHeight =324
+                    ColumnStart =9
+                    ColumnEnd =9
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+            End
+        End
+        Begin Section
+            KeepTogether = NotDefault
+            Height =369
+            Name ="Corpo"
+            GUID = Begin
+                0x32f57f0a195f7e43b2c1dbb98e7ace7a
+            End
+            AutoHeight =1
+            AlternateBackColor =-2147483613
+            Begin
+                Begin TextBox
+                    OverlapFlags =81
+                    IMESentenceMode =3
+                    Left =348
+                    Top =60
+                    Width =480
+                    Height =285
+                    Name ="Sede"
+                    ControlSource ="Sede"
+                    GUID = Begin
+                        0xd7ac64b28400244998870903001e4b82
+                    End
+                    GroupTable =1
+
+                    LayoutCachedLeft =348
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =828
+                    LayoutCachedHeight =345
+                    RowStart =1
+                    RowEnd =1
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin TextBox
+                    OverlapFlags =81
+                    IMESentenceMode =3
+                    Left =3948
+                    Top =60
+                    Width =576
+                    Height =285
+                    TabIndex =6
+                    Name ="Cittadinanza"
+                    ControlSource ="Cittadinanza"
+                    GUID = Begin
+                        0xc54565c432b2ea449c801d54e5106645
+                    End
+                    GroupTable =1
+
+                    LayoutCachedLeft =3948
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =4524
+                    LayoutCachedHeight =345
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =6
+                    ColumnEnd =6
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin TextBox
+                    OverlapFlags =81
+                    IMESentenceMode =3
+                    Left =13740
+                    Top =60
+                    Width =540
+                    Height =285
+                    TabIndex =16
+                    Name ="Ora1"
+                    ControlSource ="Ora1"
+                    Format ="Short Time"
+                    GUID = Begin
+                        0x456a250e09b5424dafbaabf241643cdb
+                    End
+                    GroupTable =1
+
+                    LayoutCachedLeft =13740
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =14280
+                    LayoutCachedHeight =345
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =16
+                    ColumnEnd =16
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin TextBox
+                    OverlapFlags =81
+                    IMESentenceMode =3
+                    Left =14340
+                    Top =60
+                    Width =552
+                    Height =285
+                    TabIndex =17
+                    Name ="Ora"
+                    ControlSource ="Ora"
+                    Format ="Short Time"
+                    GUID = Begin
+                        0x2277e52aa31b0141aca83e0a04d8ceb2
+                    End
+                    GroupTable =1
+                    ShowDatePicker =1
+
+                    LayoutCachedLeft =14340
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =14892
+                    LayoutCachedHeight =345
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =17
+                    ColumnEnd =17
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin TextBox
+                    OverlapFlags =81
+                    IMESentenceMode =3
+                    Left =14952
+                    Top =60
+                    Width =540
+                    Height =285
+                    TabIndex =18
+                    Name ="Diff"
+                    ControlSource ="Diff"
+                    GUID = Begin
+                        0xc550158087a616449439c0aa796ba9dc
+                    End
+                    GroupTable =1
+
+                    LayoutCachedLeft =14952
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =15492
+                    LayoutCachedHeight =345
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =18
+                    ColumnEnd =18
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin TextBox
+                    OverlapFlags =81
+                    IMESentenceMode =3
+                    Left =888
+                    Top =60
+                    Width =636
+                    Height =285
+                    TabIndex =1
+                    Name ="N"
+                    ControlSource ="N"
+                    GUID = Begin
+                        0xfd79c8d8061cc74b84936f328f64562e
+                    End
+                    GroupTable =1
+
+                    LayoutCachedLeft =888
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =1524
+                    LayoutCachedHeight =345
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =1
+                    ColumnEnd =1
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin TextBox
+                    OverlapFlags =81
+                    IMESentenceMode =3
+                    Left =1584
+                    Top =60
+                    Width =228
+                    Height =285
+                    TabIndex =2
+                    Name ="Num progressivo del minore"
+                    ControlSource ="Num progressivo del minore"
+                    EventProcPrefix ="Num_progressivo_del_minore"
+                    GUID = Begin
+                        0xb4a2b8613d3e8a47b0aca6ffb539a8e2
+                    End
+                    GroupTable =1
+
+                    LayoutCachedLeft =1584
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =1812
+                    LayoutCachedHeight =345
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =2
+                    ColumnEnd =2
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin TextBox
+                    OverlapFlags =81
+                    IMESentenceMode =3
+                    Left =1872
+                    Top =60
+                    Width =732
+                    Height =285
+                    TabIndex =3
+                    Name ="ID minore"
+                    ControlSource ="IdMinoriMIS"
+                    EventProcPrefix ="ID_minore"
+                    GUID = Begin
+                        0x3117b39e2a9adc47b9d8ad0d72c5ecc2
+                    End
+                    GroupTable =1
+
+                    LayoutCachedLeft =1872
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =2604
+                    LayoutCachedHeight =345
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =3
+                    ColumnEnd =3
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin TextBox
+                    OverlapFlags =81
+                    IMESentenceMode =3
+                    Left =2664
+                    Top =60
+                    Width =636
+                    Height =285
+                    TabIndex =4
+                    Name ="Nome MSNA"
+                    ControlSource ="Nome MSNA"
+                    EventProcPrefix ="Nome_MSNA"
+                    GUID = Begin
+                        0xfd2ad0ad31f536439c5cf636b403dd34
+                    End
+                    GroupTable =1
+
+                    LayoutCachedLeft =2664
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =3300
+                    LayoutCachedHeight =345
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =4
+                    ColumnEnd =4
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin TextBox
+                    OverlapFlags =81
+                    IMESentenceMode =3
+                    Left =3360
+                    Top =60
+                    Width =528
+                    Height =285
+                    TabIndex =5
+                    Name ="Cognome MSNA"
+                    ControlSource ="Cognome MSNA"
+                    EventProcPrefix ="Cognome_MSNA"
+                    GUID = Begin
+                        0x658d654b3a75bc4cb5960dc58ab3ddad
+                    End
+                    GroupTable =1
+
+                    LayoutCachedLeft =3360
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =3888
+                    LayoutCachedHeight =345
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =5
+                    ColumnEnd =5
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin TextBox
+                    OverlapFlags =81
+                    IMESentenceMode =3
+                    Left =4584
+                    Top =60
+                    Width =1116
+                    Height =285
+                    TabIndex =7
+                    Name ="Data di nascita"
+                    ControlSource ="Data di nascita"
+                    EventProcPrefix ="Data_di_nascita"
+                    GUID = Begin
+                        0xeb5cd7dbebcb5c41ac3320dd84bbbf50
+                    End
+                    GroupTable =1
+                    ShowDatePicker =1
+
+                    LayoutCachedLeft =4584
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =5700
+                    LayoutCachedHeight =345
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =7
+                    ColumnEnd =7
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin TextBox
+                    OverlapFlags =81
+                    IMESentenceMode =3
+                    Left =5760
+                    Top =60
+                    Width =552
+                    Height =285
+                    TabIndex =8
+                    Name ="Genere"
+                    ControlSource ="Genere"
+                    GUID = Begin
+                        0x313964475ca14e4ba3076532671a0471
+                    End
+                    GroupTable =1
+
+                    LayoutCachedLeft =5760
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =6312
+                    LayoutCachedHeight =345
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =8
+                    ColumnEnd =8
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin TextBox
+                    OverlapFlags =81
+                    IMESentenceMode =3
+                    Left =7920
+                    Top =60
+                    Width =900
+                    Height =285
+                    TabIndex =10
+                    Name ="Tipologia di accoglienza (struttura/privato)"
+                    ControlSource ="Tipologia di accoglienza (struttura/privato)"
+                    EventProcPrefix ="Tipologia_di_accoglienza__struttura_privato_"
+                    GUID = Begin
+                        0x7dd3d94c0a408949ae32de97dde917ad
+                    End
+                    GroupTable =1
+
+                    LayoutCachedLeft =7920
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =8820
+                    LayoutCachedHeight =345
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =10
+                    ColumnEnd =10
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin TextBox
+                    OverlapFlags =81
+                    IMESentenceMode =3
+                    Left =8880
+                    Top =60
+                    Width =936
+                    Height =285
+                    TabIndex =11
+                    Name ="Denominazione(struttura/privato)"
+                    ControlSource ="Denominazione"
+                    EventProcPrefix ="Denominazione_struttura_privato_"
+                    GUID = Begin
+                        0x6332fe78db6b7a4d99eda3533b6adcc2
+                    End
+                    GroupTable =1
+
+                    LayoutCachedLeft =8880
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =9816
+                    LayoutCachedHeight =345
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =11
+                    ColumnEnd =11
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin TextBox
+                    OverlapFlags =81
+                    IMESentenceMode =3
+                    Left =9876
+                    Top =60
+                    Width =816
+                    Height =285
+                    TabIndex =12
+                    Name ="Indirizzo"
+                    ControlSource ="Indirizzo"
+                    GUID = Begin
+                        0x47e21e9a76c374449fc6e096123947aa
+                    End
+                    GroupTable =1
+
+                    LayoutCachedLeft =9876
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =10692
+                    LayoutCachedHeight =345
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =12
+                    ColumnEnd =12
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin TextBox
+                    OverlapFlags =81
+                    IMESentenceMode =3
+                    Left =10752
+                    Top =60
+                    Width =720
+                    Height =285
+                    TabIndex =13
+                    Name ="Ente gestore struttura di accoglienza"
+                    ControlSource ="Ente gestore struttura di accoglienza"
+                    EventProcPrefix ="Ente_gestore_struttura_di_accoglienza"
+                    GUID = Begin
+                        0x6b14d3a30e90b847aed0afb5b0726585
+                    End
+                    GroupTable =1
+
+                    LayoutCachedLeft =10752
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =11472
+                    LayoutCachedHeight =345
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =13
+                    ColumnEnd =13
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin TextBox
+                    OverlapFlags =81
+                    IMESentenceMode =3
+                    Left =11532
+                    Top =60
+                    Width =1032
+                    Height =285
+                    TabIndex =14
+                    Name ="Periodo di accoglienza DAL"
+                    ControlSource ="Periodo di accoglienza DAL"
+                    EventProcPrefix ="Periodo_di_accoglienza_DAL"
+                    GUID = Begin
+                        0xc358a02974c4e6478959bfb416faa6c9
+                    End
+                    GroupTable =1
+                    ShowDatePicker =1
+
+                    LayoutCachedLeft =11532
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =12564
+                    LayoutCachedHeight =345
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =14
+                    ColumnEnd =14
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin TextBox
+                    OverlapFlags =81
+                    IMESentenceMode =3
+                    Left =12624
+                    Top =60
+                    Width =1056
+                    Height =285
+                    TabIndex =15
+                    Name ="Periodo di accoglienza AL"
+                    ControlSource ="Periodo di accoglienza AL"
+                    EventProcPrefix ="Periodo_di_accoglienza_AL"
+                    GUID = Begin
+                        0xd239eec818c54b40a72a96c0abe523e4
+                    End
+                    GroupTable =1
+                    ShowDatePicker =1
+
+                    LayoutCachedLeft =12624
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =13680
+                    LayoutCachedHeight =345
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =15
+                    ColumnEnd =15
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin TextBox
+                    OverlapFlags =81
+                    IMESentenceMode =3
+                    Left =15552
+                    Top =60
+                    Width =480
+                    Height =285
+                    TabIndex =19
+                    Name ="Retta"
+                    ControlSource ="Retta"
+                    GUID = Begin
+                        0xf45ee4c54a28fc48be8552d03866a7ab
+                    End
+                    GroupTable =1
+
+                    LayoutCachedLeft =15552
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =16032
+                    LayoutCachedHeight =345
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =19
+                    ColumnEnd =19
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+                Begin TextBox
+                    OverlapFlags =81
+                    TextFontCharSet =0
+                    IMESentenceMode =3
+                    Left =6372
+                    Top =60
+                    Width =1488
+                    Height =285
+                    ColumnWidth =2160
+                    TabIndex =9
+                    Name ="Tipo"
+                    ControlSource ="Tipo"
+                    StatusBarText ="Tipologia accettazione"
+                    GUID = Begin
+                        0x172c9f53b54c804081914b4af4daca32
+                    End
+                    GroupTable =1
+
+                    LayoutCachedLeft =6372
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =7860
+                    LayoutCachedHeight =345
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =9
+                    ColumnEnd =9
+                    LayoutGroup =1
+                    GroupTable =1
+                End
+            End
+        End
+        Begin PageFooter
+            Height =498
+            Name ="SezionePièDiPaginaPagina"
+            GUID = Begin
+                0x53e3fc1d26b68c41877e0aa765ee906b
+            End
+            AutoHeight =1
+            Begin
+                Begin TextBox
+                    OverlapFlags =81
+                    TextAlign =1
+                    IMESentenceMode =3
+                    Left =57
+                    Top =228
+                    Width =5040
+                    Height =270
+                    FontSize =9
+                    Name ="Testo29"
+                    ControlSource ="=Now()"
+                    Format ="Long Date"
+                    GUID = Begin
+                        0x02cff11c13c2344b83fbf1f9aaf4b2d7
+                    End
+                    GridlineColor =0
+
+                    LayoutCachedLeft =57
+                    LayoutCachedTop =228
+                    LayoutCachedWidth =5097
+                    LayoutCachedHeight =498
+                End
+                Begin TextBox
+                    OverlapFlags =81
+                    TextAlign =3
+                    IMESentenceMode =3
+                    Left =9127
+                    Top =170
+                    Width =5040
+                    Height =270
+                    FontSize =9
+                    TabIndex =1
+                    Name ="Testo30"
+                    ControlSource ="=\"Pagina \" & [Page] & \" di \" & [Pages]"
+                    GUID = Begin
+                        0xf1832d514963ca4086546c0652565444
+                    End
+                    GridlineColor =0
+
+                    LayoutCachedLeft =9127
+                    LayoutCachedTop =170
+                    LayoutCachedWidth =14167
+                    LayoutCachedHeight =440
+                End
+            End
+        End
+        Begin FormFooter
+            KeepTogether = NotDefault
+            Height =0
+            Name ="PièDiPaginaReport"
+            GUID = Begin
+                0xa35886deb4e2c3458be6ed9249f2c0d7
+            End
+            AutoHeight =1
+        End
+    End
+End

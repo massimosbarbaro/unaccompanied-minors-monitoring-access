@@ -1,0 +1,369 @@
+Version =21
+VersionRequired =20
+PublishOption =1
+Checksum =271712347
+Begin Form
+    DividingLines = NotDefault
+    AllowDesignChanges = NotDefault
+    TabularFamily =0
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridY =10
+    Width =10035
+    DatasheetFontHeight =11
+    ItemSuffix =25
+    Right =20460
+    Bottom =8556
+    DatasheetGridlinesColor =15263976
+    RecSrcDt = Begin
+        0x3b4d3e5e5670e540
+    End
+    GUID = Begin
+        0x9a80dc066abb2c4d932388ac9dfaa7f4
+    End
+    RecordSource ="SELECT tblUser.UserID, tblUser.UserName, tblUser.UserLogin, tblUser.Password, tb"
+        "lUser.UserSecurity FROM tblUser; "
+    DatasheetFontName ="Aptos"
+    FilterOnLoad =0
+    ShowPageMargins =0
+    DisplayOnSharePointSite =1
+    DatasheetAlternateBackColor =15921906
+    DatasheetGridlinesColor12 =0
+    FitToScreen =1
+    DatasheetBackThemeColorIndex =1
+    BorderThemeColorIndex =3
+    ThemeFontIndex =1
+    ForeThemeColorIndex =0
+    AlternateBackThemeColorIndex =1
+    AlternateBackShade =95.0
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            TextFontFamily =0
+            FontSize =11
+            BorderColor =8355711
+            ForeColor =8355711
+            FontName ="Aptos"
+            GridlineColor =10921638
+            ThemeFontIndex =1
+            BackThemeColorIndex =1
+            BorderThemeColorIndex =0
+            BorderTint =50.0
+            ForeThemeColorIndex =0
+            ForeTint =50.0
+            GridlineThemeColorIndex =1
+            GridlineShade =65.0
+        End
+        Begin TextBox
+            AddColon = NotDefault
+            FELineBreak = NotDefault
+            TextFontFamily =0
+            BorderLineStyle =0
+            Width =1701
+            LabelX =-1701
+            FontSize =11
+            BorderColor =10921638
+            ForeColor =4210752
+            FontName ="Aptos"
+            AsianLineBreak =1
+            GridlineColor =10921638
+            BackThemeColorIndex =1
+            BorderThemeColorIndex =1
+            BorderShade =65.0
+            ThemeFontIndex =1
+            ForeThemeColorIndex =0
+            ForeTint =75.0
+            GridlineThemeColorIndex =1
+            GridlineShade =65.0
+        End
+        Begin ListBox
+            TextFontFamily =0
+            BorderLineStyle =0
+            Width =1701
+            Height =1417
+            LabelX =-1701
+            FontSize =11
+            ForeColor =4210752
+            BorderColor =10921638
+            FontName ="Aptos"
+            GridlineColor =10921638
+            AllowValueListEdits =1
+            InheritValueList =1
+            ThemeFontIndex =1
+            BackThemeColorIndex =1
+            BorderThemeColorIndex =1
+            BorderShade =65.0
+            ForeThemeColorIndex =0
+            ForeTint =75.0
+            GridlineThemeColorIndex =1
+            GridlineShade =65.0
+        End
+        Begin ComboBox
+            AddColon = NotDefault
+            TextFontFamily =0
+            BorderLineStyle =0
+            Width =1701
+            LabelX =-1701
+            FontSize =11
+            BorderColor =10921638
+            ForeColor =2102279
+            FontName ="Aptos"
+            GridlineColor =10921638
+            AllowValueListEdits =1
+            InheritValueList =1
+            ThemeFontIndex =1
+            BackThemeColorIndex =1
+            BorderThemeColorIndex =1
+            BorderShade =65.0
+            ForeThemeColorIndex =2
+            ForeShade =50.0
+            GridlineThemeColorIndex =1
+            GridlineShade =65.0
+        End
+        Begin EmptyCell
+            Height =240
+            GridlineColor =10921638
+            GridlineThemeColorIndex =1
+            GridlineShade =65.0
+        End
+        Begin FormHeader
+            Height =1150
+            BackColor =15783096
+            Name ="IntestazioneMaschera"
+            GUID = Begin
+                0x7b7fc877d55aeb478ee1788291f34a56
+            End
+            AutoHeight =1
+            AlternateBackThemeColorIndex =1
+            AlternateBackShade =95.0
+            BackThemeColorIndex =2
+            BackTint =20.0
+            Begin
+                Begin Label
+                    OverlapFlags =85
+                    Left =566
+                    Top =850
+                    Width =792
+                    Height =300
+                    Name ="Etichetta0"
+                    Caption ="UserID"
+                    GUID = Begin
+                        0x6d43015b0786ae44a4fdc2bb6d0c5ff6
+                    End
+                    LayoutCachedLeft =566
+                    LayoutCachedTop =850
+                    LayoutCachedWidth =1358
+                    LayoutCachedHeight =1150
+                End
+                Begin Label
+                    OverlapFlags =85
+                    Left =1466
+                    Top =850
+                    Width =2265
+                    Height =300
+                    Name ="Etichetta1"
+                    Caption ="UserName"
+                    GUID = Begin
+                        0x4512541cd991364bafd212d5b838edcb
+                    End
+                    LayoutCachedLeft =1466
+                    LayoutCachedTop =850
+                    LayoutCachedWidth =3731
+                    LayoutCachedHeight =1150
+                    ColumnStart =1
+                    ColumnEnd =1
+                End
+                Begin Label
+                    OverlapFlags =85
+                    Left =3794
+                    Top =850
+                    Width =2001
+                    Height =300
+                    Name ="Etichetta2"
+                    Caption ="UserLogin"
+                    GUID = Begin
+                        0x8980bf98a9622c4baeaf104c9dfee2ae
+                    End
+                    LayoutCachedLeft =3794
+                    LayoutCachedTop =850
+                    LayoutCachedWidth =5795
+                    LayoutCachedHeight =1150
+                    ColumnStart =2
+                    ColumnEnd =2
+                End
+                Begin Label
+                    OverlapFlags =85
+                    Left =5858
+                    Top =850
+                    Width =1701
+                    Height =300
+                    Name ="Etichetta3"
+                    Caption ="Password"
+                    GUID = Begin
+                        0xfc6978eefc21954788cd0a8b5b6364a7
+                    End
+                    LayoutCachedLeft =5858
+                    LayoutCachedTop =850
+                    LayoutCachedWidth =7559
+                    LayoutCachedHeight =1150
+                    ColumnStart =3
+                    ColumnEnd =3
+                End
+                Begin Label
+                    OverlapFlags =85
+                    Left =7622
+                    Top =850
+                    Width =1701
+                    Height =300
+                    Name ="Etichetta4"
+                    Caption ="UserSecurity:"
+                    GUID = Begin
+                        0x64556ba1d05b6e43bbc5af643a698d86
+                    End
+                    LayoutCachedLeft =7622
+                    LayoutCachedTop =850
+                    LayoutCachedWidth =9323
+                    LayoutCachedHeight =1150
+                    ColumnStart =4
+                    ColumnEnd =4
+                End
+            End
+        End
+        Begin Section
+            Height =340
+            Name ="Corpo"
+            GUID = Begin
+                0xfddbd97fedda7d4f831c0c088ed9bd90
+            End
+            AlternateBackColor =15921906
+            AlternateBackThemeColorIndex =1
+            AlternateBackShade =95.0
+            BackThemeColorIndex =1
+            Begin
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =566
+                    Width =792
+                    Height =300
+                    Name ="UserID"
+                    ControlSource ="UserID"
+                    GUID = Begin
+                        0x0be30ee1f8cb4641992b6640fe1162ff
+                    End
+
+                    LayoutCachedLeft =566
+                    LayoutCachedWidth =1358
+                    LayoutCachedHeight =300
+                    RowStart =1
+                    RowEnd =1
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =1466
+                    Width =2265
+                    Height =300
+                    TabIndex =1
+                    Name ="UserName"
+                    ControlSource ="UserName"
+                    GUID = Begin
+                        0xd63649a7d1b6d9418807f468cf263437
+                    End
+
+                    LayoutCachedLeft =1466
+                    LayoutCachedWidth =3731
+                    LayoutCachedHeight =300
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =1
+                    ColumnEnd =1
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =3794
+                    Width =2001
+                    Height =300
+                    TabIndex =2
+                    Name ="UserLogin"
+                    ControlSource ="UserLogin"
+                    GUID = Begin
+                        0xec22d8ebc2bed948882fa4c4ec50e45e
+                    End
+
+                    LayoutCachedLeft =3794
+                    LayoutCachedWidth =5795
+                    LayoutCachedHeight =300
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =2
+                    ColumnEnd =2
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =5858
+                    Height =300
+                    TabIndex =4
+                    Name ="Password"
+                    ControlSource ="Password"
+                    InputMask ="Password"
+                    GUID = Begin
+                        0x03432073bfc3084aa8dcc1a26c0f47cd
+                    End
+
+                    LayoutCachedLeft =5858
+                    LayoutCachedWidth =7559
+                    LayoutCachedHeight =300
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =3
+                    ColumnEnd =3
+                End
+                Begin ComboBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    ColumnCount =2
+                    Left =7622
+                    Height =300
+                    TabIndex =3
+                    ForeColor =4210752
+                    ColumnInfo ="\"\";\"\";\"\";\"\";\"10\";\"510\""
+                    GUID = Begin
+                        0x9b94685584512a46b26790310a191915
+                    End
+                    Name ="UserSecurity"
+                    ControlSource ="UserSecurity"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT tblSecurityLevel.SecurityID, tblSecurityLevel.SecurityLevel FROM tblSecur"
+                        "ityLevel; "
+                    ColumnWidths ="0;2835"
+                    AllowValueListEdits =0
+
+                    LayoutCachedLeft =7622
+                    LayoutCachedWidth =9323
+                    LayoutCachedHeight =300
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =4
+                    ColumnEnd =4
+                    ForeThemeColorIndex =0
+                    ForeTint =75.0
+                    ForeShade =100.0
+                End
+            End
+        End
+        Begin FormFooter
+            Height =0
+            Name ="PièDiPaginaMaschera"
+            GUID = Begin
+                0xa5e4570822df6a4ba7d1d4950c8bcc88
+            End
+            AlternateBackThemeColorIndex =1
+            AlternateBackShade =95.0
+            BackThemeColorIndex =1
+        End
+    End
+End

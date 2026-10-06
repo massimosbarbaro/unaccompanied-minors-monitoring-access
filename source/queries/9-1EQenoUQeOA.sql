@@ -1,0 +1,5 @@
+SELECT LPTC.IdP, [1EQ].IdP, [2UQ].IdP, [1EQ].IdT, [2UQ].IdT, [8OrdinariaAcc].IdT
+FROM ((([Go] INNER JOIN LPTC ON (Go.IdP = LPTC.IdP) AND (Go.IdP = LPTC.IdP)) LEFT JOIN 2UQ ON LPTC.IdP = [2UQ].IdP) INNER JOIN 1EQ ON LPTC.IdP = [1EQ].IdP) INNER JOIN 8OrdinariaAcc ON LPTC.IdP = [8OrdinariaAcc].IdP
+GROUP BY LPTC.IdP, [1EQ].IdP, [2UQ].IdP, [1EQ].IdT, [2UQ].IdT, [8OrdinariaAcc].IdT
+HAVING ((([2UQ].IdP) Is Null))
+ORDER BY LPTC.IdP;

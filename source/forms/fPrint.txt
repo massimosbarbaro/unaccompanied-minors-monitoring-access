@@ -1,0 +1,600 @@
+Version =21
+VersionRequired =20
+PublishOption =1
+Checksum =1538959908
+Begin Form
+    RecordSelectors = NotDefault
+    AutoCenter = NotDefault
+    NavigationButtons = NotDefault
+    AllowDesignChanges = NotDefault
+    DefaultView =0
+    ScrollBars =0
+    TabularFamily =126
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridY =10
+    Width =4932
+    DatasheetFontHeight =10
+    ItemSuffix =45
+    Left =9840
+    Top =2010
+    Right =15540
+    Bottom =8775
+    DatasheetGridlinesColor =12632256
+    RecSrcDt = Begin
+        0xd69ea7f65473e440
+    End
+    GUID = Begin
+        0xcddcb5535e0d5143b82021a8013482d6
+    End
+    DatasheetFontName ="Arial"
+    PrtMip = Begin
+        0xa0050000a0050000a0050000a005000000000000201c0000e010000001000000 ,
+        0x010000006801000000000000a10700000100000001000000
+    End
+    FilterOnLoad =0
+    ShowPageMargins =0
+    DatasheetGridlinesColor12 =12632256
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            FontName ="Tahoma"
+        End
+        Begin CommandButton
+            Width =1701
+            Height =283
+            FontSize =8
+            FontWeight =400
+            ForeColor =-2147483630
+            FontName ="Tahoma"
+            BorderLineStyle =0
+        End
+        Begin FormHeader
+            Height =1134
+            BackColor =6723891
+            Name ="IntestazioneMaschera"
+            GUID = Begin
+                0xb22cf4c8aec8c5449d3fcc9fdcea2089
+            End
+            Begin
+                Begin Label
+                    OverlapFlags =85
+                    TextFontFamily =18
+                    Left =1875
+                    Top =225
+                    Width =1650
+                    Height =660
+                    FontSize =26
+                    Name ="Etichetta2"
+                    Caption ="Stampe"
+                    FontName ="Times New Roman"
+                    GUID = Begin
+                        0x58e9bb71442098418b59cee7eb3e4dc0
+                    End
+                    LayoutCachedLeft =1875
+                    LayoutCachedTop =225
+                    LayoutCachedWidth =3525
+                    LayoutCachedHeight =885
+                End
+            End
+        End
+        Begin Section
+            Height =3911
+            BackColor =12632256
+            Name ="Corpo"
+            GUID = Begin
+                0xc60e213b50044849a35e7f4564aed0f7
+            End
+            Begin
+                Begin CommandButton
+                    Visible = NotDefault
+                    OverlapFlags =85
+                    Left =170
+                    Top =1757
+                    Width =2085
+                    Height =510
+                    Name ="cmdOre"
+                    Caption ="Ore Movimenti"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0x8c8a6c30d6bd2a4aa0acf88bbc5ab796
+                    End
+
+                    LayoutCachedLeft =170
+                    LayoutCachedTop =1757
+                    LayoutCachedWidth =2255
+                    LayoutCachedHeight =2267
+                    WebImagePaddingLeft =3
+                    WebImagePaddingTop =3
+                    WebImagePaddingRight =2
+                    WebImagePaddingBottom =2
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =2664
+                    Top =170
+                    Width =2085
+                    Height =510
+                    TabIndex =1
+                    Name ="cmdNazionalita"
+                    Caption ="MSNA Nazionalità"
+                    GUID = Begin
+                        0x88bd29271733664d95007a34a1c64b08
+                    End
+                    OnClickEmMacro = Begin
+                        Version =196611
+                        ColumnsShown =8
+                        Begin
+                            Action ="OpenReport"
+                            Argument ="rMSNANazionalita"
+                            Argument ="2"
+                            Argument =""
+                            Argument =""
+                            Argument ="0"
+                        End
+                    End
+
+                    LayoutCachedLeft =2664
+                    LayoutCachedTop =170
+                    LayoutCachedWidth =4749
+                    LayoutCachedHeight =680
+                    WebImagePaddingLeft =3
+                    WebImagePaddingTop =3
+                    WebImagePaddingRight =2
+                    WebImagePaddingBottom =2
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =2664
+                    Top =960
+                    Width =2085
+                    Height =510
+                    TabIndex =2
+                    Name ="cmdNazionalitaGroup"
+                    Caption ="MSNA Nazionalità Generale"
+                    GUID = Begin
+                        0x38654dc224d3ae46be9dc11f8e6c2589
+                    End
+                    OnClickEmMacro = Begin
+                        Version =196611
+                        ColumnsShown =8
+                        Begin
+                            Action ="OpenReport"
+                            Argument ="rMSNANazionalitaGroup"
+                            Argument ="2"
+                            Argument =""
+                            Argument =""
+                            Argument ="0"
+                        End
+                    End
+
+                    LayoutCachedLeft =2664
+                    LayoutCachedTop =960
+                    LayoutCachedWidth =4749
+                    LayoutCachedHeight =1470
+                    WebImagePaddingLeft =3
+                    WebImagePaddingTop =3
+                    WebImagePaddingRight =2
+                    WebImagePaddingBottom =2
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =165
+                    Top =165
+                    Width =2085
+                    Height =510
+                    TabIndex =3
+                    Name ="cmdOreAccoglienza"
+                    Caption ="Ore prima accoglienza"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0xd8a4005e21195a4587376331e755e68c
+                    End
+                    ImageData = Begin
+                        0x00000000
+                    End
+
+                    LayoutCachedLeft =165
+                    LayoutCachedTop =165
+                    LayoutCachedWidth =2250
+                    LayoutCachedHeight =675
+                    WebImagePaddingLeft =3
+                    WebImagePaddingTop =3
+                    WebImagePaddingRight =2
+                    WebImagePaddingBottom =2
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =2664
+                    Top =1750
+                    Width =2085
+                    Height =510
+                    TabIndex =4
+                    Name ="cmdSingolo"
+                    Caption ="SingoloExcel"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0x8d088bd762c2764d89549c44a622dd38
+                    End
+
+                    LayoutCachedLeft =2664
+                    LayoutCachedTop =1750
+                    LayoutCachedWidth =4749
+                    LayoutCachedHeight =2260
+                    WebImagePaddingLeft =3
+                    WebImagePaddingTop =3
+                    WebImagePaddingRight =2
+                    WebImagePaddingBottom =2
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =170
+                    Top =737
+                    Width =2085
+                    Height =510
+                    TabIndex =5
+                    Name ="cmdSIM"
+                    Caption ="Ore accoglienza SIM"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0x74e7c12ea5c05748afa05616b3524e08
+                    End
+                    ImageData = Begin
+                        0x00000000
+                    End
+
+                    LayoutCachedLeft =170
+                    LayoutCachedTop =737
+                    LayoutCachedWidth =2255
+                    LayoutCachedHeight =1247
+                    WebImagePaddingLeft =3
+                    WebImagePaddingTop =3
+                    WebImagePaddingRight =2
+                    WebImagePaddingBottom =2
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =2664
+                    Top =2381
+                    Width =2085
+                    Height =510
+                    TabIndex =6
+                    Name ="cmdQuarantena"
+                    Caption ="Qurantena totale"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0xcbba4b1d115064489136dc894cc5bf59
+                    End
+
+                    LayoutCachedLeft =2664
+                    LayoutCachedTop =2381
+                    LayoutCachedWidth =4749
+                    LayoutCachedHeight =2891
+                    WebImagePaddingLeft =3
+                    WebImagePaddingTop =3
+                    WebImagePaddingRight =2
+                    WebImagePaddingBottom =2
+                End
+                Begin CommandButton
+                    Visible = NotDefault
+                    OverlapFlags =85
+                    Left =2664
+                    Top =3011
+                    Width =2085
+                    Height =510
+                    TabIndex =7
+                    Name ="cmdNoQurantena"
+                    Caption ="Qurantena non finita"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0xa938b4572d0a0447b700bee3480b52af
+                    End
+
+                    LayoutCachedLeft =2664
+                    LayoutCachedTop =3011
+                    LayoutCachedWidth =4749
+                    LayoutCachedHeight =3521
+                    WebImagePaddingLeft =3
+                    WebImagePaddingTop =3
+                    WebImagePaddingRight =2
+                    WebImagePaddingBottom =2
+                End
+                Begin CommandButton
+                    Visible = NotDefault
+                    OverlapFlags =85
+                    Left =170
+                    Top =2387
+                    Width =2085
+                    Height =510
+                    TabIndex =8
+                    Name ="cmdOrdinariaGen"
+                    Caption ="Ordinaria Generale"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0x27b90f5fbf521f49b88a55990a4a33b6
+                    End
+
+                    LayoutCachedLeft =170
+                    LayoutCachedTop =2387
+                    LayoutCachedWidth =2255
+                    LayoutCachedHeight =2897
+                    WebImagePaddingLeft =3
+                    WebImagePaddingTop =3
+                    WebImagePaddingRight =2
+                    WebImagePaddingBottom =2
+                End
+            End
+        End
+        Begin FormFooter
+            Height =963
+            BackColor =6723891
+            Name ="PièDiPaginaMaschera"
+            GUID = Begin
+                0xe732c08b8812cc4697ee6b01319ef492
+            End
+            Begin
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =4138
+                    Top =283
+                    Width =576
+                    Height =576
+                    Name ="cmdEsci"
+                    Caption ="Comando1"
+                    OnClick ="[Event Procedure]"
+                    PictureData = Begin
+                        0x2800000010000000100000000100040000000000800000000000000000000000 ,
+                        0x0000000000000000000000000000800000800000008080008000000080008000 ,
+                        0x8080000080808000c0c0c0000000ff00c0c0c00000ffff00ff000000c0c0c000 ,
+                        0xffff0000ffffff00dadad0dadadadadaadad00adadadadaddad030dadadadada ,
+                        0xad0330adadadadad0033300000000adaa03330ff0dadadadd03300ff0adad4da ,
+                        0xa03330ff0dad44add03330ff0ad44444a03330ff0d444444d03330ff0ad44444 ,
+                        0xa0330fff0dad44add030ffff0adad4daa00fffff0dadadadd00000000adadada ,
+                        0xadadadadadadadad000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000
+                    End
+                    ObjectPalette = Begin
+                        0x000301000000000000000000
+                    End
+                    ControlTipText ="Chiudi maschera"
+                    GUID = Begin
+                        0x4b0efca5c211ee4a94cd32b2116c6de0
+                    End
+
+                    LayoutCachedLeft =4138
+                    LayoutCachedTop =283
+                    LayoutCachedWidth =4714
+                    LayoutCachedHeight =859
+                    WebImagePaddingLeft =3
+                    WebImagePaddingTop =3
+                    WebImagePaddingRight =2
+                    WebImagePaddingBottom =2
+                End
+            End
+        End
+    End
+End
+CodeBehindForm
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Compare Database
+Private Sub cmdEsci_Click()
+On Error GoTo Err_cmdEsci_Click
+
+
+    DoCmd.Close
+
+Exit_cmdEsci_Click:
+    Exit Sub
+
+Err_cmdEsci_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdEsci_Click
+    
+End Sub
+
+Private Sub cmdNoQurantena_Click()
+    Dim stDocName As String
+
+    'Aggiorno il totale delle persone che sono state in quarantena
+    
+    CalcoloQuarantena
+
+
+     stDocName = "rMsnaNoQurantena"
+'     SWhere = ""
+'        sFiltro = Me.Filter
+       ' con la funzione replace sostiuisco i dati per la ricerca nella query
+     
+     
+'     SWhere = Replace(sFiltro, "[qMsnaQuarantena].", "", 1)
+'     sFiltro = ""
+    DoCmd.OpenReport stDocName, acPreview, , SWhere
+
+
+Exit_cmdQuarantena_Click:
+    Exit Sub
+
+Err_cmdQuarantena_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdQuarantena_Click
+
+End Sub
+
+Private Sub cmdOrdinariaGen_Click()
+CalcoloOrdinariaGenerale
+
+End Sub
+
+Private Sub cmdOre_Click()
+On Error GoTo Err_cmdOre_Click
+CalcoloMovimenti
+
+Exit_cmdOre_Click:
+    Exit Sub
+
+Err_cmdOre_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdOre_Click
+
+End Sub
+
+
+Private Sub cmdOreAccoglienza_Click()
+    On Error GoTo Err_cmdOreAccoglienza_Click
+    
+    Dim stDocName As String
+
+    'Calcolo il totale delle ore di accoglienza
+    CalcoloAccoglienza
+    CalcoloTrasferimento
+    CalcoloOrdinariaGenerale
+
+    'Genero un file excel per il conteggio in comune
+    
+    If bErrore = True Then
+        Exit Sub
+    Else
+        stDocName = "rOreAccoglienza"
+        DoCmd.OutputTo acReport, stDocName
+    End If
+    
+
+
+
+
+
+Exit_cmdOreAccoglienza_Click:
+    Exit Sub
+
+Err_cmdOreAccoglienza_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdOreAccoglienza_Click
+    
+    
+End Sub
+
+Private Sub cmdReg_Click()
+On Error GoTo Err_cmdReg_Click
+CalcoloReg
+Exit_cmdReg_Click:
+    Exit Sub
+
+Err_cmdReg_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdReg_Click
+
+
+End Sub
+
+Private Sub cmdQuarantena_Click()
+    
+    Dim stDocName As String
+
+    'Aggiorno il totale delle persone che sono state in quarantena
+    
+    CalcoloQuarantena
+
+
+     stDocName = "rMsnaQuarantenaTot"
+'     SWhere = ""
+'        sFiltro = Me.Filter
+       ' con la funzione replace sostiuisco i dati per la ricerca nella query
+     
+     
+'     SWhere = Replace(sFiltro, "[qMsnaQuarantena].", "", 1)
+'     sFiltro = ""
+    DoCmd.OpenReport stDocName, acPreview, , SWhere
+
+
+Exit_cmdQuarantena_Click:
+    Exit Sub
+
+Err_cmdQuarantena_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdQuarantena_Click
+    
+
+
+End Sub
+
+Private Sub cmdQuarantenaReg_Click()
+TabellaQuarantena
+End Sub
+
+Private Sub cmdSIM_Click()
+   On Error GoTo Err_cmdSIM_Click
+   
+    
+    Dim stDocName As String
+
+    'Calcolo il totale delle ore di accoglienza
+ '   CalcoloAccoglienza
+ '   CalcoloTrasferimento
+ '   CalcoloQuarantena
+ '   CalcoloOrdinariaGenerale
+
+    'Genero un file excel per il conteggio in comune
+    
+    If bErrore = True Then
+        Exit Sub
+    Else
+        stDocName = "fCalcoli"
+          
+        DoCmd.OpenForm stDocName, , , SWhere
+'        DoCmd.OutputTo acReport, stDocName
+    End If
+    
+
+
+
+
+
+Exit_cmdSIM_Click:
+    Exit Sub
+
+Err_cmdSIM_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdSIM_Click
+End Sub
+
+Private Sub cmdSingolo_Click()
+    On Error GoTo Err_cmdSingolo_Click
+    
+    Dim stDocName As String
+
+    'Calcolo il totale delle ore di accoglienza
+ '   CalcoloAccoglienza
+
+    
+
+    'Genero un file excel per il conteggio in comune
+    
+    stDocName = "rMSNASingolo"
+    DoCmd.OutputTo acReport, stDocName
+
+
+
+
+
+
+
+Exit_cmdSingolo_Click:
+    Exit Sub
+
+Err_cmdSingolo_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdSingolo_Click
+    
+    
+End Sub

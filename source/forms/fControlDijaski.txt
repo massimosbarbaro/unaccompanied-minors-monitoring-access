@@ -1,0 +1,442 @@
+Version =21
+VersionRequired =20
+PublishOption =1
+Checksum =786505128
+Begin Form
+    Modal = NotDefault
+    RecordSelectors = NotDefault
+    AutoCenter = NotDefault
+    NavigationButtons = NotDefault
+    AllowDesignChanges = NotDefault
+    DefaultView =0
+    TabularFamily =124
+    PictureAlignment =2
+    PictureSizeMode =3
+    DatasheetGridlinesBehavior =3
+    GridY =10
+    Width =5102
+    DatasheetFontHeight =10
+    ItemSuffix =7
+    Left =4740
+    Top =1590
+    Right =10095
+    Bottom =4815
+    DatasheetGridlinesColor =12632256
+    RecSrcDt = Begin
+        0x04f30724d2a3e440
+    End
+    GUID = Begin
+        0xa0a79b12ff41244cb37d53022fe619b7
+    End
+    Caption ="Geslo"
+    OnCurrent ="[Event Procedure]"
+    DatasheetFontName ="Arial"
+    PrtMip = Begin
+        0xa0050000a0050000a0050000a00500000000000025160000c007000001000000 ,
+        0x010000006801000000000000a10700000100000001000000
+    End
+    OnLoad ="[Event Procedure]"
+    FilterOnLoad =0
+    ShowPageMargins =0
+    PictureSizeMode =3
+    DatasheetGridlinesColor12 =12632256
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            FontName ="Tahoma"
+        End
+        Begin CommandButton
+            Width =1701
+            Height =283
+            FontSize =8
+            FontWeight =400
+            ForeColor =-2147483630
+            FontName ="Tahoma"
+            BorderLineStyle =0
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            SpecialEffect =2
+            OldBorderStyle =0
+            BorderLineStyle =0
+            Width =1701
+            LabelX =-1701
+            FontName ="Tahoma"
+            AsianLineBreak =255
+        End
+        Begin ComboBox
+            SpecialEffect =2
+            BorderLineStyle =0
+            Width =1701
+            LabelX =-1701
+            FontName ="Tahoma"
+        End
+        Begin FormHeader
+            Height =1134
+            BackColor =13421619
+            Name ="IntestazioneMaschera"
+            GUID = Begin
+                0x335c857ec6216f4298d796e33b4c3243
+            End
+            Begin
+                Begin Label
+                    OverlapFlags =85
+                    Left =737
+                    Top =226
+                    Width =3450
+                    Height =600
+                    FontSize =24
+                    BackColor =-2147483633
+                    ForeColor =-2147483630
+                    Name ="Etichetta42"
+                    Caption ="Geslo operaterij"
+                    FontName ="MS Sans Serif"
+                    GUID = Begin
+                        0x1925f3c0f874b145b270e0d510baa3b5
+                    End
+                    LayoutCachedLeft =737
+                    LayoutCachedTop =226
+                    LayoutCachedWidth =4187
+                    LayoutCachedHeight =826
+                End
+            End
+        End
+        Begin Section
+            Height =1247
+            BackColor =-2147483633
+            Name ="Corpo"
+            GUID = Begin
+                0x76365dad7419cd4aa4a61b2a86b8cb03
+            End
+            Begin
+                Begin ComboBox
+                    OverlapFlags =87
+                    IMESentenceMode =3
+                    ColumnCount =2
+                    ListWidth =2880
+                    Left =1398
+                    Top =113
+                    Width =3201
+                    Height =340
+                    FontSize =11
+                    ColumnInfo ="\"\";\"\";\"\";\"\";\"10\";\"0\""
+                    GUID = Begin
+                        0x91bcd3d9bea8e24286127a75d7b3494b
+                    End
+                    Name ="cmbIdPr"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT Dijaski.IdD, [Nome] & \" \" & [cognome] AS Nominativo FROM Dijaski;"
+                    ColumnWidths ="0;1441"
+                    AfterUpdate ="[Event Procedure]"
+
+                    LayoutCachedLeft =1398
+                    LayoutCachedTop =113
+                    LayoutCachedWidth =4599
+                    LayoutCachedHeight =453
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            Left =963
+                            Top =113
+                            Width =435
+                            Height =240
+                            Name ="Cognome_Etichetta"
+                            Caption ="Ime"
+                            GUID = Begin
+                                0x0027bf7f594444458f4303b1cf039322
+                            End
+                            LayoutCachedLeft =963
+                            LayoutCachedTop =113
+                            LayoutCachedWidth =1398
+                            LayoutCachedHeight =353
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =1870
+                    Top =623
+                    Width =2211
+                    Height =397
+                    FontSize =11
+                    TabIndex =1
+                    Name ="txtGeslo"
+                    GUID = Begin
+                        0xfbf7d69c5bfc6f4bb40364e7fd2cdc4f
+                    End
+
+                    LayoutCachedLeft =1870
+                    LayoutCachedTop =623
+                    LayoutCachedWidth =4081
+                    LayoutCachedHeight =1020
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =1303
+                            Top =623
+                            Width =525
+                            Height =240
+                            Name ="Etichetta3"
+                            Caption ="Geslo:"
+                            GUID = Begin
+                                0xdcbd8f8217e50640a79b27ddade171f0
+                            End
+                            LayoutCachedLeft =1303
+                            LayoutCachedTop =623
+                            LayoutCachedWidth =1828
+                            LayoutCachedHeight =863
+                        End
+                    End
+                End
+            End
+        End
+        Begin FormFooter
+            Height =850
+            BackColor =13421619
+            Name ="PièDiPaginaMaschera"
+            GUID = Begin
+                0xc488ea5d6d5f85448e32cec051d0d6b1
+            End
+            Begin
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =3514
+                    Top =170
+                    Width =576
+                    Height =576
+                    Name ="cmdOpen"
+                    Caption ="Comando4"
+                    OnClick ="[Event Procedure]"
+                    PictureData = Begin
+                        0x2800000010000000100000000100040000000000800000000000000000000000 ,
+                        0x0000000000000000000000000000800000800000008080008000000080008000 ,
+                        0x8080000080808000c0c0c0000000ff00c0c0c00000ffff00ff000000c0c0c000 ,
+                        0xffff0000ffffff00dadadadadadadadaadada00dadadadaddada0ff00adadada ,
+                        0xada0f00ff00dadadda0f0ff00ff00adaa0f0fffff00ff00dda0ff00ffff00ff0 ,
+                        0xa0ff0ff00ffff00dda00fffff00ffff0ad0ffff44ff00f0dd0ffff4444fff00a ,
+                        0xad00f444444ffff0dada07f44fffff0aadadad044ffff0addadadad447ff0ada ,
+                        0xadadada44d00adad000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000
+                    End
+                    ObjectPalette = Begin
+                        0x000301000000000000000000
+                    End
+                    ControlTipText ="kontol geslo"
+                    GUID = Begin
+                        0x40b646838664e14b8e631a363dd49665
+                    End
+
+                    LayoutCachedLeft =3514
+                    LayoutCachedTop =170
+                    LayoutCachedWidth =4090
+                    LayoutCachedHeight =746
+                    WebImagePaddingLeft =3
+                    WebImagePaddingTop =3
+                    WebImagePaddingRight =2
+                    WebImagePaddingBottom =2
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =4422
+                    Top =170
+                    Width =576
+                    Height =576
+                    TabIndex =1
+                    Name ="cmdQuit"
+                    Caption ="Comando6"
+                    OnClick ="[Event Procedure]"
+                    PictureData = Begin
+                        0x2800000010000000100000000100040000000000800000000000000000000000 ,
+                        0x0000000000000000000000000000800000800000008080008000000080008000 ,
+                        0x8080000080808000c0c0c0000000ff00c0c0c00000ffff00ff000000c0c0c000 ,
+                        0xffff0000ffffff00dadad0dadadadadaadad00adadadadaddad030dadadadada ,
+                        0xad0330adadadadad0033300000000adaa03330ff0dadadadd03300ff0adad4da ,
+                        0xa03330ff0dad44add03330ff0ad44444a03330ff0d444444d03330ff0ad44444 ,
+                        0xa0330fff0dad44add030ffff0adad4daa00fffff0dadadadd00000000adadada ,
+                        0xadadadadadadadad000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000
+                    End
+                    ObjectPalette = Begin
+                        0x000301000000000000000000
+                    End
+                    ControlTipText ="Chiudi applicazione"
+                    GUID = Begin
+                        0x53da0859048cd54791d1230be6d12bda
+                    End
+
+                    LayoutCachedLeft =4422
+                    LayoutCachedTop =170
+                    LayoutCachedWidth =4998
+                    LayoutCachedHeight =746
+                    WebImagePaddingLeft =3
+                    WebImagePaddingTop =3
+                    WebImagePaddingRight =2
+                    WebImagePaddingBottom =2
+                End
+            End
+        End
+    End
+End
+CodeBehindForm
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Compare Database
+
+
+Private Sub cmbIdPr_AfterUpdate()
+'sIdPr = "" 'pulisco la variabile
+sIdPr = cmbIdPr
+End Sub
+
+Private Sub cmdOpen_Click()
+On Error GoTo Err_cmdOpen_Click
+
+    Dim stDocName As String
+    Dim stLinkCriteria As String
+    
+    Dim sqlc As String
+    Dim rsT As Recordset, db As Database
+
+        If IsNull(sIdPr) Or sIdPr = "" Then
+            
+            MsgBox "Ime??"
+            Exit Sub
+        
+        End If
+        
+
+        Set db = CurrentDb
+        sqlc = "SELECT IdD, Pass  " & _
+                "FROM Dijaski " & _
+                "WHERE IdD=" & sIdPr
+        
+    Set rsT = db.OpenRecordset(sqlc, dbOpenDynaset)
+
+    If Not rsT.EOF Then
+        If Not txtGeslo <> rsT("pass") Then
+              stDocName = "fOpen"
+                DoCmd.OpenForm stDocName, , , stLinkCriteria
+        Else
+                MsgBox "Geslo?"
+        End If
+        
+    End If
+    
+    
+    
+    
+    
+    
+  
+
+Exit_cmdOpen_Click:
+    Exit Sub
+
+Err_cmdOpen_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdOpen_Click
+    
+End Sub
+Private Sub cmdEsci_Click()
+On Error GoTo Err_cmdEsci_Click
+
+
+    DoCmd.Close
+
+Exit_cmdEsci_Click:
+    Exit Sub
+
+Err_cmdEsci_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdEsci_Click
+    
+End Sub
+Sub ControlloDijaski()
+Dim sqlc As String
+Dim rsT As Recordset, db As Database
+
+Set db = CurrentDb
+sqlc = "SELECT Dijaski.IdD, [Nome] & ' ' & [Cognome] AS Nominativo" & _
+        "FROM Dijaski " & _
+        "WHERE IdPr=" & sIdPr
+        
+Set rsT = db.OpenRecordset(sqlc, dbOpenDynaset)
+
+If Not rsT.EOF Then
+    If Not txtGeslo <> rsT("pass") Then
+        
+        Else
+        MsgBox "Geslo?"
+    End If
+    
+    
+  
+    
+End If
+
+
+
+
+End Sub
+
+
+Private Sub cmdQuit_Click()
+On Error GoTo Err_cmdQuit_Click
+
+
+ '   If Me.Dirty Then Me.Dirty = False
+    DoCmd.Quit
+
+Exit_cmdQuit_Click:
+    Exit Sub
+
+Err_cmdQuit_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdQuit_Click
+    
+End Sub
+
+Private Sub Form_Current()
+sIdPr = cmbIdPr
+
+End Sub
+
+Private Sub Form_Load()
+cmbIdPr = ""
+End Sub

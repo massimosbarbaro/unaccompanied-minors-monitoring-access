@@ -1,0 +1,838 @@
+Version =21
+VersionRequired =20
+PublishOption =1
+Checksum =-533869258
+Begin Form
+    RecordSelectors = NotDefault
+    AutoCenter = NotDefault
+    NavigationButtons = NotDefault
+    AllowDesignChanges = NotDefault
+    DefaultView =0
+    ScrollBars =0
+    TabularFamily =126
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridY =10
+    Width =4932
+    DatasheetFontHeight =10
+    ItemSuffix =42
+    Left =9840
+    Top =2265
+    Right =14775
+    Bottom =7755
+    DatasheetGridlinesColor =12632256
+    RecSrcDt = Begin
+        0xd69ea7f65473e440
+    End
+    GUID = Begin
+        0xcddcb5535e0d5143b82021a8013482d6
+    End
+    DatasheetFontName ="Arial"
+    PrtMip = Begin
+        0xa0050000a0050000a0050000a005000000000000201c0000e010000001000000 ,
+        0x010000006801000000000000a10700000100000001000000
+    End
+    FilterOnLoad =0
+    ShowPageMargins =0
+    DatasheetGridlinesColor12 =12632256
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            FontName ="Tahoma"
+        End
+        Begin CommandButton
+            Width =1701
+            Height =283
+            FontSize =8
+            FontWeight =400
+            ForeColor =-2147483630
+            FontName ="Tahoma"
+            BorderLineStyle =0
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            BorderLineStyle =0
+            Width =1701
+            LabelX =-1701
+            FontSize =11
+            BorderColor =12632256
+            FontName ="Calibri"
+            AsianLineBreak =1
+        End
+        Begin FormHeader
+            Height =1134
+            BackColor =6723891
+            Name ="IntestazioneMaschera"
+            GUID = Begin
+                0xb22cf4c8aec8c5449d3fcc9fdcea2089
+            End
+            Begin
+                Begin Label
+                    OverlapFlags =85
+                    TextFontFamily =18
+                    Left =1875
+                    Top =225
+                    Width =1905
+                    Height =660
+                    FontSize =26
+                    Name ="Etichetta2"
+                    Caption ="Ricerche"
+                    FontName ="Times New Roman"
+                    GUID = Begin
+                        0x58e9bb71442098418b59cee7eb3e4dc0
+                    End
+                    LayoutCachedLeft =1875
+                    LayoutCachedTop =225
+                    LayoutCachedWidth =3780
+                    LayoutCachedHeight =885
+                End
+            End
+        End
+        Begin Section
+            Height =3401
+            BackColor =12632256
+            Name ="Corpo"
+            GUID = Begin
+                0xc60e213b50044849a35e7f4564aed0f7
+            End
+            Begin
+                Begin CommandButton
+                    OverlapFlags =85
+                    TextFontCharSet =163
+                    Left =1757
+                    Top =1587
+                    Width =2085
+                    Height =510
+                    FontSize =11
+                    Name ="cmdCerca"
+                    Caption ="Cerca"
+                    OnClick ="[Event Procedure]"
+                    FontName ="Arial"
+                    GUID = Begin
+                        0x88bd29271733664d95007a34a1c64b08
+                    End
+
+                    LayoutCachedLeft =1757
+                    LayoutCachedTop =1587
+                    LayoutCachedWidth =3842
+                    LayoutCachedHeight =2097
+                    WebImagePaddingLeft =3
+                    WebImagePaddingTop =3
+                    WebImagePaddingRight =2
+                    WebImagePaddingBottom =2
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    TextFontCharSet =163
+                    IMESentenceMode =3
+                    Left =1313
+                    Top =566
+                    Width =2608
+                    Height =315
+                    TabIndex =1
+                    Name ="txtCerca"
+                    FontName ="Arial"
+                    ControlTipText ="Inserire il cognome cercato o parte di esso utilizzando i caratteri jolly"
+                    GUID = Begin
+                        0xf1ad6e26f8a6d74a9fc7153cf96f6864
+                    End
+
+                    LayoutCachedLeft =1313
+                    LayoutCachedTop =566
+                    LayoutCachedWidth =3921
+                    LayoutCachedHeight =881
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            TextFontCharSet =163
+                            Left =1137
+                            Top =166
+                            Width =3000
+                            Height =300
+                            FontSize =11
+                            Name ="Etichetta41"
+                            Caption ="Inserire il cognome cercato"
+                            FontName ="Arial"
+                            GUID = Begin
+                                0x24265a817e0ef54b9848791b384143f7
+                            End
+                            LayoutCachedLeft =1137
+                            LayoutCachedTop =166
+                            LayoutCachedWidth =4137
+                            LayoutCachedHeight =466
+                        End
+                    End
+                End
+            End
+        End
+        Begin FormFooter
+            Height =963
+            BackColor =6723891
+            Name ="PièDiPaginaMaschera"
+            GUID = Begin
+                0xe732c08b8812cc4697ee6b01319ef492
+            End
+            Begin
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =4138
+                    Top =283
+                    Width =576
+                    Height =576
+                    Name ="cmdEsci"
+                    Caption ="Comando1"
+                    OnClick ="[Event Procedure]"
+                    PictureData = Begin
+                        0x2800000010000000100000000100040000000000800000000000000000000000 ,
+                        0x0000000000000000000000000000800000800000008080008000000080008000 ,
+                        0x8080000080808000c0c0c0000000ff00c0c0c00000ffff00ff000000c0c0c000 ,
+                        0xffff0000ffffff00dadad0dadadadadaadad00adadadadaddad030dadadadada ,
+                        0xad0330adadadadad0033300000000adaa03330ff0dadadadd03300ff0adad4da ,
+                        0xa03330ff0dad44add03330ff0ad44444a03330ff0d444444d03330ff0ad44444 ,
+                        0xa0330fff0dad44add030ffff0adad4daa00fffff0dadadadd00000000adadada ,
+                        0xadadadadadadadad000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000
+                    End
+                    ObjectPalette = Begin
+                        0x000301000000000000000000
+                    End
+                    ControlTipText ="Chiudi maschera"
+                    GUID = Begin
+                        0x4b0efca5c211ee4a94cd32b2116c6de0
+                    End
+
+                    LayoutCachedLeft =4138
+                    LayoutCachedTop =283
+                    LayoutCachedWidth =4714
+                    LayoutCachedHeight =859
+                    WebImagePaddingLeft =3
+                    WebImagePaddingTop =3
+                    WebImagePaddingRight =2
+                    WebImagePaddingBottom =2
+                End
+            End
+        End
+    End
+End
+CodeBehindForm
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Compare Database
+
+Private Sub cmdDijaki_Click()
+On Error GoTo Err_cmdDijaki_Click
+
+    Dim stDocName As String
+
+    stDocName = "rDijakElenco"
+    DoCmd.OpenReport stDocName, acPreview
+
+Exit_cmdDijaki_Click:
+    Exit Sub
+
+Err_cmdDijaki_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdDijaki_Click
+    
+End Sub
+
+Private Sub cmdCerca_Click()
+
+sqlc = "SELECT Go.IdP, Go.Sede, Go.Nome, Go.Cognome, Go.Sesso, Go.Cittadinanza, Go.DataN, " & _
+            "TipoData.IdT, TipoData.Tipo, LPTC.Data, LPTC.Ora, Comunita.Comunita, LPTC.Note, " & _
+            "Go.IdMinoriMIS, Alias.DataModifica, Alias.Cognome, Alias.Nome, Alias.DataN, " & _
+            "Alias.Cittadinanza, Alias.Note, Alias.Attiva " & _
+        "FROM ((([Go] LEFT JOIN LPTC ON Go.IdP = LPTC.IdP) LEFT JOIN TipoData ON LPTC.IdT = TipoData.IdT) " & _
+            "LEFT JOIN Comunita ON LPTC.IdC = Comunita.IdC) LEFT JOIN Alias ON Go.IdP = Alias.IdP " & _
+        "WHERE (((Go.Cognome) Like '" & txtCerca & "') " & _
+            "And ((TipoData.IdT) = 1 Or (TipoData.IdT) Is Null)) Or (((TipoData.IdT) = 1 " & _
+            "Or (TipoData.IdT) Is Null) And ((Alias.Cognome) Like '" & txtCerca & "')) " & _
+            "ORDER BY TipoData.IdT;"
+            
+'Sull 'evento clik del pulsante 1
+
+ DoCmd.OpenForm "fElencoCerca", , , , acFormReadOnly
+DoCmd.Maximize
+Forms!fElencoCerca.RecordSource = sqlc
+
+'Forms!"fElencoCerca".RecordSource = sqlc
+'DoEvents [felencocerca].RowSource = sqlc
+           
+
+
+
+End Sub
+
+Private Sub cmdEsci_Click()
+On Error GoTo Err_cmdEsci_Click
+
+
+    DoCmd.Close
+
+Exit_cmdEsci_Click:
+    Exit Sub
+
+Err_cmdEsci_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdEsci_Click
+    
+End Sub
+
+Private Sub cmdNovi_Click()
+
+    Dim stDocName As String
+
+    stDocName = "rScuolaProfUceSTNoStNovi"
+    DoCmd.OutputTo acReport, stDocName
+
+Exit_cmdNovi_Click:
+    Exit Sub
+
+Err_cmdNovi_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdNovi_Click
+    
+End Sub
+
+Private Sub cmdOre_Click()
+On Error GoTo Err_cmdOre_Click
+CalcoloMovimenti
+
+Exit_cmdOre_Click:
+    Exit Sub
+
+Err_cmdOre_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdOre_Click
+
+End Sub
+
+Private Sub cmdRacuni_Click()
+On Error GoTo Err_cmdRacuni_Click
+
+    Dim stDocName As String
+
+    stDocName = "rPagati"
+    DoCmd.OpenReport stDocName, acPreview
+
+Exit_cmdRacuni_Click:
+    Exit Sub
+
+Err_cmdRacuni_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdRacuni_Click
+    
+End Sub
+Private Sub cmdRacuniG_Click()
+On Error GoTo Err_cmdRacuniG_Click
+
+    Dim stDocName As String
+
+    stDocName = "rRestoGenerale"
+    DoCmd.OpenReport stDocName, acPreview
+
+Exit_cmdRacuniG_Click:
+    Exit Sub
+
+Err_cmdRacuniG_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdRacuniG_Click
+    
+End Sub
+Private Sub cmdStarsi_Click()
+On Error GoTo Err_cmdStarsi_Click
+
+    Dim stDocName As String
+
+    stDocName = "rDijakStar"
+    DoCmd.OpenReport stDocName, acPreview
+
+Exit_cmdStarsi_Click:
+    Exit Sub
+
+Err_cmdStarsi_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdStarsi_Click
+    
+End Sub
+Private Sub cmdPoskus_Click()
+On Error GoTo Err_cmdPoskus_Click
+
+    Dim stDocName As String
+
+    stDocName = "rPoskus"
+    DoCmd.OutputTo acReport, stDocName
+
+Exit_cmdPoskus_Click:
+    Exit Sub
+
+Err_cmdPoskus_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdPoskus_Click
+    
+End Sub
+Private Sub cmdUcenci_Click()
+On Error GoTo Err_cmdUcenci_Click
+
+    Dim stDocName As String
+
+    stDocName = "rUcenci"
+    DoCmd.OutputTo acReport, stDocName
+
+Exit_cmdUcenci_Click:
+    Exit Sub
+
+Err_cmdUcenci_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdUcenci_Click
+    
+End Sub
+Private Sub cmdFatture_Click()
+On Error GoTo Err_cmdFatture_Click
+
+    Dim stDocName As String
+
+    stDocName = "rFattura"
+    DoCmd.OpenReport stDocName, acPreview
+
+Exit_cmdFatture_Click:
+    Exit Sub
+
+Err_cmdFatture_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdFatture_Click
+    
+End Sub
+Private Sub cmdBil_Click()
+On Error GoTo Err_cmdBil_Click
+
+    Dim stDocName As String
+
+    stDocName = "rRestoMensile"
+    DoCmd.OpenReport stDocName, acPreview
+
+Exit_cmdBil_Click:
+    Exit Sub
+
+Err_cmdBil_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdBil_Click
+    
+End Sub
+Private Sub cmdProfUce_Click()
+On Error GoTo Err_cmdProfUce_Click
+
+    Dim stDocName As String
+
+    stDocName = "rProfUce"
+    DoCmd.OpenReport stDocName, acPreview
+
+Exit_cmdProfUce_Click:
+    Exit Sub
+
+Err_cmdProfUce_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdProfUce_Click
+    
+End Sub
+Private Sub cmdExProf_Click()
+On Error GoTo Err_cmdExProf_Click
+
+    Dim stDocName As String
+
+    stDocName = "rExProfUce"
+    DoCmd.OutputTo acReport, stDocName
+
+Exit_cmdExProf_Click:
+    Exit Sub
+
+Err_cmdExProf_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdExProf_Click
+    
+End Sub
+Private Sub cmdClani_Click()
+On Error GoTo Err_cmdClani_Click
+
+    Dim stDocName As String
+
+    stDocName = "rClani"
+    DoCmd.OpenReport stDocName, acPreview
+
+Exit_cmdClani_Click:
+    Exit Sub
+
+Err_cmdClani_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdClani_Click
+    
+End Sub
+
+Private Sub cmdUltima_Click()
+On Error GoTo Err_cmdUltima_Click
+
+    Dim stDocName As String
+    Dim stLinkCriteria As String
+
+    stDocName = "fUltima"
+    DoCmd.OpenForm stDocName, , , stLinkCriteria
+
+Exit_cmdUltima_Click:
+    Exit Sub
+
+Err_cmdUltima_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdUltima_Click
+    
+End Sub
+
+Private Sub Comando23_Click()
+On Error GoTo Err_cmdBilKaus_Click
+
+    Dim stDocName As String
+
+    stDocName = "rRestoMensileCausaleUK"
+    DoCmd.OpenReport stDocName, acPreview
+
+Exit_cmdBilKaus_Click:
+    Exit Sub
+
+Err_cmdBilKaus_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdBilKaus_Click
+    
+
+End Sub
+
+Private Sub ProfUceUre_Click()
+  Dim stDocName As String
+
+    stDocName = "rProfUceDataFine"
+    DoCmd.OpenReport stDocName, acPreview
+
+Exit_ProfUceUre_Click:
+    Exit Sub
+
+Err_ProfUceUre_Click:
+    MsgBox Err.Description
+    Resume Exit_ProfUceUre_Click
+    
+End Sub
+
+Private Sub smdUcNoSt_Click()
+On Error GoTo Err_smdUcNoSt_Click
+
+    Dim stDocName As String
+
+    stDocName = "rProfUceNoST"
+    DoCmd.OpenReport stDocName, acPreview
+
+Exit_smdUcNoSt_Click:
+    Exit Sub
+
+Err_smdUcNoSt_Click:
+    MsgBox Err.Description
+    Resume Exit_smdUcNoSt_Click
+    
+End Sub
+Private Sub cmdPoskProf_Click()
+On Error GoTo Err_cmdPoskProf_Click
+
+    Dim stDocName As String
+
+    stDocName = "rProfUcePosk"
+    DoCmd.OpenReport stDocName, acPreview
+
+Exit_cmdPoskProf_Click:
+    Exit Sub
+
+Err_cmdPoskProf_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdPoskProf_Click
+    
+End Sub
+Private Sub cmdUcST_Click()
+On Error GoTo Err_cmdUcST_Click
+
+    Dim stDocName As String
+
+    stDocName = "rProfUceST"
+    DoCmd.OpenReport stDocName, acPreview
+
+Exit_cmdUcST_Click:
+    Exit Sub
+
+Err_cmdUcST_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdUcST_Click
+    
+End Sub
+Private Sub cmdClaniTot_Click()
+On Error GoTo Err_cmdClaniTot_Click
+
+    Dim stDocName As String
+
+    stDocName = "rClaniTot"
+    DoCmd.OpenReport stDocName, acPreview
+
+Exit_cmdClaniTot_Click:
+    Exit Sub
+
+Err_cmdClaniTot_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdClaniTot_Click
+    
+End Sub
+Private Sub cmdIzpit_Click()
+On Error GoTo Err_cmdIzpit_Click
+
+    Dim stDocName As String
+
+    stDocName = "rKonservIzpit"
+    DoCmd.OpenReport stDocName, acPreview
+
+Exit_cmdIzpit_Click:
+    Exit Sub
+
+Err_cmdIzpit_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdIzpit_Click
+    
+End Sub
+Private Sub cmdTekm_Click()
+On Error GoTo Err_cmdTekm_Click
+
+    Dim stDocName As String
+
+    stDocName = "rTekmovanije"
+    DoCmd.OpenReport stDocName, acPreview
+
+Exit_cmdTekm_Click:
+    Exit Sub
+
+Err_cmdTekm_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdTekm_Click
+    
+End Sub
+Private Sub cmdMail_Click()
+On Error GoTo Err_cmdMail_Click
+
+    Dim stDocName As String
+    Dim stLinkCriteria As String
+
+    stDocName = "fMail"
+    DoCmd.OpenForm stDocName, , , stLinkCriteria
+
+Exit_cmdMail_Click:
+    Exit Sub
+
+Err_cmdMail_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdMail_Click
+    
+End Sub
+Private Sub cmdBilKaus_Click()
+On Error GoTo Err_cmdBilKaus_Click
+
+    Dim stDocName As String
+
+    stDocName = "rRestoMensileCausale"
+    DoCmd.OpenReport stDocName, acPreview
+
+Exit_cmdBilKaus_Click:
+    Exit Sub
+
+Err_cmdBilKaus_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdBilKaus_Click
+    
+End Sub
+Private Sub cmdUreSt_Click()
+On Error GoTo Err_cmdUreSt_Click
+
+    Dim stDocName As String
+
+    stDocName = "rProfUceStSkupno"
+    DoCmd.OpenReport stDocName, acPreview
+
+Exit_cmdUreSt_Click:
+    Exit Sub
+
+Err_cmdUreSt_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdUreSt_Click
+    
+End Sub
+Private Sub cmdStarost_Click()
+On Error GoTo Err_cmdStarost_Click
+
+    Dim stDocName As String
+
+    stDocName = "rScuolaProfUceSTNoSt"
+    DoCmd.OutputTo acReport, stDocName
+
+Exit_cmdStarost_Click:
+    Exit Sub
+
+Err_cmdStarost_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdStarost_Click
+    
+End Sub
+Private Sub cmdAnualita_Click()
+On Error GoTo Err_cmdAnualita_Click
+
+    Dim stDocName As String
+
+    stDocName = "rParagoneAnnualita"
+    DoCmd.OutputTo acReport, stDocName
+
+Exit_cmdAnualita_Click:
+    Exit Sub
+
+Err_cmdAnualita_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdAnualita_Click
+    
+End Sub
+Private Sub CmdParagoneAnnualita_Click()
+On Error GoTo Err_CmdParagoneAnnualita_Click
+
+    Dim stDocName As String
+
+    stDocName = "rParagoneAnnualitaConteggio"
+    DoCmd.OpenReport stDocName, acPreview
+
+Exit_CmdParagoneAnnualita_Click:
+    Exit Sub
+
+Err_CmdParagoneAnnualita_Click:
+    MsgBox Err.Description
+    Resume Exit_CmdParagoneAnnualita_Click
+    
+End Sub
+Private Sub cmdConteggio_Click()
+On Error GoTo Err_cmdConteggio_Click
+
+    Dim stDocName As String
+
+    stDocName = "rAnnualitaConteggioPerAnno"
+    DoCmd.OutputTo acReport, stDocName
+Exit_cmdConteggio_Click:
+    Exit Sub
+
+Err_cmdConteggio_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdConteggio_Click
+    
+End Sub
+
+
+Private Sub cmdOreAccoglienza_Click()
+    On Error GoTo Err_cmdOreAccoglienza_Click
+    
+    Dim stDocName As String
+
+    'Calcolo il totale delle ore di accoglienza
+    CalcoloAccoglienza
+    CalcoloTrasferimento
+    
+
+    'Genero un file excel per il conteggio in comune
+    
+    If bErrore = True Then
+        Exit Sub
+    Else
+        stDocName = "rOreAccoglienza"
+        DoCmd.OutputTo acReport, stDocName
+    End If
+    
+
+
+
+
+
+Exit_cmdOreAccoglienza_Click:
+    Exit Sub
+
+Err_cmdOreAccoglienza_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdOreAccoglienza_Click
+    
+    
+End Sub
+
+Private Sub cmdSIM_Click()
+   On Error GoTo Err_cmdSIM_Click
+   
+    
+    Dim stDocName As String
+
+    'Calcolo il totale delle ore di accoglienza
+    CalcoloAccoglienza
+    CalcoloTrasferimento
+    
+
+    'Genero un file excel per il conteggio in comune
+    
+    If bErrore = True Then
+        Exit Sub
+    Else
+        stDocName = "rOreSIM"
+        DoCmd.OutputTo acReport, stDocName
+    End If
+    
+
+
+
+
+
+Exit_cmdSIM_Click:
+    Exit Sub
+
+Err_cmdSIM_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdSIM_Click
+End Sub
+
+Private Sub cmdSingolo_Click()
+    On Error GoTo Err_cmdSingolo_Click
+    
+    Dim stDocName As String
+
+    'Calcolo il totale delle ore di accoglienza
+ '   CalcoloAccoglienza
+
+    
+
+    'Genero un file excel per il conteggio in comune
+    
+    stDocName = "rMSNASingolo"
+    DoCmd.OutputTo acReport, stDocName
+
+
+
+
+
+
+
+Exit_cmdSingolo_Click:
+    Exit Sub
+
+Err_cmdSingolo_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdSingolo_Click
+    
+    
+End Sub

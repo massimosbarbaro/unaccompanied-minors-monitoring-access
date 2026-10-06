@@ -1,0 +1,400 @@
+Version =21
+VersionRequired =20
+PublishOption =1
+Checksum =707748754
+Begin Form
+    RecordSelectors = NotDefault
+    AutoCenter = NotDefault
+    NavigationButtons = NotDefault
+    AllowDesignChanges = NotDefault
+    DefaultView =0
+    ScrollBars =0
+    TabularFamily =126
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridY =10
+    Width =6066
+    DatasheetFontHeight =10
+    ItemSuffix =47
+    Left =9285
+    Top =2100
+    Right =15345
+    Bottom =8100
+    DatasheetGridlinesColor =12632256
+    RecSrcDt = Begin
+        0xd69ea7f65473e440
+    End
+    GUID = Begin
+        0x7e3e22ad67dd474d963bb0ab6c973c8d
+    End
+    Caption ="Controllo dati"
+    DatasheetFontName ="Arial"
+    PrtMip = Begin
+        0xa0050000a0050000a0050000a005000000000000201c0000e010000001000000 ,
+        0x010000006801000000000000a10700000100000001000000
+    End
+    FilterOnLoad =0
+    ShowPageMargins =0
+    DatasheetGridlinesColor12 =12632256
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            FontName ="Tahoma"
+        End
+        Begin CommandButton
+            Width =1701
+            Height =283
+            FontSize =8
+            FontWeight =400
+            ForeColor =-2147483630
+            FontName ="Tahoma"
+            BorderLineStyle =0
+        End
+        Begin FormHeader
+            Height =1134
+            BackColor =6723891
+            Name ="IntestazioneMaschera"
+            GUID = Begin
+                0xb22cf4c8aec8c5449d3fcc9fdcea2089
+            End
+            Begin
+                Begin Label
+                    OverlapFlags =85
+                    TextFontFamily =18
+                    Left =1247
+                    Top =226
+                    Width =2985
+                    Height =660
+                    FontSize =26
+                    Name ="Etichetta2"
+                    Caption ="Controllo dati"
+                    FontName ="Times New Roman"
+                    GUID = Begin
+                        0x58e9bb71442098418b59cee7eb3e4dc0
+                    End
+                    LayoutCachedLeft =1247
+                    LayoutCachedTop =226
+                    LayoutCachedWidth =4232
+                    LayoutCachedHeight =886
+                End
+            End
+        End
+        Begin Section
+            Height =3911
+            BackColor =12632256
+            Name ="Corpo"
+            GUID = Begin
+                0xc60e213b50044849a35e7f4564aed0f7
+            End
+            Begin
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =3341
+                    Top =165
+                    Width =2490
+                    Height =795
+                    FontSize =11
+                    Name ="cmdNoUQ"
+                    Caption ="Nessuna data Uscita Q e data Ordinaria"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0x8c8a6c30d6bd2a4aa0acf88bbc5ab796
+                    End
+
+                    LayoutCachedLeft =3341
+                    LayoutCachedTop =165
+                    LayoutCachedWidth =5831
+                    LayoutCachedHeight =960
+                    WebImagePaddingLeft =3
+                    WebImagePaddingTop =3
+                    WebImagePaddingRight =2
+                    WebImagePaddingBottom =2
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =165
+                    Top =165
+                    Width =2490
+                    Height =795
+                    FontSize =11
+                    TabIndex =1
+                    Name ="cmdVuota"
+                    Caption ="Data movimento vuota"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0xd8a4005e21195a4587376331e755e68c
+                    End
+                    ImageData = Begin
+                        0x00000000
+                    End
+
+                    LayoutCachedLeft =165
+                    LayoutCachedTop =165
+                    LayoutCachedWidth =2655
+                    LayoutCachedHeight =960
+                    WebImagePaddingLeft =3
+                    WebImagePaddingTop =3
+                    WebImagePaddingRight =2
+                    WebImagePaddingBottom =2
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =165
+                    Top =1474
+                    Width =2490
+                    Height =795
+                    FontSize =11
+                    TabIndex =2
+                    Name ="cmdDoppiaEQ"
+                    Caption ="Doppia Entrata Quarantena"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0x74e7c12ea5c05748afa05616b3524e08
+                    End
+                    ImageData = Begin
+                        0x00000000
+                    End
+
+                    LayoutCachedLeft =165
+                    LayoutCachedTop =1474
+                    LayoutCachedWidth =2655
+                    LayoutCachedHeight =2269
+                    WebImagePaddingLeft =3
+                    WebImagePaddingTop =3
+                    WebImagePaddingRight =2
+                    WebImagePaddingBottom =2
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =3341
+                    Top =1474
+                    Width =2490
+                    Height =795
+                    FontSize =11
+                    TabIndex =3
+                    Name ="cmdNoOA"
+                    Caption ="Data uscita Q e no data Ordinaria"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0x562251737bbd264d899691dc123fb38f
+                    End
+
+                    LayoutCachedLeft =3341
+                    LayoutCachedTop =1474
+                    LayoutCachedWidth =5831
+                    LayoutCachedHeight =2269
+                    WebImagePaddingLeft =3
+                    WebImagePaddingTop =3
+                    WebImagePaddingRight =2
+                    WebImagePaddingBottom =2
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =170
+                    Top =2721
+                    Width =2490
+                    Height =795
+                    FontSize =11
+                    TabIndex =4
+                    Name ="cmdEq"
+                    Caption ="Entrata Quarantena"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0x625f9f5ec333fc4da43d3f57506e8475
+                    End
+                    ImageData = Begin
+                        0x00000000
+                    End
+
+                    LayoutCachedLeft =170
+                    LayoutCachedTop =2721
+                    LayoutCachedWidth =2660
+                    LayoutCachedHeight =3516
+                    WebImagePaddingLeft =3
+                    WebImagePaddingTop =3
+                    WebImagePaddingRight =2
+                    WebImagePaddingBottom =2
+                End
+            End
+        End
+        Begin FormFooter
+            Height =963
+            BackColor =6723891
+            Name ="PièDiPaginaMaschera"
+            GUID = Begin
+                0xe732c08b8812cc4697ee6b01319ef492
+            End
+            Begin
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =5272
+                    Top =226
+                    Width =576
+                    Height =576
+                    Name ="cmdEsci"
+                    Caption ="Comando1"
+                    OnClick ="[Event Procedure]"
+                    PictureData = Begin
+                        0x2800000010000000100000000100040000000000800000000000000000000000 ,
+                        0x0000000000000000000000000000800000800000008080008000000080008000 ,
+                        0x8080000080808000c0c0c0000000ff00c0c0c00000ffff00ff000000c0c0c000 ,
+                        0xffff0000ffffff00dadad0dadadadadaadad00adadadadaddad030dadadadada ,
+                        0xad0330adadadadad0033300000000adaa03330ff0dadadadd03300ff0adad4da ,
+                        0xa03330ff0dad44add03330ff0ad44444a03330ff0d444444d03330ff0ad44444 ,
+                        0xa0330fff0dad44add030ffff0adad4daa00fffff0dadadadd00000000adadada ,
+                        0xadadadadadadadad000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000
+                    End
+                    ObjectPalette = Begin
+                        0x000301000000000000000000
+                    End
+                    ControlTipText ="Chiudi maschera"
+                    GUID = Begin
+                        0x4b0efca5c211ee4a94cd32b2116c6de0
+                    End
+
+                    LayoutCachedLeft =5272
+                    LayoutCachedTop =226
+                    LayoutCachedWidth =5848
+                    LayoutCachedHeight =802
+                    WebImagePaddingLeft =3
+                    WebImagePaddingTop =3
+                    WebImagePaddingRight =2
+                    WebImagePaddingBottom =2
+                End
+            End
+        End
+    End
+End
+CodeBehindForm
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Compare Database
+
+Private Sub cmdDoppiaEQ_Click()
+On Error GoTo Err_cmdDoppiaEQ_Click
+
+    Dim stDocName As String
+    Dim stLinkCriteria As String
+
+    stDocName = "fElencoMSNADaControllareDoppiaEQ"
+    DoCmd.OpenForm stDocName, , , stLinkCriteria
+
+Exit_cmdDoppiaEQ_Click:
+    Exit Sub
+
+Err_cmdDoppiaEQ_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdDoppiaEQ_Click
+
+
+End Sub
+
+Private Sub cmdEq_Click()
+On Error GoTo Err_cmdEq_Click
+
+    Dim stDocName As String
+    Dim stLinkCriteria As String
+
+    stDocName = "fElencoMSNADaControllareQ"
+    DoCmd.OpenForm stDocName, , , stLinkCriteria
+
+Exit_cmdEq_Click:
+    Exit Sub
+
+Err_cmdEq_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdEq_Click
+
+End Sub
+
+Private Sub cmdEsci_Click()
+On Error GoTo Err_cmdEsci_Click
+
+
+    DoCmd.Close
+
+Exit_cmdEsci_Click:
+    Exit Sub
+
+Err_cmdEsci_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdEsci_Click
+    
+End Sub
+
+Private Sub cmdReg_Click()
+On Error GoTo Err_cmdReg_Click
+CalcoloReg
+Exit_cmdReg_Click:
+    Exit Sub
+
+Err_cmdReg_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdReg_Click
+
+
+End Sub
+
+Private Sub cmdNoOA_Click()
+On Error GoTo Err_cmdNoOA_Click
+
+    Dim stDocName As String
+    Dim stLinkCriteria As String
+
+    stDocName = "fElencoMSNADaControllareNoOA"
+    DoCmd.OpenForm stDocName, , , stLinkCriteria
+
+Exit_cmdNoOA_Click:
+    Exit Sub
+
+Err_cmdNoOA_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdNoOA_Click
+
+End Sub
+
+Private Sub cmdNoUQ_Click()
+On Error GoTo Err_cmdNoUQ_Click
+
+    Dim stDocName As String
+    Dim stLinkCriteria As String
+
+    stDocName = "fElencoMSNADaControllareNoUQ"
+    DoCmd.OpenForm stDocName, , , stLinkCriteria
+
+Exit_cmdNoUQ_Click:
+    Exit Sub
+
+Err_cmdNoUQ_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdNoUQ_Click
+
+End Sub
+
+Private Sub cmdVuota_Click()
+On Error GoTo Err_cmdVuota_Click
+
+    Dim stDocName As String
+    Dim stLinkCriteria As String
+
+    stDocName = "fElencoMSNADaControllare"
+    DoCmd.OpenForm stDocName, , , stLinkCriteria
+
+Exit_cmdVuota_Click:
+    Exit Sub
+
+Err_cmdVuota_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdVuota_Click
+End Sub

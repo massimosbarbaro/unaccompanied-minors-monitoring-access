@@ -1,0 +1,282 @@
+Version =21
+VersionRequired =20
+PublishOption =1
+Checksum =2007569497
+Begin Form
+    Modal = NotDefault
+    RecordSelectors = NotDefault
+    AutoCenter = NotDefault
+    NavigationButtons = NotDefault
+    AllowDesignChanges = NotDefault
+    DefaultView =0
+    ScrollBars =0
+    TabularFamily =126
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridY =10
+    Width =7605
+    DatasheetFontHeight =10
+    ItemSuffix =13
+    Left =2385
+    Top =510
+    Right =9975
+    Bottom =7125
+    DatasheetGridlinesColor =12632256
+    RecSrcDt = Begin
+        0xfdb51eda5373e440
+    End
+    GUID = Begin
+        0x7edc001c89fd154b8f7aaec29fadcc4e
+    End
+    DatasheetFontName ="Arial"
+    PrtMip = Begin
+        0xa0050000a0050000a0050000a005000000000000201c0000e010000001000000 ,
+        0x010000006801000000000000a10700000100000001000000
+    End
+    FilterOnLoad =0
+    ShowPageMargins =0
+    DatasheetGridlinesColor12 =12632256
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            FontName ="Tahoma"
+        End
+        Begin CommandButton
+            Width =1701
+            Height =283
+            FontSize =8
+            FontWeight =400
+            ForeColor =-2147483630
+            FontName ="Tahoma"
+            BorderLineStyle =0
+        End
+        Begin FormHeader
+            Height =1230
+            BackColor =6723891
+            Name ="IntestazioneMaschera"
+            GUID = Begin
+                0xcb5afc89fc1bf44e8bfbf1be6c62ed64
+            End
+            Begin
+                Begin Label
+                    OverlapFlags =85
+                    Left =623
+                    Top =340
+                    Width =6570
+                    Height =540
+                    FontSize =20
+                    Name ="Etichetta7"
+                    Caption ="Comunità MSNA"
+                    GUID = Begin
+                        0x8640021c5bef5e40ae00a0ec47177dc6
+                    End
+                    LayoutCachedLeft =623
+                    LayoutCachedTop =340
+                    LayoutCachedWidth =7193
+                    LayoutCachedHeight =880
+                End
+            End
+        End
+        Begin Section
+            Height =4535
+            BackColor =-2147483633
+            Name ="Corpo"
+            GUID = Begin
+                0xd052abf3d83cf3489dd30503bfbd1b13
+            End
+            Begin
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =735
+                    Top =225
+                    Width =2160
+                    Height =735
+                    FontSize =14
+                    ForeColor =-2147483625
+                    Name ="cmdElenco"
+                    Caption ="Elenco"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0xdb51c59676332a4f8bd1e1b662c7a46d
+                    End
+                    GridlineColor =-2147483644
+
+                    LayoutCachedLeft =735
+                    LayoutCachedTop =225
+                    LayoutCachedWidth =2895
+                    LayoutCachedHeight =960
+                    WebImagePaddingLeft =3
+                    WebImagePaddingTop =3
+                    WebImagePaddingRight =2
+                    WebImagePaddingBottom =2
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =735
+                    Top =1247
+                    Width =2160
+                    Height =735
+                    FontSize =14
+                    TabIndex =1
+                    ForeColor =-2147483625
+                    Name ="cmdComunita"
+                    Caption ="Singole"
+                    GUID = Begin
+                        0xe4ef4272b3165047b80dc77f6b413aac
+                    End
+                    GridlineColor =-2147483644
+                    OnClickEmMacro = Begin
+                        Version =196611
+                        ColumnsShown =8
+                        Begin
+                            Action ="OpenForm"
+                            Argument ="fComunita"
+                            Argument ="0"
+                            Argument =""
+                            Argument =""
+                            Argument ="-1"
+                            Argument ="0"
+                        End
+                    End
+
+                    LayoutCachedLeft =735
+                    LayoutCachedTop =1247
+                    LayoutCachedWidth =2895
+                    LayoutCachedHeight =1982
+                    WebImagePaddingLeft =3
+                    WebImagePaddingTop =3
+                    WebImagePaddingRight =2
+                    WebImagePaddingBottom =2
+                    Overlaps =1
+                End
+            End
+        End
+        Begin FormFooter
+            Height =1133
+            BackColor =6723891
+            Name ="PièDiPaginaMaschera"
+            GUID = Begin
+                0x7fdbe1b0d1999f49938e7a7e2b4d4c15
+            End
+            Begin
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =6916
+                    Top =283
+                    Width =576
+                    Height =576
+                    Name ="cmdEsci"
+                    Caption ="Comando6"
+                    OnClick ="[Event Procedure]"
+                    PictureData = Begin
+                        0x2800000010000000100000000100040000000000800000000000000000000000 ,
+                        0x0000000000000000000000000000800000800000008080008000000080008000 ,
+                        0x8080000080808000c0c0c0000000ff00c0c0c00000ffff00ff000000c0c0c000 ,
+                        0xffff0000ffffff00dadad0dadadadadaadad00adadadadaddad030dadadadada ,
+                        0xad0330adadadadad0033300000000adaa03330ff0dadadadd03300ff0adad4da ,
+                        0xa03330ff0dad44add03330ff0ad44444a03330ff0d444444d03330ff0ad44444 ,
+                        0xa0330fff0dad44add030ffff0adad4daa00fffff0dadadadd00000000adadada ,
+                        0xadadadadadadadad000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000
+                    End
+                    ObjectPalette = Begin
+                        0x000301000000000000000000
+                    End
+                    ControlTipText ="Chiudi maschera"
+                    GUID = Begin
+                        0xff64772caef2a34eab06290d5946d1f0
+                    End
+
+                    LayoutCachedLeft =6916
+                    LayoutCachedTop =283
+                    LayoutCachedWidth =7492
+                    LayoutCachedHeight =859
+                    WebImagePaddingLeft =3
+                    WebImagePaddingTop =3
+                    WebImagePaddingRight =2
+                    WebImagePaddingBottom =2
+                End
+            End
+        End
+    End
+End
+CodeBehindForm
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Compare Database
+Private Sub cmdChiudi_Click()
+On Error GoTo Err_cmdChiudi_Click
+
+
+    DoCmd.Quit
+
+Exit_cmdChiudi_Click:
+    Exit Sub
+
+Err_cmdChiudi_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdChiudi_Click
+    
+End Sub
+
+Private Sub CmdElenco_Click()
+On Error GoTo Err_CmdElenco_Click
+
+    Dim stDocName As String
+    Dim stLinkCriteria As String
+
+    stDocName = "fComunitaElenco"
+    DoCmd.OpenForm stDocName, , , stLinkCriteria
+
+Exit_CmdElenco_Click:
+    Exit Sub
+
+Err_CmdElenco_Click:
+    MsgBox Err.Description
+    Resume Exit_CmdElenco_Click
+
+End Sub
+
+Private Sub cmdEsci_Click()
+On Error GoTo Err_cmdEsci_Click
+
+
+   ' If Me.Dirty Then Me.Dirty = False
+    DoCmd.Close
+
+Exit_cmdEsci_Click:
+    Exit Sub
+
+Err_cmdEsci_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdEsci_Click
+    
+End Sub

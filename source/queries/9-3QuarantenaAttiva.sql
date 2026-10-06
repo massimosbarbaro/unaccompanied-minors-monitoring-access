@@ -1,0 +1,4 @@
+SELECT LPTC.IdP AS Persona, LPTC.IdT, [2UQ].IdP, [6Fuga].IdP, [8OrdinariaAcc].IdP, LPTC.Data, DateDiff("y",[LPTC]![Data],Date()) AS Differenza, Go.IdMinoriMIS, Go.Sede, Go.Cognome, Go.Nome, Go.LuogoN, Go.DataN, Go.Sesso, Go.Cittadinanza, Go.Note, LPTC.Ora, LPTC.Note, LPTC.Reg, Comunita.Comunita, Comunita.Struttura, TipoData.Tipo, [1EQ].IdC, [1EQ].Ora, [1EQ].Ora
+FROM (((((([Go] INNER JOIN LPTC ON (Go.IdP = LPTC.IdP) AND (Go.IdP = LPTC.IdP)) LEFT JOIN 2UQ ON LPTC.IdP = [2UQ].IdP) INNER JOIN 1EQ ON LPTC.IdP = [1EQ].IdP) LEFT JOIN 8OrdinariaAcc ON LPTC.IdP = [8OrdinariaAcc].IdP) LEFT JOIN 6Fuga ON LPTC.IdP = [6Fuga].IdP) LEFT JOIN Comunita ON LPTC.IdC = Comunita.IdC) INNER JOIN TipoData ON LPTC.IdT = TipoData.IdT
+WHERE (((LPTC.IdT)=2) AND (([2UQ].IdP) Is Null) AND (([6Fuga].IdP) Is Null) AND (([8OrdinariaAcc].IdP) Is Null))
+ORDER BY LPTC.IdP;

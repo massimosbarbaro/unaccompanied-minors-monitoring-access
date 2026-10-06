@@ -1,0 +1,431 @@
+Version =21
+VersionRequired =20
+PublishOption =1
+Checksum =317316449
+Begin Form
+    DividingLines = NotDefault
+    AllowDesignChanges = NotDefault
+    TabularCharSet =162
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridY =10
+    Width =11005
+    DatasheetFontHeight =11
+    ItemSuffix =15
+    Left =855
+    Top =2280
+    Right =12150
+    Bottom =7065
+    DatasheetGridlinesColor =15062992
+    RecSrcDt = Begin
+        0x07f1d0919585e540
+    End
+    GUID = Begin
+        0xcf57c9eca26f4b4b9a1dd1c2948618f9
+    End
+    RecordSource ="Struttura"
+    DatasheetFontName ="Calibri"
+    PrtMip = Begin
+        0x6801000068010000680100006801000000000000201c0000e010000001000000 ,
+        0x010000006801000000000000a10700000100000001000000
+    End
+    AllowDatasheetView =0
+    FilterOnLoad =0
+    ShowPageMargins =0
+    DisplayOnSharePointSite =1
+    DatasheetAlternateBackColor =16053492
+    DatasheetGridlinesColor12 =15062992
+    FitToScreen =1
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            FontSize =11
+            FontName ="Calibri"
+        End
+        Begin Line
+            BorderLineStyle =0
+            Width =1701
+        End
+        Begin Image
+            BackStyle =0
+            OldBorderStyle =0
+            BorderLineStyle =0
+            SizeMode =3
+            PictureAlignment =2
+            Width =1701
+            Height =1701
+        End
+        Begin CommandButton
+            Width =1701
+            Height =283
+            FontSize =11
+            FontWeight =400
+            ForeColor =-2147483630
+            FontName ="Calibri"
+            BorderLineStyle =0
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            BorderLineStyle =0
+            Width =1701
+            LabelX =-1701
+            FontSize =11
+            BorderColor =12632256
+            FontName ="Calibri"
+            AsianLineBreak =1
+        End
+        Begin FormHeader
+            Height =0
+            BackColor =14602694
+            Name ="IntestazioneMaschera"
+            GUID = Begin
+                0x13775d1fc37ffa4c9b3ac5c4a0a51ee1
+            End
+        End
+        Begin Section
+            Height =1360
+            Name ="Corpo"
+            GUID = Begin
+                0xf6d2d03fbc37cc4e8ee66b8ad58aa0b6
+            End
+            Begin
+                Begin TextBox
+                    OverlapFlags =87
+                    TextAlign =1
+                    IMESentenceMode =3
+                    Left =1004
+                    Top =60
+                    Width =3540
+                    Height =315
+                    LeftMargin =22
+                    TopMargin =22
+                    RightMargin =22
+                    BottomMargin =22
+                    Name ="Struttura"
+                    ControlSource ="Struttura"
+                    GUID = Begin
+                        0xe385f70361379a408b41630ba803f860
+                    End
+
+                    LayoutCachedLeft =1004
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =4544
+                    LayoutCachedHeight =375
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            TextAlign =1
+                            Top =60
+                            Width =1004
+                            Height =315
+                            LeftMargin =22
+                            TopMargin =22
+                            RightMargin =22
+                            BottomMargin =22
+                            Name ="Etichetta5"
+                            Caption ="Struttura:"
+                            GUID = Begin
+                                0x9f92ae37888b46448ca783dcb4bc27f9
+                            End
+                            LayoutCachedTop =60
+                            LayoutCachedWidth =1004
+                            LayoutCachedHeight =375
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =87
+                    TextAlign =1
+                    IMESentenceMode =3
+                    Left =5190
+                    Top =60
+                    Width =5805
+                    Height =315
+                    TabIndex =1
+                    Name ="Via"
+                    ControlSource ="Via"
+                    GUID = Begin
+                        0x607cc9c7331e7c428daf4a7360f8da64
+                    End
+
+                    LayoutCachedLeft =5190
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =10995
+                    LayoutCachedHeight =375
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            TextAlign =1
+                            Left =4755
+                            Top =60
+                            Width =435
+                            Height =315
+                            Name ="Etichetta7"
+                            Caption ="Via:"
+                            GUID = Begin
+                                0xd87f77af84f8b0408367b35da8f4161c
+                            End
+                            LayoutCachedLeft =4755
+                            LayoutCachedTop =60
+                            LayoutCachedWidth =5190
+                            LayoutCachedHeight =375
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =87
+                    TextAlign =1
+                    IMESentenceMode =3
+                    Left =7575
+                    Top =450
+                    Width =840
+                    Height =315
+                    TabIndex =2
+                    Name ="Cap"
+                    ControlSource ="Cap"
+                    GUID = Begin
+                        0x99260ca8e23af246a1d5a4897044ea95
+                    End
+
+                    LayoutCachedLeft =7575
+                    LayoutCachedTop =450
+                    LayoutCachedWidth =8415
+                    LayoutCachedHeight =765
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            TextAlign =1
+                            Left =7095
+                            Top =450
+                            Width =480
+                            Height =315
+                            Name ="Etichetta8"
+                            Caption ="Cap:"
+                            GUID = Begin
+                                0x0db85dde7548e04eba4deacd55462716
+                            End
+                            LayoutCachedLeft =7095
+                            LayoutCachedTop =450
+                            LayoutCachedWidth =7575
+                            LayoutCachedHeight =765
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =87
+                    TextAlign =1
+                    Left =915
+                    Top =456
+                    Width =6000
+                    Height =315
+                    TabIndex =3
+                    Name ="Comune"
+                    ControlSource ="Comune"
+                    GUID = Begin
+                        0xc039cd2d822111448ef3243c2b2fc323
+                    End
+
+                    LayoutCachedLeft =915
+                    LayoutCachedTop =456
+                    LayoutCachedWidth =6915
+                    LayoutCachedHeight =771
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            TextAlign =1
+                            Top =456
+                            Width =915
+                            Height =315
+                            Name ="Etichetta9"
+                            Caption ="Comune:"
+                            GUID = Begin
+                                0x649fa80421b37346870939660156cb87
+                            End
+                            LayoutCachedTop =456
+                            LayoutCachedWidth =915
+                            LayoutCachedHeight =771
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    TextAlign =1
+                    IMESentenceMode =3
+                    Left =9079
+                    Top =450
+                    Width =1920
+                    Height =315
+                    TabIndex =4
+                    Name ="Tel"
+                    ControlSource ="Tel"
+                    GUID = Begin
+                        0x191b27d234086d4f968cc824028e9937
+                    End
+
+                    LayoutCachedLeft =9079
+                    LayoutCachedTop =450
+                    LayoutCachedWidth =10999
+                    LayoutCachedHeight =765
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            TextAlign =1
+                            Left =8625
+                            Top =450
+                            Width =420
+                            Height =315
+                            Name ="Etichetta10"
+                            Caption ="Tel:"
+                            GUID = Begin
+                                0x039cb31e2ae0e34c98c41de48c02b0f4
+                            End
+                            LayoutCachedLeft =8625
+                            LayoutCachedTop =450
+                            LayoutCachedWidth =9045
+                            LayoutCachedHeight =765
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =87
+                    TextAlign =1
+                    IMESentenceMode =3
+                    Left =540
+                    Top =850
+                    Width =3435
+                    Height =315
+                    TabIndex =5
+                    Name ="Mail"
+                    ControlSource ="Mail"
+                    GUID = Begin
+                        0x59b527fa904d6d45b4ed59c5e45bd6ba
+                    End
+
+                    LayoutCachedLeft =540
+                    LayoutCachedTop =850
+                    LayoutCachedWidth =3975
+                    LayoutCachedHeight =1165
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            TextAlign =1
+                            Top =850
+                            Width =540
+                            Height =315
+                            Name ="Etichetta11"
+                            Caption ="Mail:"
+                            GUID = Begin
+                                0x987b83071f3bb04aa3aec851ee2892cc
+                            End
+                            LayoutCachedTop =850
+                            LayoutCachedWidth =540
+                            LayoutCachedHeight =1165
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =87
+                    TextAlign =1
+                    IMESentenceMode =3
+                    Left =8738
+                    Top =850
+                    Width =2265
+                    Height =315
+                    TabIndex =6
+                    Name ="cel"
+                    ControlSource ="cel"
+                    GUID = Begin
+                        0xd33643c45bd7d74086ff5bbf1c799889
+                    End
+
+                    LayoutCachedLeft =8738
+                    LayoutCachedTop =850
+                    LayoutCachedWidth =11003
+                    LayoutCachedHeight =1165
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            TextAlign =1
+                            Left =8333
+                            Top =850
+                            Width =405
+                            Height =315
+                            Name ="Etichetta12"
+                            Caption ="cel:"
+                            GUID = Begin
+                                0x0fa118fcee1a5648982822362e89b887
+                            End
+                            LayoutCachedLeft =8333
+                            LayoutCachedTop =850
+                            LayoutCachedWidth =8738
+                            LayoutCachedHeight =1165
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =87
+                    TextAlign =1
+                    IMESentenceMode =3
+                    Left =5115
+                    Top =855
+                    Width =3165
+                    Height =315
+                    TabIndex =7
+                    Name ="Referente"
+                    ControlSource ="Referente"
+                    GUID = Begin
+                        0xa538e4bc298e7f4c8bc96953560b79ca
+                    End
+
+                    LayoutCachedLeft =5115
+                    LayoutCachedTop =855
+                    LayoutCachedWidth =8280
+                    LayoutCachedHeight =1170
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            TextAlign =1
+                            Left =4035
+                            Top =855
+                            Width =1080
+                            Height =315
+                            Name ="Etichetta13"
+                            Caption ="Referente:"
+                            GUID = Begin
+                                0x49d91911491228429a96cc3d4554353c
+                            End
+                            LayoutCachedLeft =4035
+                            LayoutCachedTop =855
+                            LayoutCachedWidth =5115
+                            LayoutCachedHeight =1170
+                        End
+                    End
+                End
+                Begin Line
+                    BorderWidth =1
+                    OverlapFlags =85
+                    Left =120
+                    Top =1260
+                    Width =10885
+                    Name ="Linea14"
+                    GUID = Begin
+                        0xe781e48acbac194ab763f74b5e4ba174
+                    End
+                    LayoutCachedLeft =120
+                    LayoutCachedTop =1260
+                    LayoutCachedWidth =11005
+                    LayoutCachedHeight =1260
+                End
+            End
+        End
+        Begin FormFooter
+            Height =0
+            BackColor =-2147483604
+            Name ="PièDiPaginaMaschera"
+            GUID = Begin
+                0xdc3b9c95f449224fa647b2f29ba6cda0
+            End
+        End
+    End
+End

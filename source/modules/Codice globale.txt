@@ -1,0 +1,2555 @@
+Option Compare Database
+Public db As Database
+Public sIdP As String
+Public sStarNow As String
+Public sDataN As String
+Public sTekma As String
+Public sSodelo As String
+Public sNastop As String
+Public sIdPr As String
+Public sDijaski As String
+'Public sIdPr As String
+Public sqlc As String
+Public sqlc1 As String
+Public dData1 As Date
+Public dOra1 As Date
+Public dIdC1 As Double
+Public dIdT1 As Double
+
+
+Public sRetta As String
+Public dApertura As Double ' Variabile per controllo apertura form minoreReg
+Public dAperturaOrd As Double ' Variabile controllo apertura ordinaria
+
+
+
+Public Differenza As String
+
+
+
+Public rsR As Recordset
+Public rsR1 As Recordset
+Public rsRC As Recordset
+
+Public sDol As Double
+Public sEMA5 As Double
+Public sEMAO5 As Double
+Public sEMA10 As Double
+Public sEMAO10 As Double
+Public sEMA15 As Double
+Public sEMAO15 As Double
+
+Public bFilter As Boolean
+Public bErrore As Boolean
+
+
+Public sIdT As String, sIdC As String, dData As Date, dOra As Date, dIdR As Boolean
+
+Public sIdTE As String, sIdCE As String, dDataE As Date, dOraE As Date
+Public sIdTU As String, sIdCU As String, dDataU As Date, dOraU As Date
+Public sIdTT As String, sIdCT As String, dDataT As Date, dOraT As Date
+Public sIdTF As String, sIdCF As String, dDataF As Date, dOraF As Date
+Public sIdTR As String, sIdCR As String, dDataR As Date, dOraR As Date
+Public sIdTA As String, sIdCA As String, dDataA As Date, dOraA As Date
+Public bSalva As Boolean
+
+Public sOpen As String, bControlla As Boolean
+
+Public UserLevel As Integer 'Così vedo chi è entrato ed apro le tabelle apposite
+Public dDataInizio As Date, dDataFine As Date
+
+
+
+
+
+
+
+Function IsLoaded(ByVal strFormName As String) As Integer
+ ' Returns True if the specified form is open in Form view or Datasheet view.
+    
+    Const conObjStateClosed = 0
+    Const conDesignView = 0
+    
+    If SysCmd(acSysCmdGetObjectState, acForm, strFormName) <> conObjStateClosed Then
+        If Forms(strFormName).CurrentView <> conDesignView Then
+            IsLoaded = True
+        End If
+    End If
+    
+End Function
+
+
+Sub ControlloDijaski()
+'Dim sqlc As String
+'Dim rsT As Recordset, db As Database'
+
+'Set db = CurrentDb
+'sqlc = "SELECT Dijaski.IdD, [Nome]&" & "' '" & "&[Cognome] AS Nominativo " & _
+'        "FROM Dijaski " & _
+'        "WHERE IdD=" & sIdPr
+'
+'Set rsT = db.OpenRecordset(sqlc, dbOpenDynaset)'
+'
+'If Not rsT.EOF Then
+'    sDijaski = rsT("Nominativo")
+'Else
+'    sDijaski = ""
+'End If
+
+
+
+
+End Sub
+Sub CalcoloAccoglienza()
+
+Set db = CurrentDb
+bErrore = False
+bControlla = False
+
+
+
+
+            'Preparo il recordset per la tabella dei controlli
+            ' se un minore è stato accolto ma non è entrato in quarantena
+            
+            CurrentDb.Execute "delete * from ControlloA", dbFailOnError ' pulisco la tabella di controllo
+            
+            'Apro il recordset per le aggiunte
+             sqlcC = "SELECT IdP, IdT, Data, Ora " & _
+                        "FROM ControlloA;"
+             
+             
+             'apro il recordset
+              Set rsRC = db.OpenRecordset(sqlcC, dbOpenDynaset)
+              
+            ' ora sono pronto ad aggiungere i dati dei minori senza entrata in quarantena
+
+
+
+
+' Cancello la tabella contenete i dati di acquisto
+        CurrentDb.Execute "delete * from Differenza", dbFailOnError ' to empty table before new insertion
+
+
+
+'ricreo i dati diacquisto
+    ' CurrentDb.Execute (sqlc) '
+
+
+'sqlc = "SELECT LPTC.IdP, Data, IdT, Ora, IdC " & _
+        "FROM LPTC INNER JOIN [Go] ON LPTC.IdP = Go.IdP " & _
+        "WHERE (((IdT) = 1 Or (IdT) = 2)) " & _
+        "ORDER BY LPTC.IdP, Data, IdT;"
+
+sqlc = "SELECT LPTC.IdP, LPTC.Data, LPTC.IdT, LPTC.Ora, LPTC.IdC " & _
+        "FROM LPTC INNER JOIN [Go] ON LPTC.IdP = Go.IdP " & _
+        "WHERE (((LPTC.Data) Between #" & dDataInizio & "# And #" & dDataFine & "# AND ((LPTC.[IdT])=1 Or (LPTC.[IdT])=2)))" & _
+        "ORDER BY LPTC.IdP, LPTC.Data, LPTC.IdT;"
+
+
+        
+'Apro il recordset
+    
+    Set rsR = db.OpenRecordset(sqlc, dbOpenDynaset)
+    
+    
+    
+    
+ 'Apro la tabella per il calcolo
+ 
+ sqlc1 = "SELECT IdP, IdT, Data, Ora, Data1, Ora1, Diff, Retta,  IdC " & _
+            "FROM Differenza;"
+ 
+ 
+ 'apro il recordset
+  Set rsR1 = db.OpenRecordset(sqlc1, dbOpenDynaset)
+  
+    
+'pulisco le variabili
+  
+    sIdP = ""
+    Differenza = ""
+    sRetta = ""
+    
+    
+'Apro il case per le varie opzioni
+
+ 
+    
+    
+'Apro il case per le varie opzioni
+
+    Do While Not rsR.EOF
+        
+        If rsR("idp") = sIdP Then
+ '           iTot = iTot + rs1![pr]
+            If Not IsNull(rsR("Ora")) Then
+               Differenza = DateDiff("h", dOra1, rsR("Data") & " " & rsR("Ora"))
+ '               Differenza = DateDiff("h", dOra1, rsR("Ora"))
+'
+            Else
+                Differenza = DateDiff("h", dOra1, rsR("Data") & " 23:59:00")
+            End If
+            
+            If Differenza > 4 Then
+                sRetta = 85
+            Else
+                sRetta = 30
+            End If
+            
+            sIdP = ""       'azzero l'id persona così ricomincia il calcolo per la seconda accoglienza
+            bControlla = False 'Boolean del controllo se non esiste una entrata in quarantena
+            
+        Else
+            If bControlla = True Then  'se controlla attivo aggiungo la riga con i dati
+                rsRC.AddNew
+                    rsRC!IdP = sIdP
+                    rsRC!IdT = rsR!IdT
+                    rsRC!Data = dData1
+                    rsRC!Ora = Format(Right(dOra1, 8), h)
+                rsRC.Update
+                    
+            End If
+                
+                sIdP = rsR("Idp")
+    '             = rs1![prd]
+                 If Not IsNull(rsR![Data]) Then
+                   
+                   dData1 = rsR![Data]
+                                 
+                 Else
+    '              MsgBox "Il seguente Minore non ha una data di entrata in quarantena. Codice Minore nr:" & rsR![IdP], vbQuestion + vbOKOnly, "Funzione MsgBox Semplice"
+                    MsgBox "Il seguente Minore non ha una data di entrata in quarantena. Codice Minore nr:" & rsR![IdP], vbCritical + vbOKOnly, "Controllo inserimento dati"
+                    Dim stDocName As String
+                    Dim stLinkCriteria As String
+                    stLinkCriteria = "[IdP]='" & rsR![IdP] & "'"
+                    stDocName = "fMinore"
+                    DoCmd.OpenForm stDocName, , , stLinkCriteria
+                    bErrore = True
+    
+                    Exit Sub
+                 
+                 End If
+                    If Not IsNull(rsR![Ora]) Then
+                        dOra1 = rsR![Data] & " " & rsR![Ora]
+    '                    dOra1 = rsR![Data] & " " & rsR![Ora]
+    
+                    Else
+                        dOra1 = rsR![Data] & " " & "23:59:00"
+                    End If
+                    dIdC1 = rsR!IdC
+                    dIdT1 = rsR!IdT
+                 bControlla = True
+           
+            
+        End If
+        
+        If Differenza = "" Then
+        Else                        'if total quantity purchased does not exceed consumed
+            rsR1.AddNew
+                rsR1!IdP = rsR!IdP
+                rsR1!IdT = dIdT1
+                rsR1!IdC = dIdC1  'assegno il valore della comunita del primo movimento
+                rsR1!Data = rsR!Data
+                rsR1!Ora = rsR!Ora
+                rsR1!Data1 = dData1
+                rsR1!Ora1 = Format(Right(dOra1, 8), h)
+                rsR1!Diff = Differenza
+                rsR1!Retta = sRetta
+                sRetta = ""
+                Differenza = ""
+            rsR1.Update
+            bControlla = False
+
+        End If
+        rsR.MoveNext
+        
+        Loop
+    
+    
+    
+    
+    
+    
+    rsR.Close
+    rsR1.Close
+    rsRC.Close
+    
+ '   cn.Close
+    
+    Set rsR = Nothing
+    Set rsR1 = Nothing
+    Set rsRC = Nothing
+'    Set cn = Nothing
+    
+
+
+
+
+End Sub
+
+Sub CalcoloMovimenti()
+
+Set db = CurrentDb
+
+'inizializzo le variabili
+sIdT = 0
+sIdC = 0
+sIdTE = 0
+sIdCE = 0
+sIdTU = 0
+sIdCU = 0
+sIdTT = 0
+sIdCT = 0
+sIdTF = 0
+sIdCF = 0
+sIdTR = 0
+sIdCR = 0
+sIdTA = 0
+sIdCA = 0
+bSalva = False
+
+
+
+' Cancello la tabella contenete i dati di acquisto
+        CurrentDb.Execute "delete * from Movimenti", dbFailOnError ' to empty table before new insertion
+
+
+sqlc = "SELECT IdP, Data, IdT, Ora, IdC " & _
+        "FROM LPTC " & _
+        "WHERE (((IdT) = 1 Or (IdT) = 2 Or (IdT) = 3 Or (IdT) = 4 Or (IdT) = 5 Or (IdT) = 6 Or (IdT) = 9)) " & _
+        "ORDER BY IdP, Data, IdT;"
+
+'Apro il recordset
+    
+   Set rsR = db.OpenRecordset(sqlc, dbOpenDynaset)
+ 
+ 'Apro la tabella per il calcolo
+ 
+ sqlc1 = "SELECT * " & _
+            "FROM Movimenti;"
+ 
+ 'apro il recordset
+  Set rsR1 = db.OpenRecordset(sqlc1, dbOpenDynaset)
+  
+'pulisco le variabili
+  
+    sIdP = ""
+    Differenza = ""
+    
+    
+'Apro il case per le varie opzioni
+
+    Do While Not rsR.EOF
+'        sIdP = rsR("idp")
+      
+     
+        If rsR("idp") = sIdP Then
+'        Differenza = DateDiff("d", dData1, rsR("Data"))
+ '       sIdP = ""       'azzero l'id persona così ricomincia il calcolo per la seconda accoglienza
+                Select Case rsR("IdT")
+                     Case 1
+                        sIdP = rsR("Idp")
+                        '             = rs1![prd]
+                        dData = rsR![Data]
+                        If Not IsNull(rsR![Ora]) Then
+                         dOra = rsR![Ora]
+                        Else
+                            dOra = "00:00"
+                        End If
+                        sIdT = rsR("IdT")
+                        
+                        If Not IsNull(rsR("IdC")) Then
+                            sIdC = rsR("IdC")
+                        Else
+                            sIdC = 15
+                        End If
+                        bSalva = True
+                    
+                    Case 2
+                        sIdP = rsR("Idp")
+                        '             = rs1![prd]
+                        dDataE = rsR![Data]
+                        If Not IsNull(rsR![Ora]) Then
+                         dOraE = rsR![Ora]
+                        Else
+                            dOraE = "00:00"
+                        End If
+                        sIdTE = rsR("IdT")
+                        sIdCE = rsR("IdC")
+                        bSalva = True
+                    Case 3
+                        sIdP = rsR("Idp")
+                        '             = rs1![prd]
+                        dDataU = rsR![Data]
+                        If Not IsNull(rsR![Ora]) Then
+                            dOraU = rsR![Ora]
+                        Else
+                            dOraU = "00:00"
+                        End If
+                        sIdTU = rsR("IdT")
+                        sIdCU = rsR("IdC")
+                        bSalva = True
+                        
+                    Case 4
+                        sIdP = rsR("Idp")
+                        '             = rs1![prd]
+                        dDataT = rsR![Data]
+                        If Not IsNull(rsR![Ora]) Then
+                            dOraT = rsR![Ora]
+                        Else
+                            dOraT = "00:00"
+                        End If
+                        sIdTT = rsR("IdT")
+                        sIdCT = rsR("IdC")
+                        bSalva = True
+                    Case 5
+                        sIdP = rsR("Idp")
+                        '             = rs1![prd]
+                        dDataR = rsR![Data]
+                        If Not IsNull(rsR![Ora]) Then
+                            dOraR = rsR![Ora]
+                        Else
+                            dOraR = "00:00"
+                        End If
+                        sIdTR = rsR("IdT")
+                        sIdCR = rsR("IdC")
+                        bSalva = True
+                    Case 6
+                        sIdP = rsR("Idp")
+                        '             = rs1![prd]
+                        dDataF = rsR![Data]
+                        If Not IsNull(rsR![Ora]) Then
+                            dOraF = rsR![Ora]
+                        Else
+                            dOraF = "00:00"
+                        End If
+                        sIdTF = rsR("IdT")
+                        If Not IsNull(rsR("IdC")) Then
+                            sIdCF = rsR("IdC")
+                        Else
+                            sIdCF = 0
+                        End If
+                        bSalva = True
+                    Case 9
+                        sIdP = rsR("Idp")
+                        '             = rs1![prd]
+                        dDataA = rsR![Data]
+                        If Not IsNull(rsR![Ora]) Then
+                            dOraA = rsR![Ora]
+                        Else
+                            dOraA = "00:00"
+                        End If
+                        sIdTA = rsR("IdT")
+                        sIdCA = rsR("IdC")
+                        bSalva = True
+                End Select
+        Else
+            If bSalva = True Then
+                'CaricaTabella
+                
+                rsR1.AddNew
+                    rsR1!IdP = sIdP
+                    rsR1!IdT = sIdT
+                    rsR1!IdC = sIdC
+                    rsR1!Data = dData
+                    rsR1!Ora = dOra
+                    rsR1!IdTE = sIdTE
+                    rsR1!IdCE = sIdCE
+                    rsR1!DataE = dDataE
+                    rsR1!OraE = dOraE
+                    rsR1!IdTU = sIdTU
+                    rsR1!IdCU = sIdCU
+                    rsR1!DataU = dDataU
+                    rsR1!OraU = dOraU
+                    rsR1!IdTt = sIdTT
+                    rsR1!IdCt = sIdCT
+                    rsR1!DataT = dDataT
+                    rsR1!Orat = dOraT
+                    rsR1!IdTr = sIdTR
+                    rsR1!IdCR = sIdCR
+                    rsR1!DataR = dDataR
+                    rsR1!Orar = dOraR
+                    rsR1!IdTf = sIdTF
+                    rsR1!IdCf = sIdCF
+                    rsR1!DataF = dDataF
+                    rsR1!Oraf = dOraF
+                    rsR1!IdTa = sIdTA
+                    rsR1!IdCa = sIdCA
+                    rsR1!DataA = dDataA
+                    rsR1!Oraa = dOraA
+                rsR1.Update
+            
+                bSalva = False
+                sIdT = 0
+                sIdC = 0
+                sIdTE = 0
+                sIdCE = 0
+                sIdTU = 0
+                sIdCU = 0
+                sIdTT = 0
+                sIdCT = 0
+                sIdTF = 0
+                sIdCF = 0
+                sIdTR = 0
+                sIdCR = 0
+                sIdTA = 0
+                sIdCA = 0
+ 
+            
+            Else
+                bSalva = False
+            End If
+            
+                Select Case rsR("IdT")
+                     Case 1
+                        sIdP = rsR("Idp")
+                        '             = rs1![prd]
+                        If Not IsNull(rsR![Data]) Then
+                            dData = rsR![Data]
+                        Else
+                            dData = "01/01/2000"
+                        End If
+                        If Not IsNull(rsR![Ora]) Then
+                         dOra = rsR![Ora]
+                        Else
+                            dOra = "00:00"
+                        End If
+                        sIdT = rsR("IdT")
+                        If Not IsNull(rsR("IdC")) Then
+                            sIdC = rsR("IdC")
+                        Else
+                            sIdC = 15
+                        End If
+                        bSalva = True
+                    
+                    Case 2
+                        sIdP = rsR("Idp")
+                        '             = rs1![prd]
+                       ' dDataE = rsR![Data]
+                         If Not IsNull(rsR![Data]) Then
+                            dDataE = rsR![Data]
+                        Else
+                            dDataE = "01/01/2000"
+                        End If
+                        If Not IsNull(rsR![Ora]) Then
+                         dOraE = rsR![Ora]
+                        Else
+                            dOraE = "00:00"
+                        End If
+                        sIdTE = rsR("IdT")
+                        sIdCE = rsR("IdC")
+                        bSalva = True
+                    Case 3
+                        sIdP = rsR("Idp")
+                        '             = rs1![prd]
+                       ' dDataU = rsR![Data]
+                        If Not IsNull(rsR![Data]) Then
+                            dDataU = rsR![Data]
+                        Else
+                            dDataU = "01/01/2000"
+                        End If
+                        If Not IsNull(rsR![Ora]) Then
+                            dOraU = rsR![Ora]
+                        Else
+                            dOraU = "00:00"
+                        End If
+                        sIdTU = rsR("IdT")
+                        sIdCU = rsR("IdC")
+                        bSalva = True
+                        
+                    Case 4
+                        sIdP = rsR("Idp")
+                        '             = rs1![prd]
+                      '  dDataT = rsR![Data]
+                        If Not IsNull(rsR![Data]) Then
+                            dDataT = rsR![Data]
+                        Else
+                            dDataT = "01/01/2000"
+                        End If
+                        If Not IsNull(rsR![Ora]) Then
+                            dOraT = rsR![Ora]
+                        Else
+                            dOraT = "00:00"
+                        End If
+                        sIdTT = rsR("IdT")
+                        sIdCT = rsR("IdC")
+                        bSalva = True
+                    Case 5
+                        sIdP = rsR("Idp")
+                        '             = rs1![prd]
+                        'dDataR = rsR![Data]
+                        If Not IsNull(rsR![Data]) Then
+                            dDataR = rsR![Data]
+                        Else
+                            dDataR = "01/01/2000"
+                        End If
+                        If Not IsNull(rsR![Ora]) Then
+                            dOraR = rsR![Ora]
+                        Else
+                            dOraR = "00:00"
+                        End If
+                        sIdTR = rsR("IdT")
+                        sIdCR = rsR("IdC")
+                        bSalva = True
+                    Case 6
+                        sIdP = rsR("Idp")
+                        '             = rs1![prd]
+                        'dDataF = rsR![Data]
+                        If Not IsNull(rsR![Data]) Then
+                            dDataF = rsR![Data]
+                        Else
+                            dDataF = "01/01/2000"
+                        End If
+                        If Not IsNull(rsR![Ora]) Then
+                            dOraF = rsR![Ora]
+                        Else
+                            dOraF = "00:00"
+                        End If
+                        sIdTF = rsR("IdT")
+                        If Not IsNull(rsR("IdC")) Then
+                            sIdCF = rsR("IdC")
+                        Else
+                            sIdCF = 0
+                        End If
+                        bSalva = True
+                    Case 9
+                        sIdP = rsR("Idp")
+                        '             = rs1![prd]
+                        'dDataA = rsR![Data]
+                        If Not IsNull(rsR![Data]) Then
+                            dDataA = rsR![Data]
+                        Else
+                            dDataA = "01/01/2000"
+                        End If
+                        If Not IsNull(rsR![Ora]) Then
+                            dOraA = rsR![Ora]
+                        Else
+                            dOraA = "00:00"
+                        End If
+                        sIdTA = rsR("IdT")
+                        sIdCA = rsR("IdC")
+                        bSalva = True
+                End Select
+            bSalva = False
+            
+            
+            
+            
+            
+            
+            
+            
+            
+  '          sIdP = rsR("Idp")
+  '          '             = rs1![prd]
+  '
+  '          If Not IsNull(rsR![Data]) Then
+  '          dData = rsR![Data]
+  '          Else
+  '              dData = "01/01/2000"
+  '          End If
+  '
+  '          If Not IsNull(rsR![Ora]) Then
+  '              dOra = rsR![Ora]
+  '          Else
+  '              dOra = "00:00"
+  '          End If
+  '           sIdT = rsR("IdT")
+  '          If Not IsNull(rsR("Idc")) Then
+  '
+  '           sIdC = rsR("IdC")
+  '           Else
+  '          sIdC = 0
+ '            End If
+  '
+  '          bSalva = False
+            
+             
+        End If
+        
+        
+        rsR.MoveNext
+    Loop
+       If bSalva = True Then
+                'CaricaTabella
+                
+                rsR1.AddNew
+                rsR1!IdP = sIdP
+                rsR1!IdT = sIdT
+                rsR1!IdC = sIdC
+                rsR1!Data = dData
+                rsR1!Ora = dOra
+                rsR1!IdTE = sIdTE
+                rsR1!IdCE = sIdCE
+                rsR1!DataE = dDataE
+                rsR1!OraE = dOraE
+                rsR1!IdTU = sIdTU
+                rsR1!IdCU = sIdCU
+                rsR1!DataU = dDataU
+                rsR1!OraU = dOraU
+                rsR1!IdTt = sIdTT
+                rsR1!IdCt = sIdCT
+                rsR1!DataT = dDataT
+                rsR1!Orat = dOraT
+                rsR1!IdTr = sIdTR
+                rsR1!IdCR = sIdCR
+                rsR1!DataR = dDataR
+                rsR1!Orar = dOraR
+                rsR1!IdTf = sIdTF
+                rsR1!IdCf = sIdCF
+                rsR1!DataF = dDataF
+                rsR1!Oraf = dOraF
+                rsR1!IdTa = sIdTA
+                rsR1!IdCa = sIdCA
+                rsR1!DataA = dDataA
+                rsR1!Oraa = dOraA
+               
+        
+                rsR1.Update
+            
+                bSalva = False
+                sIdT = 0
+                sIdC = 0
+                sIdTE = 0
+                sIdCE = 0
+                sIdTU = 0
+                sIdCU = 0
+                sIdTT = 0
+                sIdCT = 0
+                sIdTF = 0
+                sIdCF = 0
+                sIdTR = 0
+                sIdCR = 0
+                sIdTA = 0
+                sIdCA = 0
+            Else
+                bSalva = False
+            End If
+ 
+    
+    rsR.Close
+    rsR1.Close
+ '   cn.Close
+    
+    Set rsR = Nothing
+    Set rsR1 = Nothing
+'    Set cn = Nothing
+    
+
+End Sub
+
+Sub CalcoloTrasferimento()
+
+
+Set db = CurrentDb
+bErrore = False
+bControlla = False
+
+            'Preparo il recordset per la tabella dei controlli
+            ' se un minore è stato accolto ma non è entrato in quarantena
+            
+            CurrentDb.Execute "delete * from ControlloT", dbFailOnError ' pulisco la tabella di controllo
+            
+            'Apro il recordset per le aggiunte
+             sqlcC = "SELECT IdP, IdT, Data, Ora " & _
+                        "FROM Controllot;"
+             
+             
+             'apro il recordset
+              Set rsRC = db.OpenRecordset(sqlcC, dbOpenDynaset)
+              
+            ' ora sono pronto ad aggiungere i dati dei minori senza entrata in quarantena
+
+'ricreo i dati diacquisto
+    ' CurrentDb.Execute (sqlc) '
+
+
+'sqlc = "SELECT LPTC.IdP, Data, IdT, Ora, IdC " & _
+        "FROM LPTC INNER JOIN [Go] ON LPTC.IdP = Go.IdP " & _
+        "WHERE (((IdT) = 4 Or (IdT) = 10)) " & _
+        "ORDER BY LPTC.IdP, Data, IdT;"
+       
+sqlc = "SELECT LPTC.IdP, LPTC.Data, LPTC.IdT, LPTC.Ora, LPTC.IdC " & _
+        "FROM LPTC INNER JOIN [Go] ON LPTC.IdP = Go.IdP " & _
+        "WHERE (((LPTC.Data) Between #" & dDataInizio & "# And #" & dDataFine & "# AND ((LPTC.[IdT])=4 Or (LPTC.[IdT])=10)))" & _
+        "ORDER BY LPTC.IdP, LPTC.Data, LPTC.IdT;"
+       
+       
+       
+       
+       
+       
+'Apro il recordset
+    
+    Set rsR = db.OpenRecordset(sqlc, dbOpenDynaset)
+ 
+ 
+ 
+ 'Apro la tabella per il calcolo
+ 
+ sqlc1 = "SELECT IdP, IdT, Data, Ora, Data1, Ora1, Diff, Retta,  IdC " & _
+            "FROM Differenza;"
+ 
+ 'apro il recordset
+  Set rsR1 = db.OpenRecordset(sqlc1, dbOpenDynaset)
+  
+    
+'pulisco le variabili
+  
+    sIdP = ""
+    Differenza = ""
+    sRetta = ""
+    
+'Apro il case per le varie opzioni
+
+    Do While Not rsR.EOF
+        '        sIdP = rsR("idp")
+            
+            If rsR("idp") = sIdP Then
+        '           iTot = iTot + rs1![pr]
+                If Not IsNull(rsR("Ora")) Then
+                   Differenza = DateDiff("h", dOra1, rsR("Data") & " " & rsR("Ora"))
+        '               Differenza = DateDiff("h", dOra1, rsR("Ora"))
+        '
+                Else
+                    Differenza = DateDiff("h", dOra1, rsR("Data") & " 23:59:00")
+        '                Differenza = DateDiff("h", dOra1, "23:59:00")
+        
+        '               DateDiff('s',[Start Date],DateAdd('d',IIF([End date]<[Start Date],1,0),[End Date]))/3600
+        '              Differenza = Round(dOra1 - "00:00:00", 1)
+                    
+                End If
+        '            Differenza = DateDiff("n", dOra1, rsR("Ora"))
+                If Differenza > 4 Then
+                    sRetta = 85
+                Else
+                    sRetta = 30
+                End If
+                
+                sIdP = ""       'azzero l'id persona così ricomincia il calcolo per la seconda accoglienza
+                bControlla = False 'Boolean del controllo se non esiste una entrata in quarantena
+            
+            Else
+                If bControlla = True Then  'se controlla attivo aggiungo la riga con i dati
+                    rsRC.AddNew
+                        rsRC!IdP = sIdP
+                        rsRC!IdT = rsR!IdT
+                        rsRC!Data = dData1
+                        rsRC!Ora = Format(Right(dOra1, 8), h)
+                    rsRC.Update
+                        
+                End If
+                
+                sIdP = rsR("Idp")
+        '             = rs1![prd]
+                 If Not IsNull(rsR![Data]) Then
+                   
+                   dData1 = rsR![Data]
+                                 
+                 Else
+        '              MsgBox "Il seguente Minore non ha una data di entrata in quarantena. Codice Minore nr:" & rsR![IdP], vbQuestion + vbOKOnly, "Funzione MsgBox Semplice"
+                    MsgBox "Il seguente Minore non ha una data di entrata in accoglienza ordinaria. Codice Minore nr:" & rsR![IdP], vbCritical + vbOKOnly, "Controllo inserimento dati"
+                    Dim stDocName As String
+                    Dim stLinkCriteria As String
+                    stLinkCriteria = "[IdP]='" & rsR![IdP] & "'"
+                    stDocName = "fMinore"
+                    DoCmd.OpenForm stDocName, , , stLinkCriteria
+                    bErrore = True
+        
+                    Exit Sub
+                 
+                 End If
+                    If Not IsNull(rsR![Ora]) Then
+                        dOra1 = rsR![Data] & " " & rsR![Ora]
+        '                    dOra1 = rsR![Data] & " " & rsR![Ora]
+                    Else
+                        dOra1 = rsR![Data] & " " & "23:59:00"
+                    End If
+                    dIdC1 = rsR!IdC
+                    dIdT1 = rsR!IdT
+                 bControlla = True
+            End If
+            
+            If Differenza = "" Then
+            Else                        'if total quantity purchased does not exceed consumed
+                rsR1.AddNew
+                    rsR1!IdP = rsR!IdP
+ '                   rsR1!IdT = rsR!IdT
+                    rsR1!IdT = dIdT1
+                    rsR1!IdC = dIdC1    'Assegno il valore alla comunità trasferente
+                    
+                    rsR1!Data = rsR!Data
+                    rsR1!Ora = rsR!Ora
+                    rsR1!Data1 = dData1
+                    rsR1!Ora1 = Format(Right(dOra1, 8), h)
+                    rsR1!Diff = Differenza
+                    rsR1!Retta = sRetta
+                    sRetta = ""
+                    Differenza = ""
+                rsR1.Update
+                bControlla = False
+
+            End If
+            rsR.MoveNext
+        Loop
+    
+    rsR.Close
+    rsR1.Close
+    rsRC.Close
+    
+ '   cn.Close
+    
+    Set rsR = Nothing
+    Set rsR1 = Nothing
+    Set rsRC = Nothing
+'    Set cn = Nothing
+    
+End Sub
+
+Public Sub ImportEncr()
+
+
+'Importo i dati dalla cartella c:\Import del db ExportComune.accdb
+    Const dbImport = "\ExportComune.accdb"
+    DoCmd.SetWarnings False 'Turn OFF display alerts
+ 'Controllo se esistono le tabelle se sì le elimino
+
+   ' Call TblExists("TempAlias")
+    If TblExists("TempAlias") = True Then
+        DoCmd.DeleteObject acTable, "TempAlias"
+    End If
+    
+   ' Call TblExists("TempGo")
+    If TblExists("TempGo") = True Then
+        DoCmd.DeleteObject acTable, "TempGo"
+    End If
+    
+  '  Call TblExists("TempLPTC")
+    If TblExists("TempLPTC") = True Then
+         DoCmd.DeleteObject acTable, "TempLPTC"
+    End If
+    
+  '  Call TblExists("TempTipoData")
+'    If TblExists("TempTipoData") = True Then
+'         DoCmd.DeleteObject acTable, "TempTipoData"
+'    End If
+    
+ '   Call TblExists("TempComunita")
+'    If TblExists("TempComunita") = True Then
+'         DoCmd.DeleteObject acTable, "TempComunita"
+'    End If
+   
+   
+   
+   
+
+    DoCmd.TransferDatabase acImport, "Microsoft Access", CurrentProject.Path & dbImport, acTable, "Alias", "TempAlias", False
+    DoCmd.TransferDatabase acImport, "Microsoft Access", CurrentProject.Path & dbImport, acTable, "Go", "TempGo", False
+    DoCmd.TransferDatabase acImport, "Microsoft Access", CurrentProject.Path & dbImport, acTable, "LPTC", "TempLPTC", False
+ '   DoCmd.TransferDatabase acImport, "Microsoft Access", dbImport, acTable, "TipoData", "TempTipoData", False
+ '   DoCmd.TransferDatabase acImport, "Microsoft Access", dbImport, acTable, "Comunita", "TempComunita", False
+    
+    
+    
+'Accodo dati tabella 1Go
+sqlc = "INSERT INTO [Go] ( IdP, IdMinoriMIS, Sede, Cognome, Nome, LuogoN, DataN, Sesso, " & _
+            "Cittadinanza, tel, mail, [Note] ) " & _
+        "SELECT TempGo.IdP, TempGo.IdMinoriMIS, TempGo.Sede, TempGo.Cognome, TempGo.Nome, " & _
+            "TempGo.LuogoN, TempGo.DataN, TempGo.Sesso, TempGo.Cittadinanza, TempGo.tel, " & _
+            "TempGo.mail, TempGo.Note " & _
+        "FROM TempGo " & _
+        "WHERE (((TempGo.Sede)='sede'));"
+'eseguo la query di acodamento
+     CurrentDb.Execute (sqlc)
+
+'Accodo dati tabella 2Alias
+sqlc = "INSERT INTO Alias ( IdA, IdP, DataModifica, Cognome, Nome, LuogoN, DataN, " & _
+            "Cittadinanza, [Note], Attiva ) " & _
+        "SELECT TempAlias.IdA, TempAlias.IdP, TempAlias.DataModifica, " & _
+            "TempAlias.Cognome, TempAlias.Nome, TempAlias.LuogoN, TempAlias.DataN, " & _
+            "TempAlias.Cittadinanza, TempAlias.Note, TempAlias.Attiva " & _
+        "FROM TempAlias INNER JOIN [Go] ON TempAlias.IdP = Go.IdP;"
+
+'eseguo la query di acodamento
+     CurrentDb.Execute (sqlc)
+
+
+'Accodo dati tabella 3LPTC
+'sqlc = "INSERT INTO LPTC ( IdL, IdP, IdT, IdC, Data, Ora, Note, Reg ) " & _
+        "SELECT TempLPTC.IdL, TempLPTC.IdP, TempLPTC.IdT, TempLPTC.IdC, " & _
+            "TempLPTC.Data, TempLPTC.Ora, TempLPTC.Note, 0 AS Reg " & _
+        "FROM TempLPTC;"
+
+sqlc = "INSERT INTO LPTC ( IdL, IdP, IdT, IdC, Data, Ora, [Note], Reg ) " & _
+        "SELECT TempLPTC.IdL, TempLPTC.IdP, TempLPTC.IdT, TempLPTC.IdC, TempLPTC.Data, TempLPTC.Ora, TempLPTC.Note, TempLPTC.Reg " & _
+        "FROM [Go] INNER JOIN (LPTC RIGHT JOIN TempLPTC ON (LPTC.Data = TempLPTC.Data) " & _
+            "AND (LPTC.IdT = TempLPTC.IdT) AND (LPTC.IdP = TempLPTC.IdP)) ON Go.IdP = TempLPTC.IdP " & _
+        "WHERE (((LPTC.IdP) Is Null) And ((Go.Sede) = 'sede')) " & _
+        "ORDER BY TempLPTC.IdP;"
+
+
+
+
+
+'eseguo la query di acodamento
+     CurrentDb.Execute (sqlc)
+     
+     
+     
+     'Accodo dati tabella 4TipoData
+'sqlc = "INSERT INTO TipoData ( IdT, Tipo ) " & _
+'        "SELECT TempTipoData.IdT, TempTipoData.Tipo " & _
+'        "FROM TempTipoData; "
+'eseguo la query di acodamento
+'     CurrentDb.Execute (sqlc)
+     
+     
+
+'Accodo dati tabella 5Comunita
+'sqlc = "INSERT INTO Comunita ( IdC, Comunita, Struttura, Via, Cap, Comune, Tel, Mail, cel, Referente ) " & _
+'        "SELECT TempComunita.IdC, TempComunita.Comunita, TempComunita.Struttura, TempComunita.Via, " & _
+'            "TempComunita.Cap, TempComunita.Comune, TempComunita.Tel, TempComunita.Mail, " & _
+'            "TempComunita.cel, TempComunita.Referente " & _
+'        "FROM TempComunita;"
+'eseguo la query di acodamento
+'     CurrentDb.Execute (sqlc)
+
+
+
+
+
+ 'Dopo aver caricato tutti i dati ricontrollo se esistono le tabelle se sì le elimino
+
+   ' Call TblExists("TempAlias")
+    If TblExists("TempAlias") = True Then
+        DoCmd.DeleteObject acTable, "TempAlias"
+    End If
+    
+   ' Call TblExists("TempGo")
+    If TblExists("TempGo") = True Then
+        DoCmd.DeleteObject acTable, "TempGo"
+    End If
+    
+  '  Call TblExists("TempLPTC")
+    If TblExists("TempLPTC") = True Then
+         DoCmd.DeleteObject acTable, "TempLPTC"
+    End If
+    
+  '  Call TblExists("TempTipoData")
+'    If TblExists("TempTipoData") = True Then
+'         DoCmd.DeleteObject acTable, "TempTipoData"
+'    End If
+    
+ '   Call TblExists("TempComunita")
+'    If TblExists("TempComunita") = True Then
+'         DoCmd.DeleteObject acTable, "TempComunita"
+'    End If
+   
+   
+
+End Sub
+
+Public Function TblExists(sTable As String) As Boolean
+    
+    On Error Resume Next
+    Dim tdf As TableDef
+  
+    Set tdf = CurrentDb.TableDefs(sTable)
+
+    If Err.Number = 0 Then
+        TblExists = True
+    Else
+        TblExists = False
+    End If
+End Function
+
+
+
+Sub CalcoloReg()
+
+Set db = CurrentDb
+
+'inizializzo le variabili
+sIdT = 0
+sIdC = 0
+dIdR = False
+
+
+bSalva = False
+
+
+' Cancello la tabella contenete i dati di acquisto
+        CurrentDb.Execute "delete * from Reg", dbFailOnError ' to empty table before new insertion
+
+'ricreo i dati diacquisto
+    ' CurrentDb.Execute (sqlc) '
+
+
+sqlc = "SELECT IdP, Data, IdT, Ora, IdC, Reg " & _
+        "FROM LPTC " & _
+        "WHERE ((IdT) = 1 Or (Reg) = 0) " & _
+        "ORDER BY IdP, Data, IdT;"
+'SELECT LPTC.IdP, LPTC.Data, LPTC.IdT, LPTC.Ora
+'FROM LPTC
+'WHERE (((LPTC.IdT) = 1 Or (LPTC.IdT) = 2))
+'ORDER BY LPTC.IdP, LPTC.Data, LPTC.IdT;
+
+        
+'Apro il recordset
+    
+   Set rsR = db.OpenRecordset(sqlc, dbOpenDynaset)
+    
+ 'Apro la tabella per il calcolo
+ 
+ sqlc1 = "SELECT * " & _
+            "FROM Reg;"
+ 
+ 
+ 'apro il recordset
+  Set rsR1 = db.OpenRecordset(sqlc1, dbOpenDynaset)
+  
+    
+'pulisco le variabili
+  
+    sIdP = ""
+    Differenza = ""
+    
+'Apro il case per le varie opzioni
+
+
+    Do While Not rsR.EOF
+'        sIdP = rsR("idp")
+      
+     
+    If rsR("idp") = sIdP Then
+        Select Case rsR("IdT")
+            Case 1
+               sIdP = rsR("Idp")
+               dData = rsR![Data]
+               If Not IsNull(rsR![Ora]) Then
+                dOra = rsR![Ora]
+               Else
+                   dOra = "00:00"
+               End If
+               sIdT = rsR("IdT")
+               If Not IsNull(rsR("IdC")) Then
+                   sIdC = rsR("IdC")
+               Else
+                   sIdC = 15
+               End If
+               dIdR = rsR("Reg")
+               bSalva = True
+           
+           Case 2
+               sIdP = rsR("Idp")
+               dIdR = rsR("Reg")
+               bSalva = True
+           Case 3
+               sIdP = rsR("Idp")
+                   dIdR = rsR("Reg")
+               bSalva = True
+               
+           Case 4
+               sIdP = rsR("Idp")
+               dIdR = rsR("Reg")
+               bSalva = True
+           Case 5
+               sIdP = rsR("Idp")
+               dIdR = rsR("Reg")
+               bSalva = True
+           Case 6
+               sIdP = rsR("Idp")
+               dIdR = rsR("Reg")
+               bSalva = True
+               
+           Case 7
+               sIdP = rsR("Idp")
+               dIdR = rsR("Reg")
+               bSalva = True
+                                       
+           Case 8
+               sIdP = rsR("Idp")
+              dIdR = rsR("Reg")
+               bSalva = True
+                                       
+               
+               
+           Case 9
+               sIdP = rsR("Idp")
+               sIdR = rsR("Reg")
+               bSalva = True
+        
+           Case 10
+               sIdP = rsR("Idp")
+              dIdR = rsR("Reg")
+               bSalva = True
+               
+        End Select
+    Else
+        If bSalva = True Then
+            'CaricaTabella
+            rsR1.AddNew
+                rsR1!IdP = sIdP
+                rsR1!IdT = sIdT
+                rsR1!IdC = sIdC
+                rsR1!Data = dData
+                rsR1!Ora = dOra
+                rsR1!Reg = dIdR
+            rsR1.Update
+        
+            bSalva = False
+            sIdT = 0
+            sIdC = 0
+            dIdR = False
+        
+        
+        Else
+            bSalva = False
+        End If
+            
+            
+            
+            Select Case rsR("IdT")
+                 Case 1
+                    sIdP = rsR("Idp")
+                    '             = rs1![prd]
+                    If Not IsNull(rsR![Data]) Then
+                        dData = rsR![Data]
+                    Else
+                        dData = "01/01/2000"
+                    End If
+                    If Not IsNull(rsR![Ora]) Then
+                     dOra = rsR![Ora]
+                    Else
+                        dOra = "00:00"
+                    End If
+                    sIdT = rsR("IdT")
+                    If Not IsNull(rsR("IdC")) Then
+                        sIdC = rsR("IdC")
+                    Else
+                        sIdC = 15
+                    End If
+                    dIdR = rsR("Reg")
+                    bSalva = True
+                
+                Case 2
+                    sIdP = rsR("Idp")
+                    dIdR = rsR("Reg")
+                    bSalva = True
+                Case 3
+                    sIdP = rsR("Idp")
+                    dIdR = rsR("Reg")
+                    bSalva = True
+                    
+                Case 4
+                    sIdP = rsR("Idp")
+                    dIdR = rsR("Reg")
+                    bSalva = True
+                Case 5
+                    sIdP = rsR("Idp")
+                    dIdR = rsR("Reg")
+                    bSalva = True
+                Case 6
+                    sIdP = rsR("Idp")
+                    dIdR = rsR("Reg")
+                    bSalva = True
+                Case 7
+                    sIdP = rsR("Idp")
+                    dIdR = rsR("Reg")
+                    bSalva = True
+                Case 8
+                    sIdP = rsR("Idp")
+                    dIdR = rsR("Reg")
+                    bSalva = True
+                Case 9
+                    sIdP = rsR("Idp")
+                    dIdR = rsR("Reg")
+                    bSalva = True
+                Case 10
+                    sIdP = rsR("Idp")
+                    dIdR = rsR("Reg")
+                    bSalva = True
+            End Select
+      '  bSalva = False
+    End If
+    
+    
+    rsR.MoveNext
+    Loop
+    If bSalva = True Then
+    'CaricaTabella
+    
+        rsR1.AddNew
+            rsR1!IdP = sIdP
+            rsR1!IdT = sIdT
+            rsR1!IdC = sIdC
+            rsR1!Data = dData
+            rsR1!Ora = dOra
+            rsR1!Reg = dIdR
+        rsR1.Update
+    
+        bSalva = False
+        sIdT = 0
+        sIdC = 0
+        sIdR = 0
+    Else
+        bSalva = False
+    End If
+
+
+rsR.Close
+rsR1.Close
+'   cn.Close
+
+Set rsR = Nothing
+Set rsR1 = Nothing
+'    Set cn = Nothing
+    
+
+End Sub
+
+
+
+Sub CalcoloOrdinaria()
+
+Set db = CurrentDb
+
+bErrore = False
+
+'sqlc = "SELECT LPTC.IdP, Data, IdT, Ora, IdC " & _
+        "FROM LPTC INNER JOIN [Go] ON LPTC.IdP = Go.IdP " & _
+        "WHERE ((IdT) = 10 ) " & _
+        "ORDER BY LPTC.IdP, Data, IdT;"
+        
+sqlc = "SELECT LPTC.IdP, LPTC.Data, LPTC.IdT, LPTC.Ora, LPTC.IdC " & _
+        "FROM LPTC INNER JOIN [Go] ON LPTC.IdP = Go.IdP " & _
+        "WHERE (((LPTC.Data) Between #" & dDataInizio & "# And #" & dDataFine & "# AND ((LPTC.[IdT])=10))" & _
+        "ORDER BY LPTC.IdP, LPTC.Data, LPTC.IdT;"
+
+        
+        
+        
+        
+        
+'SELECT LPTC.IdP, LPTC.Data, LPTC.IdT, LPTC.Ora
+'FROM LPTC
+'WHERE (((LPTC.IdT) = 1 Or (LPTC.IdT) = 2))
+'ORDER BY LPTC.IdP, LPTC.Data, LPTC.IdT;
+
+
+        
+'Apro il recordset
+    
+    Set rsR = db.OpenRecordset(sqlc, dbOpenDynaset)
+    
+    
+    
+    
+ 'Apro la tabella per il calcolo
+ 
+ sqlc1 = "SELECT IdP, IdT, Data, Ora, Data1, Ora1, Diff, Retta,  IdC " & _
+            "FROM Differenza;"
+ 
+ 
+ 'apro il recordset
+  Set rsR1 = db.OpenRecordset(sqlc1, dbOpenDynaset)
+  
+    
+'pulisco le variabili
+  
+    sIdP = ""
+    Differenza = ""
+    sRetta = ""
+    
+    
+'Apro il case per le varie opzioni
+
+ 
+    
+    
+'Apro il case per le varie opzioni
+
+    Do While Not rsR.EOF
+            
+            If rsR("idp") = sIdP Then
+                If Not IsNull(rsR("Ora")) Then
+                   Differenza = DateDiff("h", Now, rsR("Data") & " " & rsR("Ora"))
+                Else
+                    Differenza = DateDiff("h", Now, rsR("Data") & " 23:59:00")
+                End If
+                
+                If Differenza > 4 Then
+                    sRetta = 85
+                Else
+                    sRetta = 30
+                End If
+                
+                sIdP = ""       'azzero l'id persona così ricomincia il calcolo per la seconda accoglienza
+            Else
+                sIdP = rsR("Idp")
+        '             = rs1![prd]
+                 If Not IsNull(rsR![Data]) Then
+                   
+                   dData1 = rsR![Data]
+                                 
+                 Else
+        '              MsgBox "Il seguente Minore non ha una data di entrata in quarantena. Codice Minore nr:" & rsR![IdP], vbQuestion + vbOKOnly, "Funzione MsgBox Semplice"
+                    MsgBox "Il seguente Minore non ha una data di entrata in quarantena. Codice Minore nr:" & rsR![IdP], vbCritical + vbOKOnly, "Controllo inserimento dati"
+                    Dim stDocName As String
+                    Dim stLinkCriteria As String
+                    stLinkCriteria = "[IdP]='" & rsR![IdP] & "'"
+                    stDocName = "fMinore"
+                    DoCmd.OpenForm stDocName, , , stLinkCriteria
+                    bErrore = True
+        
+                    Exit Sub
+                 
+                 End If
+                    If Not IsNull(rsR![Ora]) Then
+                        dOra1 = rsR![Data] & " " & rsR![Ora]
+                    Else
+                        dOra1 = rsR![Data] & " " & "23:59:00"
+                    End If
+                    
+            End If
+            
+            If Differenza = "" Then
+            Else                        'if total quantity purchased does not exceed consumed
+                rsR1.AddNew
+                    
+            '       *********************** Assign purchase details
+                    rsR1!IdP = rsR!IdP
+                    rsR1!IdT = rsR!IdT
+                    rsR1!IdC = rsR!IdC
+                    rsR1!Data = rsR!Data
+                    rsR1!Ora = rsR!Ora
+                    rsR1!Data1 = dData1
+                    rsR1!Ora1 = Format(Right(dOra1, 8), h)
+                    rsR1!Diff = Differenza
+                    rsR1!Retta = sRetta
+                    sRetta = ""
+                    Differenza = ""
+                
+                rsR1.Update
+            End If
+        
+        rsR.MoveNext
+    Loop
+    
+    rsR.Close
+    rsR1.Close
+ '   cn.Close
+    
+    Set rsR = Nothing
+    Set rsR1 = Nothing
+'    Set cn = Nothing
+
+End Sub
+
+
+Sub CalcoloQuarantena()
+
+Set db = CurrentDb
+bErrore = False
+bControlla = False
+
+            'Preparo il recordset per la tabella dei controlli
+            'se un minore è entrato in quarantena ma non è mai uscito
+            
+            CurrentDb.Execute "delete * from Controllo", dbFailOnError ' pulisco la tabella di controllo
+            
+            'Apro il recordset per le aggiunte
+             sqlcC = "SELECT IdP, IdT, Data, Ora " & _
+                        "FROM Controllo;"
+             
+             
+             'apro il recordset
+              Set rsRC = db.OpenRecordset(sqlcC, dbOpenDynaset)
+              
+            ' ora sono pronto ad aggiungere i dati dei minori senza entrata in quarantena
+
+
+
+
+' Cancello la tabella contenete i dati di acquisto
+        CurrentDb.Execute "delete * from DifferenzaQ", dbFailOnError ' to empty table before new insertion
+
+
+
+        
+        'questa query controlla solo le date max di entrata in quarantena
+        'ad esempio idp=827 è entrato in quarantena 2 volte e uscito una volta sola
+        'in questo modo trovo solo l'ultima volta che è entrato in quarantena
+        
+'
+'sqlc = "SELECT LPTC.IdP, Max(LPTC.Data) AS Data, LPTC.IdT, Max(LPTC.Ora) AS Ora, Max(LPTC.IdC) AS IdC " & _
+        "FROM LPTC INNER JOIN [Go] ON LPTC.IdP = Go.IdP " & _
+        "GROUP BY LPTC.IdP, LPTC.IdT, LPTC.[IdT] " & _
+        "HAVING (((LPTC.[IdT]) = 2 Or (LPTC.[IdT]) = 3)) " & _
+        "ORDER BY LPTC.IdP, Max(LPTC.Data), LPTC.IdT"
+'sqlc = "SELECT LPTC.IdP, LPTC.Data AS Data, LPTC.Ora AS Ora, LPTC.IdT, LPTC.IdC AS IdC " & _
+        "FROM LPTC INNER JOIN [Go] ON LPTC.IdP = Go.IdP " & _
+        "GROUP BY LPTC.IdP, LPTC.Data, LPTC.Ora, LPTC.IdT, LPTC.IdC, LPTC.IdT " & _
+        "HAVING (((LPTC.IdT) = 2 Or (LPTC.IdT) = 3)) " & _
+        "ORDER BY LPTC.IdP, LPTC.Data, LPTC.Ora, LPTC.IdT; "
+'sqlc = "SELECT LPTC.IdP as IdP, LPTC.Data AS Data, LPTC.Ora AS Ora, LPTC.IdT, LPTC.IdC AS IdC, [6Fuga].IdP " & _
+        "FROM (LPTC INNER JOIN [Go] ON LPTC.IdP = Go.IdP) LEFT JOIN 6Fuga ON LPTC.IdP = [6Fuga].IdP " & _
+        "GROUP BY LPTC.IdP, LPTC.Data, LPTC.Ora, LPTC.IdT, LPTC.IdC, LPTC.IdT, [6Fuga].IdP " & _
+        "HAVING (((LPTC.IdT) = 2 Or (LPTC.IdT) = 3) And (([6Fuga].IdP) Is Null)) " & _
+        "ORDER BY LPTC.IdP, LPTC.Data, LPTC.Ora, LPTC.IdT;"
+sqlc = "SELECT LPTC.IdP, LPTC.Data AS Data, LPTC.Ora AS Ora, LPTC.IdT, LPTC.IdC AS IdC, [3EQeNoUQeFuga].Persona " & _
+        "FROM (LPTC INNER JOIN [Go] ON LPTC.IdP = Go.IdP) LEFT JOIN 3EQeNoUQeFuga ON LPTC.IdP = [3EQeNoUQeFuga].Persona " & _
+        "GROUP BY LPTC.IdP, LPTC.Data, LPTC.Ora, LPTC.IdT, LPTC.IdC, LPTC.IdT, [3EQeNoUQeFuga].Persona " & _
+        "HAVING (((LPTC.Data) Between #" & dDataInizio & "# And #" & dDataFine & "#) AND (([3EQeNoUQeFuga].Persona) Is Null) AND ((LPTC.IdT)=2 Or (LPTC.IdT)=3))" & _
+        "ORDER BY LPTC.IdP, LPTC.Data, LPTC.Ora, LPTC.IdT;"
+
+'sqlc = "SELECT LPTC.IdP, LPTC.Data, LPTC.IdT, LPTC.Ora, LPTC.IdC " & _
+        "FROM LPTC INNER JOIN [Go] ON LPTC.IdP = Go.IdP " & _
+        "WHERE (((LPTC.Data) Between #" & dDataI & "# And #" & dDataF & "# AND ((LPTC.[IdT])=1 Or (LPTC.[IdT])=2))" & _
+        "ORDER BY LPTC.IdP, LPTC.Data, LPTC.IdT;"
+
+        
+'Apro il recordset
+    
+    Set rsR = db.OpenRecordset(sqlc, dbOpenDynaset)
+    
+    
+    
+    
+ 'Apro la tabella per il calcolo
+ 
+ sqlc1 = "SELECT IdP, IdT, Data, Ora, Data1, Ora1, Diff, Retta,  IdC " & _
+            "FROM DifferenzaQ;"
+ 
+ 
+ 'apro il recordset
+  Set rsR1 = db.OpenRecordset(sqlc1, dbOpenDynaset)
+  
+    
+'pulisco le variabili
+  
+    sIdP = ""
+    Differenza = ""
+    sRetta = ""
+    
+    
+'Apro il case per le varie opzioni
+
+ 
+    
+    
+'Apro il case per le varie opzioni
+
+    Do While Not rsR.EOF
+        
+        If rsR("idp") = sIdP Then
+ '           iTot = iTot + rs1![pr]
+            If Not IsNull(rsR("Ora")) Then
+               Differenza = DateDiff("d", dOra1, rsR("Data") & " " & rsR("Ora"))
+ '               Differenza = DateDiff("h", dOra1, rsR("Ora"))
+'
+            Else
+                Differenza = DateDiff("d", dOra1, rsR("Data") & " 23:59:00")
+            End If
+            
+'            If Differenza > 4 Then
+'                sRetta = 85
+'            Else
+'                sRetta = 30
+'            End If
+            
+            sIdP = ""       'azzero l'id persona così ricomincia il calcolo per la seconda accoglienza
+            bControlla = False 'Boolean del controllo se non esiste una entrata in quarantena
+            
+        Else
+            If bControlla = True Then  'se controlla attivo aggiungo la riga con i dati
+                rsRC.AddNew
+                    rsRC!IdP = sIdP
+                    rsRC!IdT = rsR!IdT
+                    rsRC!Data = dData1
+                    rsRC!Ora = Format(Right(dOra1, 8), h)
+                rsRC.Update
+                    
+            End If
+                
+                sIdP = rsR("Idp")
+    '             = rs1![prd]
+                 If Not IsNull(rsR![Data]) Then
+                   
+                   dData1 = rsR![Data]
+                                 
+                 Else
+    '              MsgBox "Il seguente Minore non ha una data di entrata in quarantena. Codice Minore nr:" & rsR![IdP], vbQuestion + vbOKOnly, "Funzione MsgBox Semplice"
+                    MsgBox "Il seguente Minore non ha una data di uscita dalla quarantena. Codice Minore nr:" & rsR![IdP], vbCritical + vbOKOnly, "Controllo inserimento dati"
+                    Dim stDocName As String
+                    Dim stLinkCriteria As String
+                    stLinkCriteria = "[IdP]='" & rsR![IdP] & "'"
+                    stDocName = "fMinore"
+                    DoCmd.OpenForm stDocName, , , stLinkCriteria
+                    bErrore = True
+    
+                    Exit Sub
+                 
+                 End If
+                    If Not IsNull(rsR![Ora]) Then
+                        dOra1 = rsR![Data] & " " & rsR![Ora]
+    '                    dOra1 = rsR![Data] & " " & rsR![Ora]
+    
+                    Else
+                        dOra1 = rsR![Data] & " " & "23:59:00"
+                    End If
+                 bControlla = True
+           
+            
+        End If
+        
+        If Differenza = "" Then
+        Else                        'if total quantity purchased does not exceed consumed
+            rsR1.AddNew
+                rsR1!IdP = rsR!IdP
+                rsR1!IdT = rsR!IdT
+                rsR1!IdC = rsR!IdC
+                rsR1!Data = rsR!Data
+                rsR1!Ora = rsR!Ora
+                rsR1!Data1 = dData1
+                rsR1!Ora1 = Format(Right(dOra1, 8), h)
+                rsR1!Diff = Differenza
+'                rsR1!Retta = sRetta
+                sRetta = ""
+                Differenza = ""
+            rsR1.Update
+            bControlla = False
+
+        End If
+        rsR.MoveNext
+        
+        Loop
+    
+    
+    
+    
+    
+    
+    rsR.Close
+    rsR1.Close
+    rsRC.Close
+    
+ '   cn.Close
+    
+    Set rsR = Nothing
+    Set rsR1 = Nothing
+    Set rsRC = Nothing
+'    Set cn = Nothing
+    
+'Aggiungo tutte le date delle persone fuggite prima della fine della quarantena
+
+          sqlc = "INSERT INTO DifferenzaQ ( IdP, IdT, IdC, Data, Ora, Data1, Ora1, Diff ) " & _
+                    "SELECT [3EQeNoUQeFuga].Persona, [3EQeNoUQeFuga].IdT, [3EQeNoUQeFuga].IdC, " & _
+                        "[3EQeNoUQeFuga].Data, [3EQeNoUQeFuga].Ora, [3EQeNoUQeFuga].Data1, [3EQeNoUQeFuga].Ora1, [3EQeNoUQeFuga].Diff " & _
+                    "FROM 3EQeNoUQeFuga;"
+            
+            
+            
+            CurrentDb.Execute sqlc, dbFailOnError '
+            
+            slqc = ""
+
+'Aggiungo tutte le persone che sono attualmente in quarantena in attesa di concluderla
+    
+    sqlc = "INSERT INTO DifferenzaQ ( IdP, IdT, Data1, Diff, Retta, IdC, Ora1 ) " & _
+            "SELECT [9-3QuarantenaAttiva].Persona, [9-3QuarantenaAttiva].IdT, [9-3QuarantenaAttiva].Data, " & _
+                "[9-3QuarantenaAttiva].Differenza, 100 AS Retta, [9-3QuarantenaAttiva].IdC, [9-3QuarantenaAttiva].[1EQ].Ora " & _
+            "FROM [9-3QuarantenaAttiva];"
+
+            CurrentDb.Execute sqlc, dbFailOnError '
+            
+            slqc = ""
+
+
+'Accodo tutti i dati di DifferenzaQ a Differenza per fare il totale
+
+sqlc = "INSERT INTO Differenza ( IdP, IdT, IdC, Data, Ora, Data1, Ora1, Diff, Retta ) " & _
+        "SELECT DifferenzaQ.IdP, DifferenzaQ.IdT, DifferenzaQ.IdC, DifferenzaQ.Data, DifferenzaQ.Ora, " & _
+            "DifferenzaQ.Data1, DifferenzaQ.Ora1, DifferenzaQ.Diff, DifferenzaQ.Retta " & _
+        "FROM DifferenzaQ;"
+  
+    CurrentDb.Execute sqlc, dbFailOnError '
+    
+    slqc = ""
+
+
+
+
+End Sub
+
+
+Sub CalcoloOrdinariaGenerale()
+
+
+Dim dCalcoloInizio As Date, dDataControlloI As Date
+
+Dim dCalcoloFine As Date, dDataControlloF As Date
+
+
+Set db = CurrentDb
+bErrore = False
+bControlla = False
+
+            'Aggiorno la tabella dei MSNA Dimessi con i dati precedenti la data inizio del conteggio
+            CurrentDb.Execute "delete * from MSNADimessi", dbFailOnError ' pulisco la tabella di controllo
+            
+            
+            sqlc = "INSERT INTO MSNADimessi ( IdT, Data, IdP ) " & _
+                    "SELECT LPTC.IdT, LPTC.Data, LPTC.IdP " & _
+                    "FROM LPTC " & _
+                    "WHERE (((LPTC.IdT)=7) AND ((LPTC.Data)<#" & dDataInizio & "#));"
+
+            
+            CurrentDb.Execute sqlc, dbFailOnError ' pulisco la tabella di controllo
+            
+            sqlc = ""
+            
+            
+            'Aggiorno la tabella dei MSNA Fuggiti
+            
+            
+            CurrentDb.Execute "delete * from MSNAFuggiti", dbFailOnError ' pulisco la tabella di controllo
+            
+            sqlc = "INSERT INTO MSNAFuggiti ( IdT, Data, IdP ) " & _
+                    "SELECT LPTC.IdT, LPTC.Data, LPTC.IdP " & _
+                    "FROM LPTC " & _
+                    "WHERE (((LPTC.IdT)=6) AND ((LPTC.Data)<#" & dDataInizio & "#)) OR (((LPTC.IdT)=6) AND ((LPTC.Data) Is Null));"
+
+            CurrentDb.Execute sqlc, dbFailOnError ' pulisco la tabella di controllo
+            
+            sqlc = ""
+         
+            
+            'Preparo il recordset per la tabella dei controlli
+            'se un minore è entrato in quarantena ma non è mai uscito
+            
+            CurrentDb.Execute "delete * from ControlloO", dbFailOnError ' pulisco la tabella di controllo
+            
+            'Apro il recordset per le aggiunte
+             sqlcC = "SELECT IdP, IdT, Data, Ora " & _
+                        "FROM ControlloO;"
+             
+             
+             'apro il recordset
+              Set rsRC = db.OpenRecordset(sqlcC, dbOpenDynaset)
+              
+            ' ora sono pronto ad aggiungere i dati dei minori senza entrata in quarantena
+
+' Cancello la tabella contenete i dati dell'ordinaria
+        CurrentDb.Execute "delete * from DifferenzaO", dbFailOnError ' to empty table before new insertion
+
+
+
+'inizializzo le variabili
+sIdT = 0
+sIdC = 0
+dIdR = False
+
+
+bSalva = False
+
+'sqlc = "SELECT LPTC.IdP, Data, IdT, Ora, IdC " & _
+        "FROM LPTC INNER JOIN [Go] ON LPTC.IdP = Go.IdP " & _
+        "WHERE ((IdT) = 10 ) " & _
+        "ORDER BY LPTC.IdP, Data DESC, IdT;"
+
+'    sqlc = "SELECT LPTC.IdP, LPTC.Data, LPTC.IdT, LPTC.Ora, LPTC.IdC " & _
+            "FROM LPTC INNER JOIN [Go] ON LPTC.IdP = Go.IdP " & _
+            "WHERE (((LPTC.Data) <= #" & dDataFine & "#) And ((LPTC.[IdT]) = 10)) " & _
+            "ORDER BY LPTC.IdP, LPTC.Data DESC , LPTC.IdT, LPTC.Ora DESC;"
+
+'    sqlc = "SELECT LPTC.IdP, LPTC.Data, LPTC.IdT, LPTC.Ora, LPTC.IdC, MSNADimessi.IdP AS Persone " & _
+            "FROM (LPTC INNER JOIN [Go] ON LPTC.IdP = Go.IdP) LEFT JOIN MSNADimessi ON LPTC.IdP = MSNADimessi.IdP " & _
+            "WHERE (((LPTC.Data) <= #" & dDataFine & "#) And ((LPTC.IdT) = 10) And ((MSNADimessi.IdP) Is Null)) " & _
+            "ORDER BY LPTC.IdP, LPTC.Data DESC , LPTC.IdT, LPTC.Ora DESC;"
+
+    sqlc = "SELECT LPTC.IdP, LPTC.Data, LPTC.IdT, LPTC.Ora, LPTC.IdC, MSNADimessi.IdP AS Persone, MSNAFuggiti.Idp AS Fuggiti " & _
+            "FROM ((LPTC INNER JOIN [Go] ON LPTC.IdP = Go.IdP) LEFT JOIN MSNADimessi ON LPTC.IdP = MSNADimessi.IdP) " & _
+                "LEFT JOIN MSNAFuggiti ON LPTC.IdP = MSNAFuggiti.IdP " & _
+            "WHERE (((LPTC.Data) <= #" & dDataFine & "#) And ((LPTC.IdT) = 10) And ((MSNADimessi.IdP) Is Null) And ((MSNAFuggiti.IdP) Is Null)) " & _
+            "ORDER BY LPTC.IdP, LPTC.Data DESC , LPTC.IdT, LPTC.Ora DESC;"
+
+        
+'Apro il recordset
+    
+   Set rsR = db.OpenRecordset(sqlc, dbOpenDynaset)
+    
+ 'Apro la tabella per il calcolo
+ 
+ sqlc1 = "SELECT * " & _
+            "FROM DifferenzaO;"
+ 
+ 
+ 'apro il recordset
+  Set rsR1 = db.OpenRecordset(sqlc1, dbOpenDynaset)
+  
+    
+'pulisco le variabili
+  
+    sIdP = ""
+    Differenza = ""
+    
+    Do While Not rsR.EOF
+        If rsR("idp") = sIdP Then
+           
+            sIdP = rsR("Idp")
+'            Differenza = DateDiff("d", rsR("Data"), dData)
+
+
+'           Controllo che la data sia inferiore alla data di inizio della maschera fcalcoli
+            Differenza = DateDiff("d", rsR("Data"), dData)
+            If Not IsNull(rsR![Ora]) Then
+                dOra1 = rsR![Ora]
+            Else
+                dOra1 = "00:00"
+            End If
+            sIdT = rsR("IdT")
+            If Not IsNull(rsR("IdC")) Then
+                sIdC = rsR("IdC")
+            Else
+                sIdC = 0
+            End If
+            dData1 = rsR![Data]
+            
+             'Carico Tabella Ordinaria
+                rsR1.AddNew
+                    rsR1!IdP = sIdP
+                    rsR1!IdT = sIdT
+                    rsR1!IdC = sIdC
+                    rsR1!Data = dData
+                    rsR1!Data1 = dData1
+                    rsR1!Ora1 = Format(Right(dOra1, 8), h)
+                    rsR1!Diff = Differenza
+                    rsR1!Ora = dOra
+                    rsR1!Retta = 73
+                rsR1.Update
+                
+                sIdT = 0
+                sIdC = 0
+                bControlla = True 'Boolean del controllo se non esiste una entrata in Ordinaria
+
+        Else
+            If bControlla = True Then  'se controlla attivo aggiungo la riga con i dati
+                rsRC.AddNew
+                    rsRC!IdP = sIdP
+                    rsRC!IdT = rsR!IdT
+                    rsRC!Data = dData1
+                    rsRC!Ora = Format(Right(dOra1, 8), h)
+                rsRC.Update
+                    
+            End If
+            
+            sIdP = rsR("Idp")
+            If Not IsNull(rsR![Data]) Then
+                dData = rsR![Data]
+            Else
+                dData = "01/01/2000"
+            End If
+'            Differenza = DateDiff("d", Date, dData)
+            If Not IsNull(rsR![Ora]) Then
+             dOra = rsR![Ora]
+            Else
+                dOra = "00:00"
+            End If
+            sIdT = rsR("IdT")
+            If Not IsNull(rsR("IdC")) Then
+                sIdC = rsR("IdC")
+            Else
+                sIdC = 0
+            End If
+            ' Inserisco l'analisi delle date rispotto alla data attuale o alle date selezionate nella maschera di calocolo
+            dDataControlloF = Format(dDataFine, "mm/dd/yyyy")
+            dDataControlloI = Format(dDataInizio, "mm/dd/yyyy")
+            
+            If dDataControlloF >= Date Then
+                dCalcoloFine = Date
+            Else
+                dCalcoloFine = dDataControlloF
+            End If
+            
+            If dDataControlloI >= dData Then
+                dCalcoloInizio = dDataControlloI
+            Else
+                dCalcoloInizio = dData
+            End If
+            
+            ' Aggiorno il calcolo della differenza con l'analisi effettuata nel passaggio precedente
+            Differenza = DateDiff("d", dCalcoloInizio, dCalcoloFine)
+            
+ '           Differenza = DateDiff("d", dData, Date)
+             'Carico Tabella Ordinaria
+                rsR1.AddNew
+                    rsR1!IdP = sIdP
+                    rsR1!IdT = sIdT
+                    rsR1!IdC = sIdC
+                    rsR1!Data = dCalcoloFine
+                    rsR1!Data1 = dCalcoloInizio
+                    rsR1!Diff = Differenza
+                    rsR1!Ora = dOra
+                    rsR1!Retta = 73
+                rsR1.Update
+                
+                sIdT = 0
+                sIdC = 0
+              bControlla = False
+        End If
+            
+            
+    rsR.MoveNext
+    Loop
+    
+    
+
+
+rsR.Close
+rsR1.Close
+'   cn.Close
+
+Set rsR = Nothing
+Set rsR1 = Nothing
+'    Set cn = Nothing
+
+
+
+'Creo una tabella DiffrenzaOF con tutti i dati dei MSNA fuggiti dopo essere entrati in ordinaria
+'Elimino tabella DifferenzaOF precedente
+ '   If TblExists("DifferenzaOF") = True Then
+ '       DoCmd.DeleteObject acTable, "DifferenzaOF"
+ '   End If
+  '
+  
+  
+  
+  CurrentDb.Execute "delete * from DifferenzaOF", dbFailOnError ' pulisco la tabella DifferenzaOf
+'Creo una Tanbella DifferenzaOF dove inserisco tutti i MSNA in AO (Idt=10) e fuggiti (Idt=6) Accodo tutti i dati
+
+'sqlc = "SELECT Go.IdP, [6Fuga].IdT, [8OrdinariaAcc].IdC, [6Fuga].Data, [6Fuga].Ora, [8OrdinariaAcc].Data AS Data1, " & _
+            "[8OrdinariaAcc].Ora AS Ora1, DateDiff('y',[8OrdinariaAcc]![Data],[6Fuga]![data]) AS Diff, 100 AS Retta INTO DifferenzaOF " & _
+        "FROM (([Go] INNER JOIN LPTC ON (Go.IdP = LPTC.IdP) AND (Go.IdP = LPTC.IdP)) INNER JOIN 6Fuga ON LPTC.IdP = [6Fuga].IdP) " & _
+            "INNER JOIN 8OrdinariaAcc ON LPTC.IdL = [8OrdinariaAcc].IdL " & _
+        "ORDER BY Go.IdP;"
+        
+ sqlc = "INSERT INTO DifferenzaOF ( IdP, IdT, IdC, Data, Ora, Data1, Ora1, Diff, Retta ) " & _
+        "SELECT Go.IdP, [6Fuga].IdT, [8OrdinariaAcc].IdC, [6Fuga].Data, [6Fuga].Ora, " & _
+            "IIf([8OrdinariaAcc]![Data]<=#" & dDataInizio & "#, #" & dDataInizio & "#,[8OrdinariaAcc]![Data]) AS Data1, " & _
+            "[8OrdinariaAcc].Ora AS Ora1, DateDiff('y',[Data1],[6Fuga]![data]) AS Diff, 100 AS Retta " & _
+        "FROM (([Go] INNER JOIN LPTC ON (Go.IdP = LPTC.IdP) AND (Go.IdP = LPTC.IdP)) INNER JOIN 6Fuga ON LPTC.IdP = [6Fuga].IdP) " & _
+            "INNER JOIN 8OrdinariaAcc ON LPTC.IdL = [8OrdinariaAcc].IdL " & _
+        "WHERE ((([6Fuga].Data) Between #" & dDataInizio & "# And #" & dDataFine & "#)) " & _
+        "ORDER BY Go.IdP;"
+'WHERE ((([6Fuga].Data)<#1/24/2021#))
+
+    CurrentDb.Execute sqlc, dbFailOnError ' pulisco la tabella di controllo
+    
+    slqc = ""
+
+
+
+
+
+
+'Aggiornare la tabella DifferenzaO con tutti i MSNA Dimessi idt=7
+
+
+sqlc = "INSERT INTO DifferenzaOF ( IdP, IdT, IdC, Data, Ora, Data1, Ora1, Diff, Retta ) " & _
+        "SELECT Go.IdP, LPTC_1.IdT, [8OrdinariaAcc].IdC, LPTC_1.Data, LPTC_1.Ora, " & _
+            "IIf([8OrdinariaAcc]![Data]<=#" & dDataInizio & "#, #" & dDataInizio & "#,[8OrdinariaAcc]![Data]) AS Data1, " & _
+            "[8OrdinariaAcc].Ora AS Ora1, DateDiff('y',[Data1],[LPTC_1]![data]) AS Diff, 100 AS Retta " & _
+        "FROM LPTC AS LPTC_1 INNER JOIN (([Go] INNER JOIN LPTC ON (Go.IdP = LPTC.IdP) AND (Go.IdP = LPTC.IdP)) " & _
+            "INNER JOIN 8OrdinariaAcc ON LPTC.IdL = [8OrdinariaAcc].IdL) ON LPTC_1.IdP = LPTC.IdP " & _
+        "WHERE (((LPTC_1.IdT)=7) AND ((LPTC_1.Data) Between #" & dDataInizio & "# And #" & dDataFine & "#)) " & _
+        "ORDER BY Go.IdP;"
+
+
+    CurrentDb.Execute sqlc, dbFailOnError ' pulisco la tabella di controllo
+
+
+    slqc = ""
+
+
+'Aggiorno la tabella DifferenzaO con i dati dei MSNA fuggiti e dimessi
+
+sqlc = "UPDATE DifferenzaOF INNER JOIN DifferenzaO ON DifferenzaOF.IdP = DifferenzaO.IdP SET DifferenzaO.IdP = [DifferenzaOF]![IdP], " & _
+            "DifferenzaO.IdT = [DifferenzaOF]![IdT], DifferenzaO.IdC = [DifferenzaOF]![IdC], DifferenzaO.Data = [DifferenzaOF]![Data], " & _
+            "DifferenzaO.Ora = [DifferenzaOF]![Ora], DifferenzaO.Data1 = [DifferenzaOF]![Data1], DifferenzaO.Ora1 = [DifferenzaOF]![Ora1], " & _
+            "DifferenzaO.Diff = [DifferenzaOF]![Diff], DifferenzaO.Retta = [DifferenzaOF]![Retta];"
+
+    CurrentDb.Execute sqlc, dbFailOnError ' pulisco la tabella di controllo
+    
+    slqc = ""
+
+
+
+
+
+
+
+
+'Accodo tutti i dati di DifferenzaO a Differenza per fare il totale
+sqlc = "INSERT INTO Differenza ( IdP, IdT, IdC, Data, Ora, Data1, Ora1, Diff, Retta ) " & _
+        "SELECT DifferenzaO.IdP, DifferenzaO.IdT, DifferenzaO.IdC, DifferenzaO.Data, DifferenzaO.Ora, " & _
+            "DifferenzaO.Data1, DifferenzaO.Ora1, DifferenzaO.Diff, DifferenzaO.Retta " & _
+        "FROM DifferenzaO;"
+  
+    CurrentDb.Execute sqlc, dbFailOnError ' pulisco la tabella di controllo
+    
+    slqc = ""
+
+
+End Sub
+
+
+
+Sub CalcoloQuarantenaSIM()
+
+Set db = CurrentDb
+bErrore = False
+bControlla = False
+
+          
+            'Preparo il recordset per la tabella dei controlli
+            'se un minore è entrato in quarantena ma non è mai uscito
+            
+            CurrentDb.Execute "delete * from ControlloQ", dbFailOnError ' pulisco la tabella di controllo
+            
+            'Apro il recordset per le aggiunte
+             sqlcC = "SELECT IdP, IdT, Data, Ora " & _
+                        "FROM ControlloQ;"
+             
+             
+             'apro il recordset
+              Set rsRC = db.OpenRecordset(sqlcC, dbOpenDynaset)
+              
+            ' ora sono pronto ad aggiungere i dati dei minori senza entrata in quarantena
+
+
+
+
+'        CurrentDb.Execute "delete * from Differenza", dbFailOnError ' to empty table before new insertion
+
+
+
+        
+        'questa query controlla solo le date max di entrata in quarantena
+        'ad esempio idp=827 è entrato in quarantena 2 volte e uscito una volta sola
+        'in questo modo trovo solo l'ultima volta che è entrato in quarantena
+        
+sqlc = "SELECT LPTC.IdP, Max(LPTC.Data) AS Data, LPTC.IdT, Max(LPTC.Ora) AS Ora, Max(LPTC.IdC) AS IdC " & _
+        "FROM LPTC INNER JOIN [Go] ON LPTC.IdP = Go.IdP " & _
+        "GROUP BY LPTC.IdP, LPTC.IdT, LPTC.[IdT] " & _
+        "HAVING (((LPTC.[IdT]) = 2 Or (LPTC.[IdT]) = 3)) " & _
+        "ORDER BY LPTC.IdP, Max(LPTC.Data), LPTC.IdT"
+
+
+        
+'Apro il recordset
+    
+    Set rsR = db.OpenRecordset(sqlc, dbOpenDynaset)
+    
+    
+    
+    
+ 'Apro la tabella per il calcolo
+ 
+ sqlc1 = "SELECT IdP, IdT, Data, Ora, Data1, Ora1, Diff, Retta,  IdC " & _
+            "FROM Differenza;"
+ 
+ 'apro il recordset
+  Set rsR1 = db.OpenRecordset(sqlc1, dbOpenDynaset)
+  
+    
+'pulisco le variabili
+  
+    sIdP = ""
+    Differenza = ""
+    sRetta = ""
+    
+    
+'Apro il case per le varie opzioni
+
+ 
+    
+    
+'Apro il case per le varie opzioni
+
+    Do While Not rsR.EOF
+        
+        If rsR("idp") = sIdP Then
+ '           iTot = iTot + rs1![pr]
+            If Not IsNull(rsR("Ora")) Then
+               Differenza = DateDiff("d", dOra1, rsR("Data") & " " & rsR("Ora")) - 1 '-1 per togliere il girono del trasferimento
+               
+ '               Differenza = DateDiff("h", dOra1, rsR("Ora"))
+'
+            Else
+                Differenza = DateDiff("d", dOra1, rsR("Data") & " 23:59:00") - 1
+            End If
+            
+            sRetta = 100
+            
+            sIdP = ""       'azzero l'id persona così ricomincia il calcolo per la seconda accoglienza
+            bControlla = False 'Boolean del controllo se non esiste una entrata in quarantena
+            
+        Else
+            If bControlla = True Then  'se controlla attivo aggiungo la riga con i dati
+                rsRC.AddNew
+                    rsRC!IdP = sIdP
+                    rsRC!IdT = rsR!IdT
+                    rsRC!Data = dData1
+                    rsRC!Ora = Format(Right(dOra1, 8), h)
+                rsRC.Update
+                    
+            End If
+                
+                sIdP = rsR("Idp")
+    '             = rs1![prd]
+                 If Not IsNull(rsR![Data]) Then
+                   
+                   dData1 = rsR![Data]
+                                 
+                 Else
+    '              MsgBox "Il seguente Minore non ha una data di entrata in quarantena. Codice Minore nr:" & rsR![IdP], vbQuestion + vbOKOnly, "Funzione MsgBox Semplice"
+                    MsgBox "Il seguente Minore non ha una data di uscita dalla quarantena. Codice Minore nr:" & rsR![IdP], vbCritical + vbOKOnly, "Controllo inserimento dati"
+                    Dim stDocName As String
+                    Dim stLinkCriteria As String
+                    stLinkCriteria = "[IdP]='" & rsR![IdP] & "'"
+                    stDocName = "fMinore"
+                    DoCmd.OpenForm stDocName, , , stLinkCriteria
+                    bErrore = True
+    
+                    Exit Sub
+                 
+                 End If
+                    If Not IsNull(rsR![Ora]) Then
+                        dOra1 = rsR![Data] & " " & rsR![Ora]
+    '                    dOra1 = rsR![Data] & " " & rsR![Ora]
+    
+                    Else
+                        dOra1 = rsR![Data] & " " & "23:59:00"
+                    End If
+                 bControlla = True
+           
+            
+        End If
+        
+        If Differenza = "" Then
+        Else                        'if total quantity purchased does not exceed consumed
+            rsR1.AddNew
+                rsR1!IdP = rsR!IdP
+                rsR1!IdT = rsR!IdT
+                rsR1!IdC = rsR!IdC
+                rsR1!Data = rsR!Data
+                rsR1!Ora = rsR!Ora
+                rsR1!Data1 = dData1
+                rsR1!Ora1 = Format(Right(dOra1, 8), h)
+                rsR1!Diff = Differenza
+                rsR1!Retta = sRetta
+                sRetta = ""
+                Differenza = ""
+            rsR1.Update
+            bControlla = False
+
+        End If
+        rsR.MoveNext
+        
+        Loop
+    
+    
+    
+    
+    
+    
+    rsR.Close
+    rsR1.Close
+    rsRC.Close
+    
+ '   cn.Close
+    
+    Set rsR = Nothing
+    Set rsR1 = Nothing
+    Set rsRC = Nothing
+'    Set cn = Nothing
+    
+
+
+
+
+End Sub
+
+
+
+
+Sub CalcoloQuarantenaReg()
+
+Set db = CurrentDb
+
+'inizializzo le variabili
+sIdT = 0
+sIdC = 0
+dIdR = False
+
+
+bSalva = False
+
+
+' Cancello la tabella contenete i dati di acquisto
+        CurrentDb.Execute "delete * from DifferenzaQ", dbFailOnError ' to empty table before new insertion
+
+'ricreo i dati diacquisto
+    ' CurrentDb.Execute (sqlc) '
+
+
+sqlc = "SELECT LPTC.IdP, LPTC.Data, LPTC.IdT, LPTC.Ora, LPTC.IdC " & _
+        "FROM LPTC INNER JOIN [Go] ON LPTC.IdP = Go.IdP " & _
+        "WHERE (((LPTC.[IdT]) = 2)) Or (((LPTC.[IdT]) = 3)) Or (((LPTC.[IdT]) = 6)) " & _
+        "ORDER BY LPTC.IdP, LPTC.Data, LPTC.IdT;"
+
+
+        
+'Apro il recordset
+    
+   Set rsR = db.OpenRecordset(sqlc, dbOpenDynaset)
+    
+ 'Apro la tabella per il calcolo
+ 
+ sqlc1 = "SELECT * " & _
+            "FROM DifferenzaQ;"
+ 
+ 
+ 'apro il recordset
+  Set rsR1 = db.OpenRecordset(sqlc1, dbOpenDynaset)
+  
+    
+'pulisco le variabili
+  
+    sIdP = ""
+    Differenza = ""
+    sRetta = ""
+'Apro il case per le varie opzioni
+
+
+    Do While Not rsR.EOF
+    
+        If rsR("idp") = sIdP Then
+            Select Case rsR("IdT")
+                Case 2
+                    sIdP = rsR("Idp")
+                    dData1 = rsR![Data]
+                    If Not IsNull(rsR![Ora]) Then
+                        dOra1 = rsR![Data] & " " & rsR![Ora]
+                    Else
+                        dOra1 = rsR![Data] & " " & "23:59:00"
+                    End If
+                    sIdT = rsR("IdT")
+                    If Not IsNull(rsR("IdC")) Then
+                        sIdC = rsR("IdC")
+                    Else
+                        sIdC = 0
+                    End If
+                    bSalva = True
+                Case 3
+                    dData = rsR![Data]
+                    If Not IsNull(rsR![Ora]) Then
+                        dOra = rsR![Ora]
+                    Else
+                        dOra = "00:00"
+                    End If
+                    sIdT = rsR("IdT")
+                    If Not IsNull(rsR("IdC")) Then
+                        sIdC = rsR("IdC")
+                    Else
+                        sIdC = 0
+                    End If
+                    bSalva = True
+                Case 6
+                    dData = rsR![Data]
+                    If Not IsNull(rsR![Ora]) Then
+                        dOra = rsR![Ora]
+                    Else
+                        dOra = "00:00"
+                    End If
+                    sIdT = rsR("IdT")
+                    If Not IsNull(rsR("IdC")) Then
+                        sIdC = rsR("IdC")
+                    Else
+                        sIdC = 0
+                    End If
+                    ' dIdR = rsR("Reg")
+                    bSalva = True
+            End Select
+       
+            If bSalva = True Then
+                If Not IsNull(rsR("Ora")) Then
+                    Differenza = DateDiff("d", dOra1, dData & " " & dOra) - 1 '-1 per togliere il girono del trasferimento
+                Else
+                    Differenza = DateDiff("d", dOra1, dData & " 23:59:00") - 1
+                End If
+            
+            
+                'CaricaTabella
+                rsR1.AddNew
+                    rsR1!IdP = rsR!IdP
+                    rsR1!IdT = rsR!IdT
+                    rsR1!IdC = rsR!IdC
+                    rsR1!Data = dData
+                    rsR1!Ora = dOra
+                    rsR1!Data1 = dData1
+                    rsR1!Ora1 = Format(Right(dOra1, 8), h)
+                    rsR1!Diff = Differenza
+                    rsR1!Retta = 100
+                    sRetta = ""
+                    Differenza = ""
+                rsR1.Update
+            
+                bSalva = False
+                sIdT = 0
+                sIdC = 0
+                sIdP = "" ' in questo modo dopo aver salvato lo costringo a ricominciare il giro
+                
+            Else
+                bSalva = False
+            End If
+        Else
+                Select Case rsR("IdT")
+                    Case 2
+                        sIdP = rsR("Idp")
+                        If Not IsNull(rsR![Data]) Then
+                            dData1 = rsR![Data]
+                        Else
+                            '              MsgBox "Il seguente Minore non ha una data di entrata in quarantena. Codice Minore nr:" & rsR![IdP], vbQuestion + vbOKOnly, "Funzione MsgBox Semplice"
+                            MsgBox "Il seguente Minore non ha una data di uscita dalla quarantena. Codice Minore nr:" & rsR![IdP], vbCritical + vbOKOnly, "Controllo inserimento dati"
+                            Dim stDocName As String
+                            Dim stLinkCriteria As String
+                            stLinkCriteria = "[IdP]='" & rsR![IdP] & "'"
+                            stDocName = "fMinore"
+                            DoCmd.OpenForm stDocName, , , stLinkCriteria
+                            bErrore = True
+                            Exit Sub
+                        End If
+                        If Not IsNull(rsR![Ora]) Then
+                            dOra1 = rsR![Data] & " " & rsR![Ora]
+                        Else
+                            dOra1 = rsR![Data] & " " & "23:59:00"
+                        End If
+'                        bControlla = True
+                        sIdT = rsR("IdT")
+                        If Not IsNull(rsR("IdC")) Then
+                           sIdC = rsR("IdC")
+                        Else
+                            sIdC = 15
+                        End If
+                        bSalva = True
+                    
+                    Case 3
+                        MsgBox "Attivato case idt=3 in entrata:" & rsR![IdP], vbCritical + vbOKOnly, "Controllo inserimento dati"
+
+                        sIdP = rsR("Idp")
+                       ' dIdR = rsR("Reg")
+                        bSalva = True
+                    Case 6
+                        MsgBox "Attivato case idt=6 in entrata:" & rsR![IdP], vbCritical + vbOKOnly, "Controllo inserimento dati"
+                        
+                        sIdP = rsR("Idp")
+                        If Not IsNull(rsR![Data]) Then
+                            dData = rsR![Data]
+                        Else
+' da correggere quando mi diranno                            MsgBox "Il seguente Minore non ha una data di uscita dalla quarantena. Codice Minore nr:" & rsR![IdP], vbCritical + vbOKOnly, "Controllo inserimento dati"
+' adesso la forzo ad oggi date()                           stLinkCriteria = "[IdP]='" & rsR![IdP] & "'"
+'                            stDocName = "fMinore"
+'                            DoCmd.OpenForm stDocName, , , stLinkCriteria
+'                            bErrore = True
+'                            Exit Sub
+                            dData = Date
+                        End If
+                        'dData = rsR![Data]
+                        If Not IsNull(rsR![Ora]) Then
+                            dOra = rsR![Ora]
+                        Else
+                            dOra = "00:00"
+                        End If
+                        sIdT = rsR("IdT")
+                        If Not IsNull(rsR("IdC")) Then
+                            sIdC = rsR("IdC")
+                        Else
+                            sIdC = 0
+                        End If
+                        ' dIdR = rsR("Reg")
+                        bSalva = True
+                End Select
+          '  bSalva = False
+        End If
+    
+    
+    rsR.MoveNext
+    Loop
+    If bSalva = True Then
+    'CaricaTabella
+    
+        rsR1.AddNew
+            rsR1!IdP = sIdP
+            rsR1!IdT = sIdT
+            rsR1!IdC = sIdC
+            rsR1!Data = dData
+            rsR1!Ora = dOra
+            rsR1!Reg = dIdR
+        rsR1.Update
+    
+        bSalva = False
+        sIdT = 0
+        sIdC = 0
+        sIdR = 0
+    Else
+        bSalva = False
+    End If
+
+
+rsR.Close
+rsR1.Close
+'   cn.Close
+
+Set rsR = Nothing
+Set rsR1 = Nothing
+'    Set cn = Nothing
+    
+
+End Sub
+
+
+Sub TabellaQuarantena()
+
+
+
+
+Set db = CurrentDb
+
+'inizializzo le variabili
+sIdT = 0
+sIdC = 0
+dIdR = False
+
+
+bSalva = False
+
+
+' Cancello la tabella contenete i dati di acquisto
+        CurrentDb.Execute "delete * from QuarantenaPulita", dbFailOnError ' to empty table before new insertion
+
+'ricreo i dati diacquisto
+    ' CurrentDb.Execute (sqlc) '
+
+
+sqlc = "SELECT LPTC.IdL, LPTC.IdP, LPTC.IdT, LPTC.Data " & _
+        "FROM LPTC INNER JOIN [Go] ON LPTC.IdP = Go.IdP " & _
+        "WHERE (((LPTC.IdT) = 2)) Or (((LPTC.IdT) = 3)) Or (((LPTC.IdT) = 6))" & _
+        "ORDER BY LPTC.IdP, LPTC.Data; "
+
+
+
+
+        
+'Apro il recordset
+    
+   Set rsR = db.OpenRecordset(sqlc, dbOpenDynaset)
+    
+ 'Apro la tabella per il calcolo
+ 
+ sqlc1 = "SELECT * " & _
+            "FROM QuarantenaPulita;"
+ 
+ 
+ 'apro il recordset
+  Set rsR1 = db.OpenRecordset(sqlc1, dbOpenDynaset)
+  
+    
+'pulisco le variabili
+  
+    sIdP = ""
+    Differenza = ""
+    sRetta = ""
+'Apro il case per le varie opzioni
+
+
+    Do While Not rsR.EOF
+    
+           Select Case rsR("IdT")
+                Case 2
+                    
+                    If Not IsNull(rsR![Data]) Then
+                            dData = rsR![Data]
+                        Else
+                            '              MsgBox "Il seguente Minore non ha una data di entrata in quarantena. Codice Minore nr:" & rsR![IdP], vbQuestion + vbOKOnly, "Funzione MsgBox Semplice"
+                            MsgBox "Il seguente Minore non ha una data di uscita dalla quarantena. Codice Minore nr:" & rsR![IdP], vbCritical + vbOKOnly, "Controllo inserimento dati"
+ '                           Dim stDocName As String
+ '                           Dim stLinkCriteria As String
+                            stLinkCriteria = "[IdP]='" & rsR![IdP] & "'"
+                            stDocName = "fMinore"
+                            DoCmd.OpenForm stDocName, , , stLinkCriteria
+                            bErrore = True
+                            Exit Sub
+                        End If
+                    bSalva = True
+                Case 3
+                    dData = rsR![Data]
+                    bSalva = True
+                Case 6
+                    If Not IsNull(rsR!Data) Then
+                        If dData > rsR![Data] Then
+                            bSalva = True
+                        Else
+                            bSalva = False
+                        End If
+                    Else
+' da correggere quando mi diranno                            MsgBox "Il seguente Minore non ha una data di uscita dalla quarantena. Codice Minore nr:" & rsR![IdP], vbCritical + vbOKOnly, "Controllo inserimento dati"
+' adesso la forzo ad oggi date()                           stLinkCriteria = "[IdP]='" & rsR![IdP] & "'"
+'                            stDocName = "fMinore"
+'                            DoCmd.OpenForm stDocName, , , stLinkCriteria
+'                            bErrore = True
+'                            Exit Sub
+                            dData = Date
+                            bSalva = True
+                    End If
+            End Select
+       
+            If bSalva = True Then
+            
+                'CaricaTabella
+                rsR1.AddNew
+                    rsR1!IdL = rsR!IdL
+                    rsR1!IdP = rsR!IdP
+                    rsR1!IdT = rsR!IdT
+                   ' rsR1!IdC = rsR!IdC
+                    rsR1!Data = dData
+                rsR1.Update
+            
+                bSalva = False
+                sIdT = 0
+                sIdC = 0
+                sIdP = "" ' in questo modo dopo aver salvato lo costringo a ricominciare il giro
+                
+            Else
+                bSalva = False
+            End If
+    
+    
+    rsR.MoveNext
+    Loop
+
+
+rsR.Close
+rsR1.Close
+'   cn.Close
+
+Set rsR = Nothing
+Set rsR1 = Nothing
+'    Set cn = Nothing
+    
+
+
+
+End Sub

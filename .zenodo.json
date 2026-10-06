@@ -1,0 +1,23 @@
+{
+  "title": "Monitoring and fee calculation for unaccompanied foreign minors in reception facilities (Microsoft Access, 2020–2021)",
+  "upload_type": "software",
+  "description": "<p><em>Monitoraggio e calcolo delle rette per i minori stranieri non accompagnati nelle strutture di accoglienza</em></p><p>This database was used by a municipal social-services office to follow unaccompanied foreign minors (MSNA) placed in reception facilities during the COVID-19 period. Every movement of a minor is recorded with date and time: entry into and exit from quarantine, ordinary reception, transfer, runaway, readmission and discharge. From these movements the application computes the hours of reception and the fees due to each facility, and checks the data for missing or inconsistent dates.</p><p>Designed and programmed by Massimo Sbarbaro in 2020–2021 (Microsoft Access). Published in 2026; all original data and the names of client organisations have been removed.</p>",
+  "creators": [
+    {
+      "name": "Sbarbaro, Massimo",
+      "orcid": "0009-0006-8965-9013"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Microsoft Access",
+    "social services",
+    "unaccompanied minors",
+    "COVID-19",
+    "public administration",
+    "fee calculation"
+  ],
+  "version": "48",
+  "language": "eng",
+  "notes": "Original development: 2020–2021."
+}

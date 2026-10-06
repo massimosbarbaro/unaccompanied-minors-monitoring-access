@@ -1,0 +1,718 @@
+Version =21
+VersionRequired =20
+PublishOption =1
+Checksum =1054346356
+Begin Form
+    AutoCenter = NotDefault
+    DividingLines = NotDefault
+    AllowDesignChanges = NotDefault
+    ViewsAllowed =1
+    TabularCharSet =204
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridY =10
+    Width =13566
+    DatasheetFontHeight =11
+    ItemSuffix =30
+    Left =7515
+    Top =5265
+    Right =21630
+    Bottom =9315
+    DatasheetGridlinesColor =15062992
+    RecSrcDt = Begin
+        0xf572d995d98fe540
+    End
+    GUID = Begin
+        0x150b30ee5b71ea40b5154c8722e5d4ff
+    End
+    RecordSource ="SELECT LPTC.IdP, LPTC.Data, LPTC.Ora, LPTC.IdL, LPTC.IdT, LPTC.IdC, LPTC.Note, L"
+        "PTC.Reg FROM LPTC ORDER BY LPTC.IdP, LPTC.Data, LPTC.Ora, LPTC.IdL, LPTC.IdT;"
+    Caption ="Ospitalita"
+    BeforeInsert ="[Event Procedure]"
+    OnOpen ="[Event Procedure]"
+    DatasheetFontName ="Calibri"
+    PrtMip = Begin
+        0x6801000068010000680100006801000000000000201c0000e010000001000000 ,
+        0x010000006801000000000000a10700000100000001000000
+    End
+    AllowDatasheetView =0
+    FilterOnLoad =0
+    ShowPageMargins =0
+    DisplayOnSharePointSite =1
+    DatasheetAlternateBackColor =16053492
+    DatasheetGridlinesColor12 =15062992
+    FitToScreen =1
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            FontSize =10
+            BorderColor =13482143
+            ForeColor =6112838
+            FontName ="Gill Sans MT"
+        End
+        Begin Rectangle
+            BackStyle =0
+            OldBorderStyle =4
+            BorderLineStyle =3
+            Width =850
+            Height =850
+            BorderColor =13482143
+        End
+        Begin Line
+            OldBorderStyle =4
+            BorderLineStyle =3
+            Width =1701
+            BorderColor =13482143
+        End
+        Begin Image
+            BackStyle =0
+            OldBorderStyle =4
+            BorderLineStyle =3
+            SizeMode =3
+            PictureAlignment =2
+            Width =1701
+            Height =1701
+            BorderColor =13482143
+        End
+        Begin CommandButton
+            Width =1701
+            Height =283
+            FontWeight =400
+            ForeColor =6112838
+            FontName ="Gill Sans MT"
+            BorderLineStyle =0
+        End
+        Begin OptionButton
+            OldBorderStyle =4
+            BorderLineStyle =3
+            LabelX =230
+            LabelY =-30
+            BorderColor =13482143
+        End
+        Begin CheckBox
+            BorderLineStyle =0
+            LabelX =230
+            LabelY =-30
+        End
+        Begin OptionGroup
+            BackStyle =1
+            OldBorderStyle =4
+            BorderLineStyle =3
+            Width =1701
+            Height =1701
+            BorderColor =13482143
+        End
+        Begin BoundObjectFrame
+            SizeMode =3
+            OldBorderStyle =4
+            BorderLineStyle =3
+            BackStyle =0
+            Width =4536
+            Height =2835
+            LabelX =-1701
+            BorderColor =13482143
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            OldBorderStyle =4
+            TextFontCharSet =204
+            BorderLineStyle =3
+            Width =1701
+            LabelX =-1701
+            FontSize =11
+            BorderColor =13482143
+            FontName ="Calibri"
+            AsianLineBreak =1
+        End
+        Begin ListBox
+            TextFontCharSet =204
+            OldBorderStyle =4
+            BorderLineStyle =3
+            Width =1701
+            Height =1417
+            LabelX =-1701
+            FontSize =11
+            BorderColor =13482143
+            FontName ="Calibri"
+            AllowValueListEdits =1
+            InheritValueList =1
+        End
+        Begin ComboBox
+            OldBorderStyle =4
+            TextFontCharSet =204
+            BorderLineStyle =3
+            Width =1701
+            LabelX =-1701
+            FontSize =11
+            BorderColor =13482143
+            FontName ="Calibri"
+            AllowValueListEdits =1
+            InheritValueList =1
+        End
+        Begin Subform
+            BorderLineStyle =0
+            Width =1701
+            Height =1701
+            BorderColor =13482143
+        End
+        Begin UnboundObjectFrame
+            BackStyle =0
+            OldBorderStyle =4
+            BorderLineStyle =3
+            Width =4536
+            Height =2835
+            BorderColor =13482143
+        End
+        Begin CustomControl
+            OldBorderStyle =1
+            Width =4536
+            Height =2835
+            BorderColor =13482143
+        End
+        Begin ToggleButton
+            Width =283
+            Height =283
+            FontWeight =400
+            ForeColor =6112838
+            FontName ="Gill Sans MT"
+            BorderLineStyle =0
+        End
+        Begin Tab
+            TextFontCharSet =204
+            Width =5103
+            Height =3402
+            FontSize =11
+            FontName ="Calibri"
+            BorderLineStyle =0
+        End
+        Begin FormHeader
+            Height =900
+            BackColor =6405021
+            Name ="IntestazioneMaschera"
+            GUID = Begin
+                0x69d02472d6b491408decaa733c6257c5
+            End
+            Begin
+                Begin Label
+                    OverlapFlags =85
+                    TextAlign =2
+                    TextFontFamily =18
+                    Left =3093
+                    Top =570
+                    Width =555
+                    Height =330
+                    ForeColor =0
+                    Name ="Data_Etichetta"
+                    Caption ="Data"
+                    FontName ="Bookman Old Style"
+                    Tag ="DetachedLabel"
+                    GUID = Begin
+                        0x51e91b4a042d7f4280e6d36bce287bbc
+                    End
+                    RightPadding =38
+                    LayoutCachedLeft =3093
+                    LayoutCachedTop =570
+                    LayoutCachedWidth =3648
+                    LayoutCachedHeight =900
+                    ColumnStart =2
+                    ColumnEnd =2
+                End
+                Begin Label
+                    OverlapFlags =85
+                    TextFontFamily =18
+                    Left =3798
+                    Top =56
+                    Width =1605
+                    Height =435
+                    FontSize =16
+                    ForeColor =15526365
+                    Name ="Etichetta8"
+                    Caption ="Ospitalità"
+                    FontName ="Bookman Old Style"
+                    GUID = Begin
+                        0xeb9173e386e9c846a0a2c109f2b69611
+                    End
+                    LayoutCachedLeft =3798
+                    LayoutCachedTop =56
+                    LayoutCachedWidth =5403
+                    LayoutCachedHeight =491
+                End
+                Begin Label
+                    OverlapFlags =85
+                    Left =5310
+                    Top =540
+                    Width =885
+                    Height =315
+                    ForeColor =0
+                    Name ="Comunità_Etichetta"
+                    Caption ="Comunità"
+                    GUID = Begin
+                        0x3a43f7938a6ebb4aaf6e720c1d30597e
+                    End
+                    RightPadding =38
+                    LayoutCachedLeft =5310
+                    LayoutCachedTop =540
+                    LayoutCachedWidth =6195
+                    LayoutCachedHeight =855
+                    ColumnStart =4
+                    ColumnEnd =4
+                End
+                Begin Label
+                    OverlapFlags =85
+                    TextAlign =2
+                    TextFontFamily =18
+                    Left =4307
+                    Top =570
+                    Width =450
+                    Height =330
+                    ForeColor =0
+                    Name ="Etichetta12"
+                    Caption ="Ora"
+                    FontName ="Bookman Old Style"
+                    GUID = Begin
+                        0x1e7bb928053db44ca363b11084bdb3c7
+                    End
+                    RightPadding =38
+                    LayoutCachedLeft =4307
+                    LayoutCachedTop =570
+                    LayoutCachedWidth =4757
+                    LayoutCachedHeight =900
+                    ColumnStart =3
+                    ColumnEnd =3
+                End
+                Begin Label
+                    OverlapFlags =93
+                    Left =180
+                    Top =540
+                    Width =855
+                    Height =315
+                    ForeColor =0
+                    Name ="Ospitalità_Etichetta"
+                    Caption ="Ospitalità"
+                    GUID = Begin
+                        0x513edcd9853f5f4d9a28b37c114446bf
+                    End
+                    RightPadding =38
+                    LayoutCachedLeft =180
+                    LayoutCachedTop =540
+                    LayoutCachedWidth =1035
+                    LayoutCachedHeight =855
+                    ColumnStart =1
+                    ColumnEnd =1
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =6916
+                    Top =56
+                    Height =315
+                    Name ="IdP"
+                    ControlSource ="IdP"
+                    GUID = Begin
+                        0xab9931ce97a86a42971ad51439db7dfc
+                    End
+
+                    LayoutCachedLeft =6916
+                    LayoutCachedTop =56
+                    LayoutCachedWidth =8617
+                    LayoutCachedHeight =371
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =6519
+                            Top =56
+                            Width =375
+                            Height =315
+                            ForeColor =0
+                            Name ="Etichetta17"
+                            Caption ="IdP:"
+                            GUID = Begin
+                                0x4ea15ec7fe4ef04f9f740b4751e6c5de
+                            End
+                            LayoutCachedLeft =6519
+                            LayoutCachedTop =56
+                            LayoutCachedWidth =6894
+                            LayoutCachedHeight =371
+                        End
+                    End
+                End
+                Begin Label
+                    Visible = NotDefault
+                    OverlapFlags =215
+                    Left =45
+                    Top =540
+                    Width =360
+                    Height =315
+                    ForeColor =0
+                    Name ="Etichetta18"
+                    Caption ="IdT"
+                    GUID = Begin
+                        0x48bdf851bb0c0049bb867acffb2e3e71
+                    End
+                    RightPadding =38
+                    LayoutCachedLeft =45
+                    LayoutCachedTop =540
+                    LayoutCachedWidth =405
+                    LayoutCachedHeight =855
+                End
+                Begin Label
+                    OverlapFlags =85
+                    Left =11140
+                    Top =540
+                    Width =510
+                    Height =315
+                    ForeColor =0
+                    Name ="Etichetta21"
+                    Caption ="Note"
+                    GUID = Begin
+                        0x36b25f7cca6c8146b24e3734e98c269f
+                    End
+                    RightPadding =38
+                    LayoutCachedLeft =11140
+                    LayoutCachedTop =540
+                    LayoutCachedWidth =11650
+                    LayoutCachedHeight =855
+                End
+                Begin Label
+                    OverlapFlags =85
+                    Left =12915
+                    Top =570
+                    Width =390
+                    Height =315
+                    ForeColor =0
+                    Name ="Etichetta27"
+                    Caption ="Reg"
+                    GUID = Begin
+                        0x228b5ee1fc89c14c8bc1a3e00a5d767e
+                    End
+                    RightPadding =38
+                    LayoutCachedLeft =12915
+                    LayoutCachedTop =570
+                    LayoutCachedWidth =13305
+                    LayoutCachedHeight =885
+                End
+            End
+        End
+        Begin Section
+            Height =566
+            BackColor =15526365
+            Name ="Corpo"
+            GUID = Begin
+                0xbb6c8ec862ead44597fd062ad191a382
+            End
+            AlternateBackColor =15526365
+            Begin
+                Begin TextBox
+                    Enabled = NotDefault
+                    Locked = NotDefault
+                    FELineBreak = NotDefault
+                    OverlapFlags =93
+                    TextFontCharSet =0
+                    TextAlign =2
+                    Left =12975
+                    Top =60
+                    Width =591
+                    Height =330
+                    TabIndex =6
+                    Name ="Text9"
+                    ControlSource ="Reg"
+                    ConditionalFormat = Begin
+                        0x0100000092000000020000000100000000000000000000000c00000001000000 ,
+                        0xed1c2400ed1c240001000000000000000d0000001800000001000000a7da4e00 ,
+                        0xa7da4e0000000000000000000000000000000000000000000000000000000000 ,
+                        0x5b007200650067005d003d00460061006c0073006500000000005b0072006500 ,
+                        0x67005d003d00540072007500650000000000
+                    End
+                    GUID = Begin
+                        0x26a2dfca88c20b4d888c8bb347f07c71
+                    End
+                    AsianLineBreak =0
+
+                    LayoutCachedLeft =12975
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =13566
+                    LayoutCachedHeight =390
+                    ConditionalFormat14 = Begin
+                        0x010002000000010000000000000001000000ed1c2400ed1c24000b0000005b00 ,
+                        0x7200650067005d003d00460061006c0073006500000000000000000000000000 ,
+                        0x000000000000000000010000000000000001000000a7da4e00a7da4e000a0000 ,
+                        0x005b007200650067005d003d0054007200750065000000000000000000000000 ,
+                        0x00000000000000000000
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    TextAlign =2
+                    IMESentenceMode =3
+                    Left =2835
+                    Top =60
+                    Width =1190
+                    Height =330
+                    ColumnOrder =4
+                    TabIndex =2
+                    Name ="Data"
+                    ControlSource ="Data"
+                    GUID = Begin
+                        0x6d18a7028d750140bb5c9c0b327acc71
+                    End
+                    RightPadding =38
+
+                    LayoutCachedLeft =2835
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =4025
+                    LayoutCachedHeight =390
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =2
+                    ColumnEnd =2
+                End
+                Begin ComboBox
+                    LimitToList = NotDefault
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    ColumnCount =2
+                    ListWidth =1440
+                    Left =4980
+                    Top =60
+                    Width =4947
+                    Height =330
+                    ColumnOrder =2
+                    TabIndex =4
+                    ColumnInfo ="\"\";\"\";\"\";\"\";\"10\";\"510\""
+                    GUID = Begin
+                        0x6be6ca78973bed4192402082689e0091
+                    End
+                    Name ="cmbComunita"
+                    ControlSource ="IdC"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT Comunita.IdC, Comunita.Descrizione FROM Comunita GROUP BY Comunita.IdC, C"
+                        "omunita.Descrizione ORDER BY Comunita.Descrizione;"
+                    ColumnWidths ="0;2835"
+                    AfterUpdate ="[Event Procedure]"
+                    OnDblClick ="[Event Procedure]"
+                    BaseInfo ="\"SELECT Comunita.IdC, Comunita.Descrizione FROM Comunita GROUP BY Comunita.IdC,"
+                        " Comunita.Descrizione ORDER BY Comunita.Descrizione;\";\"Comunita\";\"\";\"IdC\""
+                        ";\"Descrizione\";\"PrimaryKey\""
+                    RightPadding =38
+
+                    LayoutCachedLeft =4980
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =9927
+                    LayoutCachedHeight =390
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =4
+                    ColumnEnd =4
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    TextAlign =2
+                    IMESentenceMode =3
+                    Left =4095
+                    Top =60
+                    Width =848
+                    Height =330
+                    ColumnOrder =3
+                    TabIndex =3
+                    Name ="Ora"
+                    ControlSource ="Ora"
+                    Format ="Short Time"
+                    GUID = Begin
+                        0xd2fdaca52767114e9d2969330f0bff62
+                    End
+                    RightPadding =38
+
+                    LayoutCachedLeft =4095
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =4943
+                    LayoutCachedHeight =390
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =3
+                    ColumnEnd =3
+                End
+                Begin ComboBox
+                    OverlapFlags =93
+                    TextFontCharSet =162
+                    IMESentenceMode =3
+                    ColumnCount =2
+                    ListWidth =1440
+                    Left =60
+                    Top =60
+                    Width =2723
+                    Height =330
+                    ColumnOrder =5
+                    TabIndex =1
+                    ColumnInfo ="\"\";\"\";\"\";\"\";\"10\";\"510\""
+                    ConditionalFormat = Begin
+                        0x010000007a000000010000000100000000000000000000000c00000001000000 ,
+                        0x00000000ed1c2400000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x5b005200650067005d003d00460061006c007300650000000000
+                    End
+                    GUID = Begin
+                        0xa75adf6147ffb941bb3cc9393bc5b034
+                    End
+                    Name ="cmbOspitalita"
+                    ControlSource ="IdT"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT [TipoData].[IdT], [TipoData].[Tipo] FROM [TipoData] ORDER BY [IdT];"
+                    ColumnWidths ="0;1440"
+                    BaseInfo ="\"SELECT [TipoData].[IdT], [TipoData].[Tipo] FROM [TipoData] ORDER BY [IdT];\";\""
+                        "TipoData\";\"\";\"IdT\";\"Tipo\";\"PrimaryKey\""
+                    RightPadding =38
+
+                    LayoutCachedLeft =60
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =2783
+                    LayoutCachedHeight =390
+                    RowStart =1
+                    RowEnd =1
+                    ColumnStart =1
+                    ColumnEnd =1
+                    ConditionalFormat14 = Begin
+                        0x01000100000001000000000000000100000000000000ed1c24000b0000005b00 ,
+                        0x5200650067005d003d00460061006c0073006500000000000000000000000000 ,
+                        0x000000000000000000
+                    End
+                End
+                Begin TextBox
+                    Visible = NotDefault
+                    OverlapFlags =247
+                    IMESentenceMode =3
+                    Left =45
+                    Top =60
+                    Width =60
+                    Height =330
+                    ColumnOrder =0
+                    Name ="IdT"
+                    ControlSource ="IdT"
+                    GUID = Begin
+                        0x7ace3d151bc58d49a2bdfc76ec6c0cb0
+                    End
+                    RightPadding =38
+                    BottomPadding =38
+
+                    LayoutCachedLeft =45
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =105
+                    LayoutCachedHeight =390
+                    RowStart =1
+                    RowEnd =1
+                End
+                Begin TextBox
+                    OldBorderStyle =1
+                    OverlapFlags =85
+                    BorderLineStyle =0
+                    IMESentenceMode =3
+                    Left =9990
+                    Top =60
+                    Width =2931
+                    Height =330
+                    ColumnOrder =1
+                    TabIndex =5
+                    Name ="Note"
+                    ControlSource ="Note"
+                    GUID = Begin
+                        0x9a1f1f3f9259e74899a208c1d07ec632
+                    End
+                    RightPadding =38
+
+                    LayoutCachedLeft =9990
+                    LayoutCachedTop =60
+                    LayoutCachedWidth =12921
+                    LayoutCachedHeight =390
+                End
+                Begin CheckBox
+                    OverlapFlags =247
+                    OldBorderStyle =4
+                    BorderLineStyle =3
+                    Left =13200
+                    Top =120
+                    Width =270
+                    TabIndex =7
+                    BorderColor =13482143
+                    Name ="Reg"
+                    ControlSource ="Reg"
+                    StatusBarText ="Registrato su MIs"
+                    GUID = Begin
+                        0x658538df1bdfa3419c3686302b6164f0
+                    End
+                    RightPadding =38
+
+                    LayoutCachedLeft =13200
+                    LayoutCachedTop =120
+                    LayoutCachedWidth =13470
+                    LayoutCachedHeight =360
+                End
+            End
+        End
+        Begin FormFooter
+            Height =0
+            BackColor =15526365
+            Name ="PièDiPaginaMaschera"
+            GUID = Begin
+                0x4ab03ca4640b6042a4cc0f3d747776b2
+            End
+            AutoHeight =1
+        End
+    End
+End
+CodeBehindForm
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Compare Database
+Public sStruttura As String
+
+Private Sub cmbComunita_AfterUpdate()
+'txtStruttura.Value = cmbComunita.Column(2)
+'Me!txtStruttura = DLookup("Struttura", "Comunita", "IdC=" & cmbComunita.Value)
+
+End Sub
+
+Private Sub cmbComunita_DblClick(Cancel As Integer)
+On Error GoTo Err_cmbComunita_DblClick
+
+    Dim stDocName As String
+    Dim stLinkCriteria As String
+
+    stDocName = "fComunita"
+    
+    stLinkCriteria = "[Idc]=" & Me![IdC]
+    DoCmd.OpenForm stDocName, , , stLinkCriteria
+
+Exit_cmbComunita_DblClick:
+    Exit Sub
+
+Err_cmbComunita_DblClick:
+    MsgBox Err.Description
+    Resume Exit_cmbComunita_DblClick
+
+End Sub
+
+Private Sub Form_BeforeInsert(Cancel As Integer)
+Dim sqlc As String, rsNum As Recordset
+Set db = CurrentDb
+'sqlc = "Select max(IdL) from LPTC"
+sqlc = "SELECT Max(CLng(Right([IdL],Len([IdL])-1))) AS L " & _
+        "FROM [LPTC];"
+
+
+
+Set rsNum = db.OpenRecordset(sqlc, dbOpenSnapshot)
+If Not IsNull(rsNum(0)) Then
+
+
+    IdL = "C" & rsNum(0) + 1
+Else
+    IdL = 1
+End If
+
+End Sub
+
+Private Sub Form_Open(Cancel As Integer)
+'ResizeControl Me.cmbComunita, True, False, , True
+End Sub

@@ -1,0 +1,2 @@
+SELECT Go.IdP, Go.Cognome, Go.Nome, Go.Cittadinanza, TipoData.Tipo, Movimenti.Data, Movimenti.Ora, Comunita.Comunita, TipoData_1.Tipo, Movimenti.DataE, Movimenti.OraE, Comunita_1.Comunita
+FROM ((((Movimenti INNER JOIN [Go] ON Movimenti.IdP = Go.IdP) LEFT JOIN Comunita ON Movimenti.IdC = Comunita.IdC) LEFT JOIN TipoData ON Movimenti.IdT = TipoData.IdT) LEFT JOIN TipoData AS TipoData_1 ON Movimenti.IdTE = TipoData_1.IdT) LEFT JOIN Comunita AS Comunita_1 ON Movimenti.IdCE = Comunita_1.IdC;

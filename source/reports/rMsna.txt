@@ -1,0 +1,712 @@
+Version =21
+VersionRequired =20
+PublishOption =1
+Checksum =1751387899
+Begin Report
+    LayoutForPrint = NotDefault
+    DividingLines = NotDefault
+    AllowDesignChanges = NotDefault
+    TabularCharSet =162
+    DateGrouping =1
+    GrpKeepTogether =1
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridY =10
+    Width =11175
+    DatasheetFontHeight =11
+    ItemSuffix =48
+    Top =600
+    Right =11475
+    Bottom =7710
+    DatasheetGridlinesColor =15062992
+    RecSrcDt = Begin
+        0x90bc245c5c8de540
+    End
+    GUID = Begin
+        0xeeaa5ada59d4b9469b7eb13e36acfb7b
+    End
+    RecordSource ="qMsnaComunita"
+    Caption ="Msna"
+    DatasheetFontName ="Calibri"
+    PrtMip = Begin
+        0x6801000068010000680100006801000000000000a72b00003b01000001000000 ,
+        0x010000006801000000000000a10700000100000001000000
+    End
+    FilterOnLoad =0
+    FitToPage =1
+    DisplayOnSharePointSite =1
+    DatasheetAlternateBackColor =16053492
+    DatasheetGridlinesColor12 =15062992
+    FitToScreen =1
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            TextFontCharSet =204
+            FontSize =10
+            BorderColor =-2147483609
+            ForeColor =-2147483615
+            FontName ="Calibri"
+            GridlineColor =-2147483613
+        End
+        Begin Rectangle
+            BorderLineStyle =0
+            Width =850
+            Height =850
+            BackColor =-2147483616
+            BorderColor =-2147483609
+            GridlineColor =-2147483613
+        End
+        Begin Line
+            OldBorderStyle =0
+            BorderLineStyle =0
+            Width =1701
+            BorderColor =-2147483609
+            GridlineColor =-2147483613
+        End
+        Begin Image
+            BorderLineStyle =0
+            SizeMode =3
+            PictureAlignment =2
+            Width =1701
+            Height =1701
+            BackColor =-2147483616
+            BorderColor =-2147483609
+            GridlineColor =-2147483613
+        End
+        Begin CommandButton
+            TextFontCharSet =204
+            Width =1701
+            Height =283
+            FontWeight =400
+            FontName ="Calibri"
+            GridlineColor =-2147483613
+            BorderLineStyle =0
+        End
+        Begin OptionButton
+            OldBorderStyle =0
+            BorderLineStyle =0
+            LabelX =230
+            LabelY =-30
+            BorderColor =-2147483609
+            GridlineColor =-2147483613
+        End
+        Begin CheckBox
+            BorderLineStyle =0
+            LabelX =230
+            LabelY =-30
+            GridlineColor =-2147483613
+        End
+        Begin OptionGroup
+            OldBorderStyle =0
+            BorderLineStyle =0
+            Width =1701
+            Height =1701
+            BorderColor =-2147483609
+        End
+        Begin BoundObjectFrame
+            SizeMode =3
+            OldBorderStyle =0
+            BorderLineStyle =0
+            BackStyle =0
+            Width =4536
+            Height =2835
+            LabelX =-1701
+            BorderColor =-2147483609
+            GridlineColor =-2147483613
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            OldBorderStyle =0
+            TextFontCharSet =204
+            BorderLineStyle =0
+            BackStyle =0
+            Width =1701
+            LabelX =-1701
+            FontSize =10
+            BorderColor =-2147483609
+            FontName ="Calibri"
+            AsianLineBreak =1
+            GridlineColor =-2147483613
+            ShowDatePicker =0
+        End
+        Begin ListBox
+            TextFontCharSet =204
+            OldBorderStyle =0
+            BorderLineStyle =0
+            Width =1701
+            Height =1417
+            LabelX =-1701
+            FontSize =10
+            BorderColor =-2147483609
+            FontName ="Calibri"
+            GridlineColor =-2147483613
+            AllowValueListEdits =1
+            InheritValueList =1
+        End
+        Begin ComboBox
+            OldBorderStyle =0
+            TextFontCharSet =204
+            BorderLineStyle =0
+            BackStyle =0
+            Width =1701
+            LabelX =-1701
+            FontSize =10
+            BorderColor =-2147483609
+            FontName ="Calibri"
+            GridlineColor =-2147483613
+            AllowValueListEdits =1
+            InheritValueList =1
+        End
+        Begin Subform
+            BorderLineStyle =0
+            Width =1701
+            Height =1701
+            BorderColor =-2147483609
+            GridlineColor =-2147483613
+        End
+        Begin UnboundObjectFrame
+            BackStyle =0
+            Width =4536
+            Height =2835
+            BorderColor =-2147483609
+            GridlineColor =-2147483613
+        End
+        Begin CustomControl
+            OldBorderStyle =1
+            Width =4536
+            Height =2835
+            BorderColor =-2147483609
+            GridlineColor =-2147483613
+        End
+        Begin ToggleButton
+            TextFontCharSet =204
+            Width =283
+            Height =283
+            FontWeight =400
+            FontName ="Calibri"
+            GridlineColor =-2147483613
+            BorderLineStyle =0
+        End
+        Begin Tab
+            TextFontCharSet =204
+            BackStyle =0
+            Width =5103
+            Height =3402
+            FontSize =10
+            FontName ="Calibri"
+            BorderLineStyle =0
+        End
+        Begin BreakLevel
+            GroupHeader = NotDefault
+            KeepTogether =1
+            ControlSource ="Sede"
+        End
+        Begin BreakLevel
+            GroupHeader = NotDefault
+            KeepTogether =1
+            ControlSource ="IdP"
+        End
+        Begin BreakLevel
+            ControlSource ="IdT"
+        End
+        Begin FormHeader
+            KeepTogether = NotDefault
+            Height =907
+            Name ="IntestazioneReport"
+            GUID = Begin
+                0xb8d176454d9671449f400690d15354f9
+            End
+            Begin
+                Begin Label
+                    TextFontCharSet =0
+                    Left =57
+                    Top =57
+                    Width =1275
+                    Height =600
+                    FontSize =20
+                    ForeColor =-2147483617
+                    Name ="Etichetta20"
+                    Caption ="Msna"
+                    FontName ="Segoe UI"
+                    GUID = Begin
+                        0x77f95e2fa24496459c11572c9e6e4f47
+                    End
+                    GridlineColor =0
+                    LayoutCachedLeft =57
+                    LayoutCachedTop =57
+                    LayoutCachedWidth =1332
+                    LayoutCachedHeight =657
+                End
+                Begin TextBox
+                    TextFontCharSet =0
+                    IMESentenceMode =3
+                    Left =1144
+                    Top =57
+                    Width =6096
+                    Height =600
+                    ColumnWidth =3210
+                    FontSize =20
+                    ForeColor =-2147483617
+                    Name ="Testo36"
+                    ControlSource ="Comunita"
+                    FontName ="Segoe UI"
+                    GUID = Begin
+                        0xb1392d4dd392894088a566fbfbfb2393
+                    End
+                    GridlineColor =0
+
+                    LayoutCachedLeft =1144
+                    LayoutCachedTop =57
+                    LayoutCachedWidth =7240
+                    LayoutCachedHeight =657
+                End
+                Begin TextBox
+                    TextFontCharSet =0
+                    IMESentenceMode =3
+                    Left =6358
+                    Top =56
+                    Width =4761
+                    Height =585
+                    FontSize =20
+                    TabIndex =1
+                    ForeColor =-2147483617
+                    Name ="Struttura"
+                    ControlSource ="Struttura"
+                    FontName ="Segoe UI"
+                    GUID = Begin
+                        0xdf7786580f8b9346900af97f694b1779
+                    End
+                    GridlineColor =0
+
+                    LayoutCachedLeft =6358
+                    LayoutCachedTop =56
+                    LayoutCachedWidth =11119
+                    LayoutCachedHeight =641
+                End
+            End
+        End
+        Begin PageHeader
+            Height =0
+            Name ="SezioneIntestazionePagina"
+            GUID = Begin
+                0x73447189519d324a873c2c9cf5a3c593
+            End
+        End
+        Begin BreakHeader
+            KeepTogether = NotDefault
+            CanGrow = NotDefault
+            CanShrink = NotDefault
+            Height =396
+            Name ="IntestazioneGruppo1"
+            GUID = Begin
+                0x7183ee865bbe0143b319c27be114f120
+            End
+            Begin
+                Begin TextBox
+                    TextAlign =1
+                    IMESentenceMode =3
+                    Left =975
+                    Width =2991
+                    Height =345
+                    FontSize =12
+                    FontWeight =700
+                    Name ="Testo33"
+                    ControlSource ="Sede"
+                    Format =">"
+                    GUID = Begin
+                        0x4b396e5084d1764fb989082f97ba10b2
+                    End
+
+                    LayoutCachedLeft =975
+                    LayoutCachedWidth =3966
+                    LayoutCachedHeight =345
+                    Begin
+                        Begin Label
+                            Width =975
+                            Height =345
+                            FontSize =12
+                            FontWeight =700
+                            Name ="Etichetta34"
+                            Caption ="Comune:"
+                            GUID = Begin
+                                0x8a07c6fa2176bc4eb9761dff34ab715a
+                            End
+                            LayoutCachedWidth =975
+                            LayoutCachedHeight =345
+                        End
+                    End
+                End
+            End
+        End
+        Begin BreakHeader
+            KeepTogether = NotDefault
+            Height =623
+            BreakLevel =1
+            Name ="IntestazioneGruppo0"
+            GUID = Begin
+                0x07d82ae938241c43829edcff8c778848
+            End
+            AlternateBackColor =16777215
+            Begin
+                Begin TextBox
+                    DecimalPlaces =0
+                    TextAlign =1
+                    IMESentenceMode =3
+                    Left =60
+                    Top =120
+                    Width =450
+                    Height =285
+                    FontWeight =700
+                    Name ="IdP"
+                    ControlSource ="IdP"
+                    GUID = Begin
+                        0x715fdebddc8458479a947689f6fa7cdb
+                    End
+                    GridlineColor =0
+
+                    LayoutCachedLeft =60
+                    LayoutCachedTop =120
+                    LayoutCachedWidth =510
+                    LayoutCachedHeight =405
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1335
+                    Top =120
+                    Width =1959
+                    Height =285
+                    FontWeight =700
+                    TabIndex =2
+                    Name ="Nome"
+                    ControlSource ="Nome"
+                    GUID = Begin
+                        0xfc0c7ade7e495345aeb9e67634f485c1
+                    End
+
+                    LayoutCachedLeft =1335
+                    LayoutCachedTop =120
+                    LayoutCachedWidth =3294
+                    LayoutCachedHeight =405
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =3285
+                    Top =120
+                    Width =2499
+                    Height =285
+                    FontWeight =700
+                    TabIndex =3
+                    Name ="Cognome"
+                    ControlSource ="Cognome"
+                    GUID = Begin
+                        0x5a50a3e08221104494602dd203ef8cc4
+                    End
+
+                    LayoutCachedLeft =3285
+                    LayoutCachedTop =120
+                    LayoutCachedWidth =5784
+                    LayoutCachedHeight =405
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =8894
+                    Top =120
+                    Width =1659
+                    Height =285
+                    FontWeight =700
+                    TabIndex =4
+                    Name ="Cittadinanza"
+                    ControlSource ="Cittadinanza"
+                    GUID = Begin
+                        0x200a1ecc1b33794f8f119540978c55d4
+                    End
+
+                    LayoutCachedLeft =8894
+                    LayoutCachedTop =120
+                    LayoutCachedWidth =10553
+                    LayoutCachedHeight =405
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =10557
+                    Top =120
+                    Width =540
+                    Height =285
+                    TabIndex =5
+                    Name ="Sesso"
+                    ControlSource ="Sesso"
+                    GUID = Begin
+                        0xc7c0a1d85e281f43aec33bbbded69db1
+                    End
+
+                    LayoutCachedLeft =10557
+                    LayoutCachedTop =120
+                    LayoutCachedWidth =11097
+                    LayoutCachedHeight =405
+                End
+                Begin Line
+                    OldBorderStyle =1
+                    BorderWidth =1
+                    Left =56
+                    Top =56
+                    Width =10829
+                    Name ="Linea24"
+                    GUID = Begin
+                        0x27684b52a8d6374fbe5aa5e70f52210d
+                    End
+                    LayoutCachedLeft =56
+                    LayoutCachedTop =56
+                    LayoutCachedWidth =10885
+                    LayoutCachedHeight =56
+                End
+                Begin Line
+                    OldBorderStyle =1
+                    BorderWidth =1
+                    Top =510
+                    Width =10829
+                    Name ="Linea25"
+                    GUID = Begin
+                        0x68f81c4541441c4abd2d1838d06cd8fc
+                    End
+                    LayoutCachedTop =510
+                    LayoutCachedWidth =10829
+                    LayoutCachedHeight =510
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =5895
+                    Top =120
+                    Width =1071
+                    Height =285
+                    TabIndex =6
+                    Name ="DataN"
+                    ControlSource ="DataN"
+                    GUID = Begin
+                        0x4afff99bb00bfe4688019ad73c3721b1
+                    End
+                    ShowDatePicker =1
+
+                    LayoutCachedLeft =5895
+                    LayoutCachedTop =120
+                    LayoutCachedWidth =6966
+                    LayoutCachedHeight =405
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =6970
+                    Top =120
+                    Width =840
+                    Height =285
+                    TabIndex =7
+                    Name ="txtAnniM"
+                    ControlSource ="=DateDiff(\"yyyy\",[DataN],Now())+Int(Format(Now(),\"mmdd\")<Format([DataN],\"mm"
+                        "dd\"))"
+                    GUID = Begin
+                        0xcac7e2e3366255449d7bd9256997b0d2
+                    End
+
+                    LayoutCachedLeft =6970
+                    LayoutCachedTop =120
+                    LayoutCachedWidth =7810
+                    LayoutCachedHeight =405
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =7814
+                    Top =120
+                    Width =1076
+                    Height =285
+                    TabIndex =8
+                    Name ="txtDataM"
+                    ControlSource ="=DateAdd(\"yyyy\",18,[datan])"
+                    GUID = Begin
+                        0x5246e2c1f21aaf4fad485903fd0f8a00
+                    End
+
+                    LayoutCachedLeft =7814
+                    LayoutCachedTop =120
+                    LayoutCachedWidth =8890
+                    LayoutCachedHeight =405
+                End
+                Begin TextBox
+                    TextAlign =1
+                    IMESentenceMode =3
+                    Left =555
+                    Top =120
+                    Width =771
+                    Height =285
+                    FontWeight =700
+                    TabIndex =1
+                    Name ="IdMinoriMIS"
+                    ControlSource ="IdMinoriMIS"
+                    StatusBarText ="Numero id Ministero"
+                    GUID = Begin
+                        0xb5c7ee20a23b2d4890c4bfcada86ac52
+                    End
+                    GridlineColor =0
+
+                    LayoutCachedLeft =555
+                    LayoutCachedTop =120
+                    LayoutCachedWidth =1326
+                    LayoutCachedHeight =405
+                End
+            End
+        End
+        Begin Section
+            KeepTogether = NotDefault
+            Height =315
+            Name ="Corpo"
+            GUID = Begin
+                0x85f3d13db3ea3e4c82b014db03a68d50
+            End
+            AutoHeight =1
+            AlternateBackColor =-2147483613
+            Begin
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =3954
+                    Top =30
+                    Width =1083
+                    Height =285
+                    TabIndex =2
+                    Name ="Data"
+                    ControlSource ="Data"
+                    Format ="Short Date"
+                    GUID = Begin
+                        0x56be31ab49834244b6d6f3b666b0e566
+                    End
+                    ShowDatePicker =1
+
+                    LayoutCachedLeft =3954
+                    LayoutCachedTop =30
+                    LayoutCachedWidth =5037
+                    LayoutCachedHeight =315
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =60
+                    Top =30
+                    Width =3834
+                    Height =285
+                    Name ="Tipo"
+                    ControlSource ="Tipo"
+                    StatusBarText ="Tipologia accettazione"
+                    GUID = Begin
+                        0x1a63876931766a448b961510867ba0f2
+                    End
+
+                    LayoutCachedLeft =60
+                    LayoutCachedTop =30
+                    LayoutCachedWidth =3894
+                    LayoutCachedHeight =315
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =5097
+                    Top =30
+                    Width =1134
+                    Height =285
+                    TabIndex =1
+                    Name ="Ora"
+                    ControlSource ="Ora"
+                    Format ="Short Time"
+                    GUID = Begin
+                        0x938a5db0ac9e204e9fd927fe177f8a87
+                    End
+                    ShowDatePicker =1
+
+                    LayoutCachedLeft =5097
+                    LayoutCachedTop =30
+                    LayoutCachedWidth =6231
+                    LayoutCachedHeight =315
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =6291
+                    Top =30
+                    Width =3708
+                    Height =285
+                    TabIndex =3
+                    Name ="Comunita"
+                    ControlSource ="Comunita"
+                    GUID = Begin
+                        0x50d03b5c1dfbb248920737018bf3d4a0
+                    End
+
+                    LayoutCachedLeft =6291
+                    LayoutCachedTop =30
+                    LayoutCachedWidth =9999
+                    LayoutCachedHeight =315
+                End
+            End
+        End
+        Begin PageFooter
+            Height =498
+            Name ="SezionePièDiPaginaPagina"
+            GUID = Begin
+                0xd74476440047aa4faa6f7ff1d995cb86
+            End
+            AutoHeight =1
+            Begin
+                Begin TextBox
+                    TextAlign =1
+                    IMESentenceMode =3
+                    Left =57
+                    Top =228
+                    Width =5040
+                    Height =270
+                    FontSize =9
+                    Name ="Testo21"
+                    ControlSource ="=Now()"
+                    Format ="Long Date"
+                    GUID = Begin
+                        0x6ce663c72c52ae40b80f505c567c2122
+                    End
+                    GridlineColor =0
+
+                    LayoutCachedLeft =57
+                    LayoutCachedTop =228
+                    LayoutCachedWidth =5097
+                    LayoutCachedHeight =498
+                End
+                Begin TextBox
+                    TextAlign =3
+                    IMESentenceMode =3
+                    Left =5670
+                    Top =165
+                    Width =5040
+                    Height =270
+                    FontSize =9
+                    TabIndex =1
+                    Name ="Testo22"
+                    ControlSource ="=\"Pagina \" & [Page] & \" di \" & [Pages]"
+                    GUID = Begin
+                        0x953976bff4bef5409db387c1785b8e29
+                    End
+                    GridlineColor =0
+
+                    LayoutCachedLeft =5670
+                    LayoutCachedTop =165
+                    LayoutCachedWidth =10710
+                    LayoutCachedHeight =435
+                End
+            End
+        End
+        Begin FormFooter
+            KeepTogether = NotDefault
+            Height =0
+            Name ="PièDiPaginaReport"
+            GUID = Begin
+                0x42c8201501e39741a2d5952b4f044434
+            End
+            AutoHeight =1
+        End
+    End
+End
+CodeBehindForm
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Compare Database
