@@ -4,7 +4,7 @@
 
 *Monitoraggio e calcolo delle rette per i minori stranieri non accompagnati nelle strutture di accoglienza*
 
-**Microsoft Access** · 2020–2021 · version 48  
+**db** · 2020–2021 · version 48  
 Author: **Massimo Sbarbaro** ([ORCID 0009-0006-8965-9013](https://orcid.org/0009-0006-8965-9013))
 
 ## Overview
@@ -52,7 +52,7 @@ The database is published **empty**: every table has been emptied and the file c
 
 Use the citation metadata in [`CITATION.cff`](CITATION.cff) (GitHub: *Cite this repository*). The release is archived on Zenodo with the DOI [10.5281/zenodo.23205218](https://doi.org/10.5281/zenodo.23205218).
 
-> Sbarbaro, Massimo. 2021. *Monitoring and fee calculation for unaccompanied foreign minors in reception facilities*. Software (Microsoft Access, 2020–2021), version 48. Zenodo. https://doi.org/10.5281/zenodo.23205218.
+> Sbarbaro, Massimo. 2021. *Monitoring and fee calculation for unaccompanied foreign minors in reception facilities*. Software (db, 2020–2021), version 48. Zenodo. https://doi.org/10.5281/zenodo.23205218.
 
 ## License
 
