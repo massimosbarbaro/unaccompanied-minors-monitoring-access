@@ -1,5 +1,7 @@
 # Monitoring and fee calculation for unaccompanied foreign minors in reception facilities
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23205218.svg)](https://doi.org/10.5281/zenodo.23205218)
+
 *Monitoraggio e calcolo delle rette per i minori stranieri non accompagnati nelle strutture di accoglienza*
 
 **Microsoft Access** · 2020–2021 · version 48  
@@ -48,9 +50,9 @@ The database is published **empty**: every table has been emptied and the file c
 
 ## How to cite
 
-Use the citation metadata in [`CITATION.cff`](CITATION.cff) (GitHub: *Cite this repository*). Each release is archived on Zenodo with its own DOI.
+Use the citation metadata in [`CITATION.cff`](CITATION.cff) (GitHub: *Cite this repository*). The release is archived on Zenodo with the DOI [10.5281/zenodo.23205218](https://doi.org/10.5281/zenodo.23205218).
 
-> Sbarbaro, Massimo. *Monitoring and fee calculation for unaccompanied foreign minors in reception facilities (Microsoft Access, 2020–2021)*. Software, version 48. GitHub: https://github.com/massimosbarbaro/unaccompanied-minors-monitoring-access
+> Sbarbaro, Massimo. 2021. *Monitoring and fee calculation for unaccompanied foreign minors in reception facilities*. Software (Microsoft Access, 2020–2021), version 48. Zenodo. https://doi.org/10.5281/zenodo.23205218.
 
 ## License
 
